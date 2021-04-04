@@ -1,0 +1,66 @@
+.experience-list {
+    margin-bottom: -30px;
+}
+
+.experience-item {
+    border-radius: 10px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 50px 150px 0 rgb(4 73 89 / 5%);
+    align-items: center;
+    font-family: Poppins,sans-serif;
+    margin-bottom: 30px;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+    cursor: pointer;
+}
+
+.experience-item:hover {
+    box-shadow: 0 40px 60px 0 rgb(4 73 89 / 3%), 0 12px 100px 0 rgb(4 73 89 / 5%);
+}
+
+@media (max-width: 576px) {
+    .experience-item {
+        display: block;
+    }
+}
+
+.experience-list .experience-item .media-left {
+    margin-right: 20px;
+}
+
+.experience-list .experience-item .media-left img {
+    width: 170px;
+    transition: all .3s linear;
+}
+
+.experience-list .experience-item .media-left img:hover {
+    transform: scale(1.15);
+}
+
+.experience-list .experience-item h4 {
+    color: #051441;
+    font-weight: 600;
+    margin-bottom: 0;
+    font-family: 'Poppins', sans-serif;
+    -webkit-transition: color .2s linear;
+    transition: color .2s linear;
+}
+
+.experience-list .experience-item span {
+    color: #545454;
+    opacity: .6;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.experience-list .experience-item p {
+    margin-bottom: 0;
+    font-size: 16px;
+    color: #545454;
+    margin-top: 8px;
+}
+
+.media-body {
+    flex: 1 1;
+}

@@ -1,38 +1,187 @@
-.App {
-  text-align: center;
+:root {
+    --white: #fff;
+    --primary: #007bff;
+    --primary-800: #0056b3;
+    --cd-back-to-top-size: 52px;
+    --cd-back-to-top-margin: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media screen and (max-width: 479px) {
+    :root {
+        --cd-back-to-top-size: 40px;
+        --cd-back-to-top-margin: 20px;
+    }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    background-color: var(--white);
+    font-family: "Poppins", sans-serif !important;
+    position: relative;
+    font-size: 14px !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1 {
+    font-size: calc(22px + (50 - 22) * ((100vw - 300px) / (1920 - 300)));
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-top: -7px;
+    margin-bottom: -20px;
+    line-height: 1.4; 
 }
 
-.App-link {
-  color: #61dafb;
+p {
+    font-size: calc(13px + (14 - 13) * ((100vw - 300px) / (1920 - 300)));
+    color: var(--secondary);
+    font-weight: 400;
+    margin-top: -7px;
+    margin-bottom: -4px;
+    line-height: 1.8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.section {
+    padding: 120px 0;
+    position: relative;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 767px) {
+
+    footer .container {
+        width: unset !important;
+        max-width: 100% !important;
+    }
+
+    .section, .section.alt {
+        padding: 60px 0!important;
+    }
+
+    .section-title {
+        margin-bottom: 20px !important;
+    }
+
+    #about .section-title {
+        padding-top: 40px !important;
+    }
+
+    #contact .section-title {
+        margin-bottom: 40px !important;
+    }
+
+    .section-title h2 {
+        font-size: 36px !important;
+    }
+
+}
+
+@media only screen and (max-width: 479px) {
+    .container {
+        width: 360px !important;
+    }
+
+    #resume h1 {
+        font-size: 36px;
+        margin-top: 10px;
+    }
+}
+
+.section.alt {
+    background-color: #f5f5f8;
+}
+
+.section-title {
+    margin-bottom: 70px;
+}
+
+.section-title p {
+    color: #545454;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.section-title h2 {
+    font-size: 42px;
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 0;
+}
+
+.list_style {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.btn-default {
+    padding: 14px 35px !important;
+    font-size: calc(13px + (16 - 13) * ((100vw - 300px) / (1920 - 300)));
+    font-weight: 500;
+    border: 2px solid;
+    text-transform: capitalize;
+    border-radius: 50px !important;
+    color: #fff !important;
+    transition: 0.5s;
+    letter-spacing: 0; 
+}
+
+.btn-default.primary-btn:hover {
+    background-color: var(--white);
+    border: 1px solid var(--primary);
+    color: var(--primary) !important;
+}
+
+.btn-default.primary-btn {
+    border: 1px solid white;
+    background-color: var(--primary);
+}
+
+#progressBarContainer {
+    position: fixed;
+    z-index: 10;
+    background: rgba(255,255,255,0.05);
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+#progressBar {
+    background: linear-gradient(to left, #0056b3, #007bff);
+    transform-origin: top left;
+    transform: scale(0,0);
+    opacity: 0;
+}
+
+#progressBarContainer,
+#progressBar {
+    height: 5px;
+}
+
+.back-top {
+    position: fixed;
+    bottom: 20px;
+    bottom: var(--cd-back-to-top-margin);
+    right: 20px;
+    right: var(--cd-back-to-top-margin);
+    display: inline-block;
+    height: 40px;
+    height: var(--cd-back-to-top-size);
+    width: 40px;
+    width: var(--cd-back-to-top-size);
+    box-shadow: 0 0 10px rgb(0 0 0 / 5%);
+    background: url(./top-arrow.svg) no-repeat center 50%;
+    background-color: var(--primary-800);
+    z-index: 9;
+    transition: all .3s,visibility .3s,background-color .3s;
+}
+
+.back-top.hidden {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.text-replace {
+    overflow: hidden;
+    color: transparent;
+    text-indent: 100%;
+    white-space: nowrap;
 }

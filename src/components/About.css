@@ -1,0 +1,13 @@
+#about p {
+    margin-bottom: 15px;
+}
+
+.thumbnail img {
+    border-radius: 8px;
+}
+
+@media only screen and (max-width: 479px) {
+    .thumbnail img {
+        width: 100% !important;
+    }
+}
