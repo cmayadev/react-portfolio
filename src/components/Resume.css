@@ -8,6 +8,7 @@
 .resume h1 {
     font-size: calc(22px + (70 - 22) * ((100vw - 300px) / (1920 - 300)));
     margin-top: -20px;
+    margin-bottom: 5px;
     line-height: normal;
 }
 
