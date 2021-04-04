@@ -12,6 +12,10 @@ library.add(faTwitter);
 library.add(faInstagram); 
 library.add(faGithub); 
 
+const getYear = () => {
+    return new Date().getFullYear();
+}
+
 const Footer = () => {
     return ( 
         <footer>
@@ -43,8 +47,8 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div className="col-sm-8 text-right">
-                            <h6>Programado y diseñado por Cristian Maya</h6>
-                            <p>© 2021 cmayadev</p>
+                            <h6>Programado por Cristian Maya con ReactJS</h6>
+                            <p>© {getYear()} cmayadev</p>
                         </div>
                     </div>
                 </div>

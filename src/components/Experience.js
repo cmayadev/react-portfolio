@@ -19,7 +19,7 @@ const Experience = () => {
                         <div className="media-body">
                             <h4>Desarrollador Web</h4>
                             <span>Marzo, 2020 - Marzo 2021 (1 año y 1 mes)</span>
-                            <p>Desarrolador frontend y backend en diversos proyectos: landings, b2b, webs corporativas...</p>
+                            <p>Desarrollador frontend y backend en diversos proyectos: landings, b2b, webs corporativas...</p>
                         </div>
                     </div>
                     <div className="media experience-item">
@@ -31,7 +31,7 @@ const Experience = () => {
                         <div className="media-body">
                             <h4>Desarrollador Web</h4>
                             <span>Julio, 2018 - Diciembre 2019 (1 año y 6 meses)</span>
-                            <p>Mantenimiento y desarrollo de diarios digitales y otras páginas web como horóscopos o blogs, así como mantenimiento y desarrollo de la API que nutria de datos éstas webs.</p>
+                            <p>Mantenimiento y desarrollo de diarios digitales y otras páginas web como horóscopos o blogs, así como mantenimiento y desarrollo de la API que nutría de datos éstas webs.</p>
                         </div>
                     </div>
                     <div className="media experience-item">
