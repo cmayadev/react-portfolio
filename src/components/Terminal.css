@@ -28,3 +28,9 @@
     color: #E7E7E7;
     font-size: 13px;
 }
+
+@media (max-width: 767px) {
+    .terminal-content {
+        margin-top: 20px;
+    }
+}

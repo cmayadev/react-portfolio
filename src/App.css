@@ -141,6 +141,12 @@ p {
     left: 0;
 }
 
+@media (max-width: 767px) {
+    #progressBarContainer {
+        top: 0;
+    }
+}
+
 #progressBar {
     background: linear-gradient(to left, #0056b3, #007acc);
     transform-origin: top left;
