@@ -116,7 +116,6 @@ p {
     padding: 14px 35px !important;
     font-size: calc(13px + (16 - 13) * ((100vw - 300px) / (1920 - 300)));
     font-weight: 500;
-    border: 2px solid;
     text-transform: capitalize;
     border-radius: 50px !important;
     color: #fff !important;
