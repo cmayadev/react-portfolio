@@ -11,7 +11,8 @@
 .skill-bars .bar .info{
   margin-bottom: 5px;
 }
-.skill-bars .bar .info span{
+.skill-bars .bar .info span {
+  color: #D4D4D4;
   font-weight: 500;
   font-size: 17px;
   opacity: 0;
@@ -30,8 +31,6 @@
   transform: scaleX(0);
   transform-origin: left;
   border-radius: 10px;
-  box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
-              0 1px rgba(255,255,255,0.8);
   animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
 }
 @keyframes animate {
@@ -45,7 +44,7 @@
   border-radius: 10px;
   transform: scaleX(0);
   transform-origin: left;
-  background: #007bff;
+  background: linear-gradient(to left, #0056b3, #007acc);
   animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
 }
 .bar .progress-line.html span{

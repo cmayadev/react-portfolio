@@ -5,15 +5,29 @@
     background: transparent;   
 }
 
+.appName {
+    background-color: #3c3c3c;
+    color: #CCCCCC;
+    font-size: 11px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.navbar {
+    top: 30px;
+}
+
 .navbar.white {
-    background: #fff !important;
+    background: #252526 !important;
     box-shadow: 0 2px 35px 0 rgb(0 0 0 / 10%);
+    top: 0;
 }
 
 .navbar-custom {
     z-index: 999;
-    padding: 20px 0px;
-    background-color: transparent;
+    padding: 0;
+    background-color: #252526;
     border: 0;
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
@@ -32,13 +46,17 @@
 }
 
 .nav-link {
-    font: 600 14px/30px "Montserrat", sans-serif;
+    font: 400 15px/30px "Roboto", sans-serif;
     color: #fff;
-    text-transform: uppercase;
     position: relative;
-    padding: 0px;
+    padding: 6px;
     cursor: pointer;
     transition: all 0.2s linear;
+}
+
+.nav-link img {
+    margin-top: -2px;
+    margin-right: 10px;
 }
 
 .navbar-custom .nav-social {
@@ -46,7 +64,26 @@
 }
 
 .navbar .navbar-nav .nav-item {
-    margin-left: 35px;
+    background-color: #2D2D2D;
+    margin-right: 2px;
+}
+
+.navbar .navbar-nav .nav-item a {
+    color: #969696;
+    padding: 10px 25px 10px 10px;
+}
+
+.navbar .navbar-nav .nav-item a.active {
+    background-color: #1E1E1E;
+    color: #E2C08D;
+}
+
+.navbar .navbar-nav .nav-item:hover {
+    background-color: #1E1E1E;
+}
+
+.navbar .navbar-nav .nav-item:hover a {
+    color: #E2C08D;
 }
 
 .navbar-custom .navigation .nav-item .nav-link {

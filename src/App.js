@@ -7,6 +7,7 @@ import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Terminal from './components/Terminal';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Skills />
       <Experience />
       <Contact />
+      <Terminal />
       <Footer />
     </div>
   );

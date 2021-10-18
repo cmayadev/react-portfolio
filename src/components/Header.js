@@ -38,104 +38,115 @@ const Header = () => {
 
     return ( 
 
-        <nav className={navbar || menu ? 'navbar navbar-expand-lg fixed-top navbar-custom navbar-light sticky white' : 'navbar navbar-expand-lg fixed-top navbar-custom navbar-light sticky'}>
-            
-            <div id="progressBarContainer">
-                <div id="progressBar" style={{transform: `scale(${scroll}, 1)`, opacity: `${scroll}`}} />
-            </div>
+        <div>
 
-            <Link
-                href="#"
-                to="resume"
-                className={`back-top text-replace ${navbar ? '' : 'hidden'}`}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                >
-                Top
-            </Link>
-            
-            <div className="container">
-                <Link className="logo" href="#" to="resume">
-                    <img src="cmayadev.png" alt="cmayadev-logo" />
-                </Link>
-                <button onClick={() => setMenu(!menu)} className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded={menu ? 'true' : 'false'} aria-label="Toggle navigation"><span className="icon-bar"></span><span className="icon-bar"></span><span className="icon-bar"></span></button>
-                <div className={`navbar-collapse offset collapse ${menu ? 'show' : ''}`} id="navbarCollapse">
-                    <ul id="navbar-navlist" className="navbar-nav ml-auto">
-                        <li className="nav-item">
-                            <Link
-                                href="#resume"
-                                to="resume"
-                                activeClass="active"
-                                className="nav-link"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                                >
-                                Inicio
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link
-                                href="#about"
-                                to="about"
-                                activeClass="active"
-                                className="nav-link"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                                >
-                                Sobre mí
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link
-                                href="#skills"
-                                to="skills"
-                                activeClass="active"
-                                className="nav-link"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                                >
-                                Conocimientos
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link
-                                href="#experience"
-                                to="experience"
-                                activeClass="active"
-                                className="nav-link"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                                >
-                                Experiencia
-                            </Link>                        
-                        </li>
-                        <li className="nav-item">
-                            <Link
-                                href="#contact"
-                                to="contact"
-                                activeClass="active"
-                                className="nav-link"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                                >
-                                Contacto
-                            </Link> 
-                        </li>
-                    </ul>
+            <div className="appName">react-porfolio - Maya Studio Code</div>
+
+            <nav className={navbar || menu ? 'navbar navbar-expand-lg fixed-top navbar-custom navbar-light sticky white' : 'navbar navbar-expand-lg fixed-top navbar-custom navbar-light sticky'}>
+    
+                <div id="progressBarContainer">
+                    <div id="progressBar" style={{transform: `scale(${scroll}, 1)`, opacity: `${scroll}`}} />
                 </div>
-            </div>
-        </nav>
+    
+                <Link
+                    href="#"
+                    to="resume"
+                    className={`back-top text-replace ${navbar ? '' : 'hidden'}`}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    >
+                    Top
+                </Link>
+                
+                <div className="container">
+                    <Link className="logo" href="#" to="resume">
+                        <img src="cmayadev.png" alt="cmayadev-logo" />
+                    </Link>
+                    <button onClick={() => setMenu(!menu)} className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded={menu ? 'true' : 'false'} aria-label="Toggle navigation"><span className="icon-bar"></span><span className="icon-bar"></span><span className="icon-bar"></span></button>
+                    <div className={`navbar-collapse offset collapse ${menu ? 'show' : ''}`} id="navbarCollapse">
+                        <ul id="navbar-navlist" className="navbar-nav ml-auto">
+                            <li className="nav-item">
+                                <Link
+                                    href="#resume"
+                                    to="resume"
+                                    activeClass="active"
+                                    className="nav-link"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-90}
+                                    duration={500}
+                                    >
+                                        <img width="15px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png" />
+                                    Inicio.js
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link
+                                    href="#about"
+                                    to="about"
+                                    activeClass="active"
+                                    className="nav-link"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration={500}
+                                    >
+                                        <img width="15px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png" />
+                                    Sobre mí.js
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link
+                                    href="#skills"
+                                    to="skills"
+                                    activeClass="active"
+                                    className="nav-link"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration={500}
+                                    >
+                                        <img width="15px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png" />
+                                    Conocimientos.js
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link
+                                    href="#experience"
+                                    to="experience"
+                                    activeClass="active"
+                                    className="nav-link"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration={500}
+                                    >
+                                        <img width="15px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png" />
+                                    Experiencia.js
+                                </Link>                        
+                            </li>
+                            <li className="nav-item">
+                                <Link
+                                    href="#contact"
+                                    to="contact"
+                                    activeClass="active"
+                                    className="nav-link"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration={500}
+                                    >
+                                        <img width="15px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png" />
+                                    Contacto.js
+                                </Link> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
 
     );
 }

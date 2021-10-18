@@ -14,7 +14,7 @@
 }
 
 body {
-    background-color: var(--white);
+    background-color: #252526 !important;
     font-family: "Poppins", sans-serif !important;
     position: relative;
     font-size: 14px !important;
@@ -85,7 +85,7 @@ p {
 }
 
 .section.alt {
-    background-color: #f5f5f8;
+    background-color: #1E1E1E;
 }
 
 .section-title {
@@ -93,7 +93,7 @@ p {
 }
 
 .section-title p {
-    color: #545454;
+    color: #D4D4D4;
     font-size: 16px;
     font-weight: 400;
 }
@@ -101,7 +101,7 @@ p {
 .section-title h2 {
     font-size: 42px;
     font-weight: 600;
-    color: #212529;
+    color: #FFF;
     margin-bottom: 5px;
 }
 
@@ -126,26 +126,23 @@ p {
 
 .btn-default.primary-btn:hover {
     background-color: var(--white);
-    border: 1px solid var(--primary);
-    color: var(--primary) !important;
+    border: 1px solid var(--white);
 }
 
 .btn-default.primary-btn {
-    border: 1px solid white;
-    background-color: var(--primary);
+    background: linear-gradient(to left, #0056b3, #007acc);
 }
 
 #progressBarContainer {
     position: fixed;
     z-index: 10;
-    background: rgba(255,255,255,0.05);
     width: 100%;
-    top: 0;
+    top: 42px;
     left: 0;
 }
 
 #progressBar {
-    background: linear-gradient(to left, #0056b3, #007bff);
+    background: linear-gradient(to left, #0056b3, #007acc);
     transform-origin: top left;
     transform: scale(0,0);
     opacity: 0;
@@ -168,8 +165,9 @@ p {
     width: 40px;
     width: var(--cd-back-to-top-size);
     box-shadow: 0 0 10px rgb(0 0 0 / 5%);
-    background: url(./top-arrow.svg) no-repeat center 50%;
-    background-color: var(--primary-800);
+    background: url(./top-arrow.svg), linear-gradient(to left, #0056b3, #007acc);
+    background-repeat: no-repeat;
+    background-position: center;
     z-index: 9;
     transition: all .3s,visibility .3s,background-color .3s;
 }
