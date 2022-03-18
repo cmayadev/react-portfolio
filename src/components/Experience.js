@@ -10,7 +10,19 @@ const Experience = () => {
                     <p>Algunos sitios donde he trabajado con algo relacionado al mundo del desarrollo.</p>
                 </div>
                 <div className="experience-list">
-                <div className="media experience-item">
+                    <div className="media experience-item">
+                        <div className="media-left">
+                            <div>
+                                <img src="logos/omatech.jpg" alt="Omatech" />
+                            </div>
+                        </div>
+                        <div className="media-body">
+                            <h4>Desarrollador Web</h4>
+                            <span>Octubre, 2021 - Actualidad</span>
+                            <p>Desarrollador frontend y backend</p>
+                        </div>
+                    </div>
+                    <div className="media experience-item">
                         <div className="media-left">
                             <div>
                                 <img src="logos/basetis.jpg" alt="BaseTIS" />
@@ -18,7 +30,7 @@ const Experience = () => {
                         </div>
                         <div className="media-body">
                             <h4>Desarrollador Web</h4>
-                            <span>Abril, 2021 - Actualidad</span>
+                            <span>Abril, 2021 - Octubre, 2021</span>
                             <p>Desarrollador frontend y backend y maquetación web</p>
                         </div>
                     </div>
