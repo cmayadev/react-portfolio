@@ -27,9 +27,9 @@ const Resume = () => {
                                     Programar es mi hobby y mi profesión, por lo que busco seguir aprendiendo y mejorando en este mundillo. 
                                 </p>
                             </div>
-                            <div className="resume-links">
+{/*                             <div className="resume-links">
                                 <a href={process.env.PUBLIC_URL + '/cv.pdf'} download={process.env.PUBLIC_URL + '/cv.pdf'} className="btn btn-default primary-btn">Descargar cv</a>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div className="col-lg-5 col-md-5 mt-4 pt-2 mt-sm-0 pt-sm-0">
