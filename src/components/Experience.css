@@ -2,65 +2,91 @@
     margin-bottom: -30px;
 }
 
-.experience-item {
-    border-radius: 10px;
-    padding: 20px;
+.media-body {
+    flex: 1 1;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 4rem;
+    margin: 0 0 0 30px;
+    color: white;
+}
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 1px;
+    top: 25px;
+    width: 4px;
+    height: 98%;
+    background: #545454;
+}
+.timeline .timeline-container {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+.timeline .timeline-container .timeline-icon {
+    position: absolute;
+    left: -88px;
+    top: 18px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 2rem;
+    background: #4f537b;
+}
+.timeline .timeline-container .timeline-icon i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.timeline .timeline-container .timeline-icon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.timeline .timeline-container .timeline-body {
     background: #fff;
-    box-shadow: 0 50px 150px 0 rgb(4 73 89 / 5%);
-    align-items: center;
-    font-family: Poppins,sans-serif;
-    margin-bottom: 30px;
-    -webkit-transition: all .3s linear;
-    transition: all .3s linear;
-    cursor: pointer;
+    border-radius: 10px;
+    padding: 30px 30px 30px 30px;
+    box-shadow: 1px 3px 9px rgba(0, 0, 0, .1);
 }
-
-.experience-item:hover {
-    box-shadow: 0 40px 60px 0 rgb(4 73 89 / 3%), 0 12px 100px 0 rgb(4 73 89 / 5%);
+.timeline .timeline-container .timeline-body:before {
+    content: '';
+    background: inherit;
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    top: 35px;
+    left: -10px;
+    transform: rotate(45deg);
+    border-radius: 0 0 0 2px;
 }
-
-@media (max-width: 576px) {
-    .experience-item {
-        display: block;
-    }
-}
-
-.experience-list .experience-item .media-left {
-    margin-right: 20px;
-}
-
-.experience-list .experience-item .media-left img {
-    width: 170px;
-    transition: all .3s linear;
-}
-
-.experience-list .experience-item .media-left img:hover {
-    transform: scale(1.15);
-}
-
-.experience-list .experience-item h4 {
+.timeline .timeline-container .timeline-body .timeline-title {
     color: #051441;
     font-weight: 600;
     margin-bottom: 0;
     font-family: 'Poppins', sans-serif;
-    -webkit-transition: color .2s linear;
     transition: color .2s linear;
 }
-
-.experience-list .experience-item span {
-    color: #545454;
-    opacity: .6;
-    font-size: 14px;
-    line-height: 1;
-}
-
-.experience-list .experience-item p {
+.timeline .timeline-container .timeline-body .timeline-subtitle {
     margin-bottom: 0;
     font-size: 16px;
     color: #545454;
     margin-top: 8px;
+    margin-bottom: 14px;
+    line-height: 1.6;
 }
-
-.media-body {
-    flex: 1 1;
+.timeline .timeline-container .timeline-body span {
+    color: #545454;
+    opacity: .6;
+    font-size: 15px;
+    line-height: 1;
+}
+.timeline .timeline-container .timeline-body .timeline-lapse {
+    font-size: 14px;
+    font-style: italic;
 }

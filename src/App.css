@@ -147,7 +147,7 @@ p {
 }
 
 #progressBar {
-    background: linear-gradient(to left, #0056b3, #007acc);
+    background: #007acc;
     transform-origin: top left;
     transform: scale(0,0);
     opacity: 0;
@@ -170,11 +170,15 @@ p {
     width: 40px;
     width: var(--cd-back-to-top-size);
     box-shadow: 0 0 10px rgb(0 0 0 / 5%);
-    background: url(./top-arrow.svg), linear-gradient(to left, #0056b3, #007acc);
+    background: url(./top-arrow.svg), #007acc;
     background-repeat: no-repeat;
     background-position: center;
     z-index: 9;
     transition: all .3s,visibility .3s,background-color .3s;
+}
+
+.back-top:hover {
+    background-position-y: 15px;
 }
 
 .back-top.hidden {

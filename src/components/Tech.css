@@ -17,36 +17,8 @@
     align-items: center;
 }
 
-.tech-box:hover {
-    color: #fff;
-}
-
-.tech-box::before {
-    content: '';
-    border-radius: 4px;
-    background: #252c41;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 0;
-    -webkit-transform: scale(0, 1);
-    transform: scale(0, 1);
-    -webkit-transform-origin: right;
-    transform-origin: right;
-    -webkit-transition: -webkit-transform 500ms ease;
-    transition: -webkit-transform 500ms ease;
-    transition: transform 500ms ease;
-    transition: transform 500ms ease, -webkit-transform 500ms ease;
-    z-index: -2;
-}
-
-.tech-box:hover::before {
-    -webkit-transform: scale(1, 1);
-    transform: scale(1, 1);
-    -webkit-transform-origin: left;
-    transform-origin: left;
+.tech-box:hover img {
+    margin-top: 0;
 }
 
 .tech-name {
