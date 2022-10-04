@@ -29,12 +29,12 @@ const Skills = () => {
                         name="React"
                     />
 
-                    <Tech   
-                        name="Redux"
-                    />
-
                     <Tech
                         name="Vue"
+                    />
+
+                    <Tech   
+                        name="Figma"
                     />
 
                     <Tech
