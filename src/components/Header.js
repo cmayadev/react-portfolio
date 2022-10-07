@@ -60,7 +60,7 @@ const Header = () => {
                 </Link>
                 
                 <div className="container">
-                    <Link className="logo" href="#" to="resume">
+                    <Link className="logo" href="#" to="resume" smooth={true} offset={-70} duration={500}>
                         <img src="cmayadev.png" alt="cmayadev-logo" />
                     </Link>
                     <button onClick={() => setMenu(!menu)} className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded={menu ? 'true' : 'false'} aria-label="Toggle navigation"><span className="icon-bar"></span><span className="icon-bar"></span><span className="icon-bar"></span></button>

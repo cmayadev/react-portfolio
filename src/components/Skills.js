@@ -13,45 +13,25 @@ const Skills = () => {
 
                 <div className="grid">
 
-                    <Tech
-                        name="HTML"
-                    />
+                    <Tech name="HTML" />
 
-                    <Tech
-                        name="CSS"
-                    />
+                    <Tech name="CSS" />
 
-                    <Tech
-                        name="JS"
-                    />
+                    <Tech name="JS" />
 
-                    <Tech
-                        name="React"
-                    />
+                    <Tech name="React" />
 
-                    <Tech
-                        name="Vue"
-                    />
+                    <Tech name="Vue" />
 
-                    <Tech   
-                        name="Figma"
-                    />
+                    <Tech name="Figma" />
 
-                    <Tech
-                        name="PHP"
-                    />     
+                    <Tech name="PHP" />     
 
-                    <Tech
-                        name="Symfony"
-                    />  
+                    <Tech name="Symfony" />  
 
-                    <Tech
-                        name="Laravel"
-                    />  
+                    <Tech name="Laravel" />  
 
-                    <Tech   
-                        name="MySQL"
-                    />  
+                    <Tech name="MySQL" />  
 
                 </div>
 
