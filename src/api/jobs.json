@@ -1,0 +1,11 @@
+[
+    {
+        "company": "Omatech",
+        "logo": "logos/omatech.jpg",
+        "position": "Desarrollador Web",
+        "description": "Desarrollador frontend y backend",
+        "from": "Oct 2021",
+        "to": "Actualidad",
+        "actually": true
+    }
+]

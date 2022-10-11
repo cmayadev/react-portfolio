@@ -1,0 +1,42 @@
+[
+    {
+        "title": "HTML",
+        "icon": "tech/html.png"
+    },
+    {
+        "title": "CSS",
+        "icon": "tech/css.png"
+    },
+    {
+        "title": "JS",
+        "icon": "tech/js.png"
+    },
+    {
+        "title": "React",
+        "icon": "tech/react.png"
+    },
+    {
+        "title": "Vue",
+        "icon": "tech/vue.png"
+    },
+    {
+        "title": "Figma",
+        "icon": "tech/figma.png"
+    },
+    {
+        "title": "PHP",
+        "icon": "tech/php.png"
+    },
+    {
+        "title": "Symfony",
+        "icon": "tech/symfony.png"
+    },
+    {
+        "title": "Laravel",
+        "icon": "tech/laravel.png"
+    },
+    {
+        "title": "MySQL",
+        "icon": "tech/mysql.png"
+    }
+]

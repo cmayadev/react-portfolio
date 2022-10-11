@@ -2,7 +2,10 @@ import React from 'react'
 import './Skills.css'
 import Tech from './Tech.js'
 
+import skills from "../api/skills.json";
+
 const Skills = () => {
+
     return ( 
         <section className="section alt" id="skills">
             <div className="container">
@@ -13,25 +16,7 @@ const Skills = () => {
 
                 <div className="grid">
 
-                    <Tech name="HTML" />
-
-                    <Tech name="CSS" />
-
-                    <Tech name="JS" />
-
-                    <Tech name="React" />
-
-                    <Tech name="Vue" />
-
-                    <Tech name="Figma" />
-
-                    <Tech name="PHP" />     
-
-                    <Tech name="Symfony" />  
-
-                    <Tech name="Laravel" />  
-
-                    <Tech name="MySQL" />  
+                    { skills.map((skill) => <Tech skill={skill} />) }
 
                 </div>
 
