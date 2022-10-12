@@ -164,6 +164,7 @@ p {
 
 .back-top {
     position: fixed;
+    border-radius: 5px;
     bottom: 20px;
     bottom: var(--cd-back-to-top-margin);
     right: 20px;

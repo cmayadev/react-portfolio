@@ -8,19 +8,10 @@
 
 .timeline {
     position: relative;
-    padding-left: 4rem;
     margin: 0 0 0 30px;
     color: white;
 }
-.timeline:before {
-    content: '';
-    position: absolute;
-    left: 1px;
-    top: 25px;
-    width: 4px;
-    height: 98%;
-    background: #545454;
-}
+
 .timeline .timeline-container {
     position: relative;
     margin-bottom: 2.5rem;

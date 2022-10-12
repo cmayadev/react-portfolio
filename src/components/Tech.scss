@@ -15,6 +15,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    img {
+        transition: all 0.3s ease;
+    }
 }
 
 .tech-box:hover img {

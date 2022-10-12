@@ -1,11 +1,68 @@
 [
     {
         "company": "Omatech",
-        "logo": "logos/omatech.jpg",
         "position": "Desarrollador Web",
         "description": "Desarrollador frontend y backend",
         "from": "Oct 2021",
         "to": "Actualidad",
-        "actually": true
+        "actually": true,
+        "skills": [
+            "Laravel", "Javascript", "React", "MySQL", "ElasticSearch"
+        ]
+    },
+    {
+        "company": "Basetis",
+        "position": "Desarrollador Web",
+        "description": "Desarrollo frontend, backend y maquetado",
+        "from": "Abr 2021",
+        "to": "Oct 2021",
+        "actually": false,
+        "skills": [
+            "Laravel", "Javascript", "MySQL"
+        ]
+    },
+    {
+        "company": "StudioGenesis",
+        "position": "Desarrollador Web",
+        "description": "Desarrollo frontend y backend en diversos proyectos: landings, b2b, webs corporativas...",
+        "from": "Mar 2020",
+        "to": "Mar 2021",
+        "actually": false,
+        "skills": [
+            "Laravel", "Javascript", "Livewire", "Vue"
+        ]
+    },
+    {
+        "company": "delCamp.cat",
+        "position": "Desarrollador Web",
+        "description": "Mantenimiento y desarrollo de diarios digitales y otras páginas web como horóscopos o blogs, así como mantenimiento y desarrollo de la API que nutría de datos éstas webs.",
+        "from": "Jul 2018",
+        "to": "Dic 2019",
+        "actually": false,
+        "skills": [
+            "Symfony", "Javascript", "MySQL", "ElasticSearch"
+        ]
+    },
+    {
+        "company": "Tecnocom",
+        "position": "Programador",
+        "description": "Mantenimiento de software para Caixabank con lenguaje PL/I basado en COBOL.",
+        "from": "Jul 2015",
+        "to": "Jul 2017",
+        "actually": false,
+        "skills": [
+            "PL/I", "Cobol", "Java"
+        ]
+    },
+    {
+        "company": "PC House",
+        "position": "Diseñador Web",
+        "description": "Diseño, maquetado y desarrollo de páginas web.",
+        "from": "Ene 2006",
+        "to": "Set 2007",
+        "actually": false,
+        "skills": [
+            "HTML", "CSS", "PHP", "WordPress", "Joomla"
+        ]
     }
 ]
