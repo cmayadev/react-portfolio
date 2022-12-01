@@ -20,9 +20,8 @@ const Footer = () => {
     return ( 
         <footer>
             <section className="footer-area">
-                <div className="container">
-                    <div className="row footer-content">
-                        <div className="col-sm-4">
+                    <div className="footer-content">
+                        <div className="rrss">
                             <ul className="react-reveal list_style">
                                 <li>
                                     <a href="https://www.linkedin.com/in/cmayadev/" title="LinkedIn" target="_blank" rel="noreferrer">
@@ -46,12 +45,10 @@ const Footer = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div className="col-sm-8 text-right">
-                            <h6>Portfolio de Cristian Maya</h6>
-                            <p>© {getYear()} cmayadev</p>
+                        <div className="copyright">
+                            <span>© {getYear()} cmayadev</span>
                         </div>
                     </div>
-                </div>
             </section>
         </footer>
     );

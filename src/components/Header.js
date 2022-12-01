@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-scroll'
+import Toolbar from './Toolbar'
 import './Header.css'
 
 const Header = () => {
@@ -40,7 +41,7 @@ const Header = () => {
 
         <div>
 
-            <div className="appName">react-porfolio - Maya Studio Code</div>
+            <Toolbar />
 
             <nav className={navbar || menu ? 'navbar navbar-expand-lg fixed-top navbar-custom navbar-light sticky white' : 'navbar navbar-expand-lg fixed-top navbar-custom navbar-light sticky'}>
     

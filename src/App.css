@@ -3,7 +3,7 @@
     --primary: #007bff;
     --primary-800: #0056b3;
     --cd-back-to-top-size: 52px;
-    --cd-back-to-top-margin: 30px;
+    --cd-back-to-top-margin: 40px;
 }
 
 @media screen and (max-width: 479px) {
@@ -46,6 +46,10 @@ p {
     padding: 120px 0;
     position: relative;
     z-index: 1;
+}
+
+.section.last {
+    padding: 120px 0 60px 0;
 }
 
 @media only screen and (max-width: 767px) {

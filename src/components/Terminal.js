@@ -7,7 +7,7 @@ const getYear = () => {
 
 const Terminal = () => {
     return ( 
-        <section className="section">
+        <section className="section last">
             <div className="container">
                 <div className="terminal-tabs">
                     <span className="">TERMINAL</span>
