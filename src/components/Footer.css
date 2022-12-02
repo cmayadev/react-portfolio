@@ -4,9 +4,21 @@
 }
 
 .footer-area .footer-content {
+    align-items: center;
     display: flex;
     justify-content: space-between;
     margin: 0 16px;
+}
+
+.branch {
+    color: #FFF;
+    font-size: 12px;
+    margin-right: 16px;
+}
+
+.branch img {
+    margin-top: -5px;
+    width: 18px;
 }
 
 @media (max-width: 576px) {
@@ -19,12 +31,9 @@
     }
 }
 
-.footer-content ul {
-    line-height: 26px;
-}
-
 .footer-content ul li {
     display: inline-block;
+    margin-top: 2px;
 }
 
 .footer-content ul li a {

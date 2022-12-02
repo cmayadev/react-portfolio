@@ -23,6 +23,9 @@ const Footer = () => {
                     <div className="footer-content">
                         <div className="rrss">
                             <ul className="react-reveal list_style">
+                                <li className="branch">
+                                    <img src="icons/fork.png" alt="branch" /> master*
+                                </li>
                                 <li>
                                     <a href="https://www.linkedin.com/in/cmayadev/" title="LinkedIn" target="_blank" rel="noreferrer">
                                         <FontAwesomeIcon icon={['fab', 'linkedin-in']} />
