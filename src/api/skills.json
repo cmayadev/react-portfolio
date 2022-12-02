@@ -1,42 +1,67 @@
 [
     {
         "title": "HTML",
-        "icon": "tech/html.png"
+        "icon": "tech/html.png",
+        "type": "language"
     },
     {
         "title": "CSS",
-        "icon": "tech/css.png"
+        "icon": "tech/css.png",
+        "type": "language"
     },
     {
-        "title": "JS",
-        "icon": "tech/js.png"
+        "title": "JavaScript",
+        "icon": "tech/js.png",
+        "type": "language"
     },
     {
-        "title": "React",
-        "icon": "tech/react.png"
-    },
-    {
-        "title": "Vue",
-        "icon": "tech/vue.png"
+        "title": "TypeScript",
+        "icon": "tech/ts.png",
+        "type": "language"
     },
     {
         "title": "Figma",
-        "icon": "tech/figma.png"
+        "icon": "tech/figma.png",
+        "type": "tool"
     },
     {
         "title": "PHP",
-        "icon": "tech/php.png"
+        "icon": "tech/php.png",
+        "type": "language"
     },
     {
         "title": "Symfony",
-        "icon": "tech/symfony.png"
+        "icon": "tech/symfony.png",
+        "type": "framework"
     },
     {
         "title": "Laravel",
-        "icon": "tech/laravel.png"
+        "icon": "tech/laravel.png",
+        "type": "framework"
+    },
+    {
+        "title": "React",
+        "icon": "tech/react.png",
+        "type": "framework"
+    },
+    {
+        "title": "Vue",
+        "icon": "tech/vue.png",
+        "type": "framework"
+    },
+    {
+        "title": "Next JS",
+        "icon": "tech/nextjs.png",
+        "type": "framework"
+    },
+    {
+        "title": "ElasticSearch",
+        "icon": "tech/elastic.png",
+        "type" : "bd"
     },
     {
         "title": "MySQL",
-        "icon": "tech/mysql.png"
+        "icon": "tech/mysql.png",
+        "type" : "bd"
     }
 ]

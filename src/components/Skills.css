@@ -133,3 +133,10 @@
 .progress-line.mysql span::after{
   content: "75%";
 }
+.techs .group {
+  margin-bottom: 40px;
+}
+.techs h6 {
+  color: #FFF;
+  margin-bottom: 16px;
+}
