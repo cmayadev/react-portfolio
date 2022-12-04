@@ -1,4 +1,13 @@
-const Toolbar = () => {
+import { useCallback } from "react";
+
+const Toolbar = ({ display, onSetDisplay }) => {
+  const handleCloseButton = useCallback(
+    (event) => {
+      onSetDisplay("desktop");
+    },
+    [onSetDisplay]
+  );
+
   return (
     <div className="appName">
       <div className="app-options">
@@ -28,7 +37,7 @@ const Toolbar = () => {
         <div className="appMaximize">
           <img src="icons/maximize.png" alt="maximize" />
         </div>
-        <div className="appClose">
+        <div className="appClose" onClick={handleCloseButton}>
           <img src="icons/close.svg" alt="close" />
         </div>
       </div>
