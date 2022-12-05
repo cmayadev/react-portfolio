@@ -165,9 +165,9 @@ $screen-background:#121010;
   width: 24rem;
   min-height: 3rem;
   display: none;
-}
-#start-button-input:checked ~ #toolbar > #start-menu {
-  display: block;
+  &.open {
+    display: block;
+  }
 }
 #start-menu ul {
   list-style: none;
@@ -220,9 +220,6 @@ $screen-background:#121010;
   background: #0c1b98;
   color: white;
   box-shadow: -8px 0 #0c1b98, 8px 0 #0c1b98;
-}
-.windows-box-shadow, .minesweeper .content > label {
-  box-shadow: -2px -2px #e0dede, -2px 0 #e0dede, 0 -2px #e0dede, -4px -4px white, -4px 0 white, 0 -4px white, 2px 2px #818181, 0 2px #818181, 2px 0 #818181,  2px -2px #e0dede, -2px 2px #818181, -4px 2px white, -4px 4px black, 4px 4px black, 4px 0 black, 0 4px black, 2px -4px white, 4px -4px black;
 }
 .inverse-windows-box-shadow, .minesweeper .content > label:active {
   box-shadow: -2px -2px #818181, -2px 0 #818181, 0 -2px #818181, -4px -4px black, -4px 0 black, 0 -4px black, 2px 2px #e0dede, 0 2px #e0dede, 2px 0 #e0dede,  2px -2px #818181, -2px 2px #e0dede, -4px 2px black, -4px 4px white, 4px 4px white, 4px 0 white, 0 4px white, 2px -4px black, 4px -4px white;
@@ -388,13 +385,6 @@ $screen-background:#121010;
       background-image: url(https://win98icons.alexmeub.com/icons/png/channels-5.png);
     }
 
-    &.volume{
-      background-image: url(https://win98icons.alexmeub.com/icons/png/loudspeaker_rays-1.png);
-    }
-
-    &.usb {
-      background-image: url(https://win98icons.alexmeub.com/icons/png/usb-1.png);
-    }
   }
   
   .toolbar-right{
@@ -456,18 +446,29 @@ $screen-background:#121010;
   vertical-align: middle;
   font-size: 13px;
   height: 25px;
-  line-height: 25px;
-  border-right: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  line-height: 22px;
   font-family: Arial;
   font-weight: 400;
   color: #000;
+  min-width: 150px;
   padding: 0 10px 0 6px;
-  border-top: 1px solid #000;
-  border-left: 1px solid #000;
-  box-shadow: inset 1px 1px grey;
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAG0lEQVQYV2M8cODAf3t7ewbG/////z948CADAFuqCj64BtLKAAAAAElFTkSuQmCC);
-  margin-top: 5px;
+  margin-top: 7px;
+  margin-right: 4px;
+  border: 2px solid #7c7c7c;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  box-shadow: none !important;
+
+  &.minimized,&:hover {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAG0lEQVQYV2M8cODAf3t7ewbG/////z948CADAFuqCj64BtLKAAAAAElFTkSuQmCC);
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    box-shadow: inset 1px 1px grey;
+    box-shadow: -2px -2px #e0dede, -2px 0 #e0dede, 0 -2px #e0dede, -4px -4px white, -4px 0 white, 0 -4px white, 2px 2px #818181, 0 2px #818181, 2px 0 #818181,  2px -2px #e0dede, -2px 2px #818181, -4px 2px white, -4px 4px black, 4px 4px black, 4px 0 black, 0 4px black, 2px -4px white, 4px -4px black;
+    line-height: 25px;
+  }
 
   span {
     margin-right: 8px;

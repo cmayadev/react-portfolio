@@ -6,7 +6,7 @@ const DesktopIcon = (props) => {
 
     return ( 
         <div className="desktop-icon my-computer">
-            <img src={`https://win98icons.alexmeub.com/icons/png/${icon}.png`} title={label}/>{label}
+            <img src={`icons/${icon}.png`} title={label} alt={label} />{label}
         </div>
     );
 }

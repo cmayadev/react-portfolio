@@ -1,15 +1,27 @@
-import { useCallback } from "react";
+import { useState, useCallback } from "react";
 
 import Clock from './windows/Clock';
+import Task from './windows/Task';
+import Window from './windows/Window';
 import DesktopIcon from './windows/DesktopIcon';
 
 import './Desktop.scss';
 
 const Desktop = ({ display, onSetDisplay }) => {
 
+    const [startMenu, setStartMenu] = useState();
+
     const handleVisualButton = useCallback(event => {
         onSetDisplay('portfolio')
       }, [onSetDisplay])
+
+    const handleStartMenu = event => {
+        if (startMenu == '') {
+            setStartMenu('open');
+        } else {
+            setStartMenu('');
+        }
+      };
 
     return ( 
         <>
@@ -17,21 +29,21 @@ const Desktop = ({ display, onSetDisplay }) => {
                 
                 <div className="overlay">AV-1</div>
 
-                <input type="checkbox" name="start-button-input" id="start-button-input" />
+                <Window title="Recycle Bin" />
 
                 <div className="desktop-icons">
-                    <DesktopIcon label="My Computer" icon="computer_explorer-5" />
-                    <DesktopIcon label="My Documents" icon="directory_open_file_mydocs-4" />
-                    <DesktopIcon label="Internet Explorer" icon="msie2-2" />
-                    <DesktopIcon label="Recycle Bin" icon="recycle_bin_empty-4" />
+                    <DesktopIcon label="My Computer" icon="my-pc" />
+                    <DesktopIcon label="My Documents" icon="documents" />
+                    <DesktopIcon label="Internet Explorer" icon="ie" />
+                    <DesktopIcon label="Recycle Bin" icon="bin-full" />
                 </div>
 
                 <div id="toolbar">
                     <div className="toolbar-start-menu">
-                        <label for="start-button-input" className="start-button">Start</label>
+                        <label for="start-button-input" className="start-button" onClick={handleStartMenu}>Start</label>
                     </div>
 
-                    <div id="start-menu" class="windows-box-shadow">
+                    <div id="start-menu" class={`windows-box-shadow ${startMenu}`}>
                             <div id="windows-start-menu-blue">Windows<span>98</span></div>
                             <ul>
                                 <li class="line update">
@@ -64,25 +76,25 @@ const Desktop = ({ display, onSetDisplay }) => {
 
                         <div className="toolbar-separator"></div>
 
+                        <button className="toolbar-icon desktop"></button>
                         <button className="toolbar-icon ie"></button>
                         <button className="toolbar-icon outlook"></button>
-                        <button className="toolbar-icon desktop"></button>
-                        <button className="toolbar-icon channels"></button>
 
                         <div className="toolbar-separator"></div>
 
                         <div className="toolbar-items">
-                            <label for="windows-ie-input-min" class="ie-tab tab windows-box-shadow">
-                                <span><img src="https://win98icons.alexmeub.com/icons/png/html2-4.png" /></span>
-                                <span>Internet Explorer</span>
-                            </label>
+                            <Task name="My Computer" icon="my-pc" />
+                            <Task name="My Documents" icon="documents" />
+                            <Task name="Internet Explorer" icon="ie-html" />
+                            <Task name="Recycle Bin" icon="bin-full" />
                         </div>
 
                     </div>
                 
                     <div className="toolbar-right">
-                        <button className="toolbar-icon volume"></button>
-                        <button className="toolbar-icon usb"></button>
+                        <button className="toolbar-icon"><img src="icons/volume.png" /></button>
+                        <button className="toolbar-icon"><img src="icons/usb.png" /></button>
+                        <button className="toolbar-icon"><img src="icons/net.gif" /></button>
                         <Clock />
                     </div>
                 </div>
