@@ -446,7 +446,6 @@ $screen-background:#121010;
   vertical-align: middle;
   font-size: 13px;
   height: 25px;
-  line-height: 22px;
   font-family: Arial;
   font-weight: 400;
   color: #000;
@@ -458,8 +457,9 @@ $screen-background:#121010;
   border-top-color: #fff;
   border-left-color: #fff;
   box-shadow: none !important;
+  line-height: 22px;
 
-  &.minimized,&:hover {
+  &.opened {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAG0lEQVQYV2M8cODAf3t7ewbG/////z948CADAFuqCj64BtLKAAAAAElFTkSuQmCC);
     border-top: 1px solid #000;
     border-left: 1px solid #000;
@@ -468,6 +468,14 @@ $screen-background:#121010;
     box-shadow: inset 1px 1px grey;
     box-shadow: -2px -2px #e0dede, -2px 0 #e0dede, 0 -2px #e0dede, -4px -4px white, -4px 0 white, 0 -4px white, 2px 2px #818181, 0 2px #818181, 2px 0 #818181,  2px -2px #e0dede, -2px 2px #818181, -4px 2px white, -4px 4px black, 4px 4px black, 4px 0 black, 0 4px black, 2px -4px white, 4px -4px black;
     line-height: 25px;
+  }
+
+  &.closed {
+    display: none;
+  }
+
+  &:hover {
+    background-color: #a7a7a7;
   }
 
   span {

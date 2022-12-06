@@ -1,28 +1,30 @@
+import {useState} from 'react';
+
 import ContentIcon from './ContentIcon';
 
 import './Window.scss';
 
 const Window = (props) => {
 
-    const { title, type } = props;
+    const { title, type, minimized } = props;
 
     return ( 
-        <div className="window">
+        <div className={minimized ? 'window minimized' : 'window'}>
             <div className="window-toolbar">   
-                <div class="window-title">{title}</div>   
-                <div class="window-buttons">
-                    <div class="window-button window-close"></div>
-                    { type !== 'alert' && <div class="window-button window-minimize"></div> }
+                <div className="window-title">{title}</div>   
+                <div className="window-buttons">
+                    <div className="window-button window-close"></div>
+                    { type !== 'alert' && <div className="window-button window-minimize"></div> }
                 </div>        
             </div>
             { type !== 'alert' &&
-                <div class="options line">
-                    <div class="item">File</div>
-                    <div class="item">Edit</div>
-                    <div class="item">Views</div>
-                    <div class="item">Go</div>
-                    <div class="item">Favourites</div>
-                    <div class="item">Help</div>
+                <div className="options line">
+                    <div className="item">File</div>
+                    <div className="item">Edit</div>
+                    <div className="item">Views</div>
+                    <div className="item">Go</div>
+                    <div className="item">Favourites</div>
+                    <div className="item">Help</div>
                 </div>
             }
             <div className="window-wrapper white">
@@ -37,8 +39,8 @@ const Window = (props) => {
                             Are you sure you want to empty the recycle bin?
                         </div>
                         <div className="window-actions">
-                            <button class="window-action-button">No</button>
-                            <button class="window-action-button">Yes</button>
+                            <button className="window-action-button">No</button>
+                            <button className="window-action-button">Yes</button>
                         </div>
                     </>
                 }

@@ -5,10 +5,10 @@ const ContentIcon = (props) => {
     const { name, icon } = props;
 
     return ( 
-        <label class="file">
-            <span class="image">
+        <label className="file">
+            <span className="image">
                 <img src={`icons/${icon}.png`} /></span>
-            <span class="text">{name}</span>
+            <span className="text">{name}</span>
         </label>
     );
 }

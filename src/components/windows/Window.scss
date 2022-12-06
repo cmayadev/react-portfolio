@@ -12,6 +12,10 @@
     left: 20%;
     resize: both;
 
+    &.minimized {
+        display: none;
+    }
+
     .window-toolbar {
         background: #000080;
         color: #fff;
