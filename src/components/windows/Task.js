@@ -1,10 +1,44 @@
 const Task = (props) => {
 
-    const { name, icon, minimized } = props;
+    const { id, name, icon, status, active, setTasks } = props;
+
+    const handleClick = (taskId) => {
+        setTasks(state => {
+            const newState = structuredClone(state);
+            newState.map(function(task) {
+                if(task.status === 'open' && task.active === true) {
+                    task.status = "minimized";
+                    task.active = false;
+                }
+            });
+            const task = newState.find((task) => task.id === taskId);
+            switch(task.status) {
+                case "open":
+                    if (task.active === false) {
+                        task.status = 'open';
+                        task.active = true;
+                    } else {
+                        task.status = 'minimized';
+                        task.active = false;
+                    }
+                    break;
+                case "minimized":
+                    if (task.active === true) {
+                        task.status = 'minimized';
+                        task.active = false;
+                    } else {
+                        task.status = 'open';
+                        task.active = true;
+                    }
+                    break;
+            }
+            return newState;
+        })
+    };
 
     return ( 
-        <label className={minimized ? '' : 'opened'}>
-            <span><img src={`icons/${icon}.png`} /></span>
+        <label className={active ? status + ' active' : status} onClick={() => handleClick(id)}>
+            <span><img src={`icons/${icon}.png`} alt={name} /></span>
             <span>{name}</span>
         </label>
     );

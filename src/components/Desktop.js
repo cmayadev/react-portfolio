@@ -7,60 +7,12 @@ import DesktopIcon from './windows/DesktopIcon';
 
 import './Desktop.scss';
 
+import useTasksStatus from "../hooks/useTasksStatus";
+
 const Desktop = ({ display, onSetDisplay }) => {
 
     const [startMenu, setStartMenu] = useState();
-
-    const [tasks, setTasks] = useState([
-        {
-            id: 1,
-            name: "My Computer",
-            icon: "my-pc",
-            minimized: false
-        },
-        {
-            id: 2,
-            name: "My Documents",
-            icon: "documents",
-            minimized: false
-        },
-        {
-            id: 3,
-            name: "Internet Explorer",
-            icon: "ie-html",
-            minimized: false
-        },
-        {
-            id: 4,
-            name: "Recycle Bin",
-            icon: "bin-full",
-            minimized: false
-        },
-    ]);
-
-    const handleClick = taskId => {
-
-        console.log("asdasdasd")
-        const task = tasks.find(t => t.id === taskId);
-    
-        if (task.minimized) {
-          setTasks(tasks.map(t => {
-            if (t.id === taskId) {
-              return { ...t, minimized: false };
-            } else {
-              return t;
-            }
-          }));
-        } else {
-          setTasks(tasks.map(t => {
-            if (t.id === taskId) {
-              return { ...t, minimized: true };
-            } else {
-              return t;
-            }
-          }));
-        }
-      };
+    const [tasks, setTasks] = useTasksStatus();
 
     const handleVisualButton = useCallback(event => {
         onSetDisplay('portfolio')
@@ -72,7 +24,7 @@ const Desktop = ({ display, onSetDisplay }) => {
         } else {
             setStartMenu('');
         }
-      };
+    };
 
     return ( 
         <>
@@ -85,7 +37,10 @@ const Desktop = ({ display, onSetDisplay }) => {
                         id={window.id}
                         key={window.id}
                         title={window.name}
-                        minimized={window.minimized} />
+                        status={window.status} 
+                        active={window.active}
+                        setTasks={setTasks}
+                    />
                 ))}
 
                 <div className="desktop-icons">
@@ -104,27 +59,28 @@ const Desktop = ({ display, onSetDisplay }) => {
                             <div id="windows-start-menu-blue">Windows<span>98</span></div>
                             <ul>
                                 <li className="line update">
-                                    <label htmlFor="windows-update-input"><img src="https://win98icons.alexmeub.com/icons/png/windows_update_large-4.png" />Windows Update</label>
+                                    <label htmlFor="windows-update-input">
+                                        <img src="icons/windows-update.png" alt="Windows Update" />Windows Update</label>
                                 </li>
                                 <li className="programs">
-                                    <label><img src="https://win98icons.alexmeub.com/icons/png/package-1.png" />Progams</label>
+                                    <label><img src="icons/programs.png" alt="Programs" />Progams</label>
                                     <ul className="windows-box-shadow">
-                                        <li><label htmlFor="windows-ie-input"><img src="https://win98icons.alexmeub.com/icons/png/msie2-4.png" />Internet Explorer</label></li>
-                                        <li><label htmlFor="windows-notepad-input"><img src="https://win98icons.alexmeub.com/icons/png/notepad-3.png" />Notepad</label></li>
-                                        <li onClick={handleVisualButton}><label htmlFor="windows-notepad-input"><img src="icons/visual_code.png" />Visual Studio Code</label></li>
+                                        <li><label><img src="icons/ie-small.png" alt="Internet Explorer" />Internet Explorer</label></li>
+                                        <li><label><img src="icons/notepad.png" alt="Notepad" />Notepad</label></li>
+                                        <li onClick={handleVisualButton}><label><img src="icons/visual_code.png" alt="Visual Studio Code" />Visual Studio Code</label></li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <label htmlFor="windows-documents-input"><img src="https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-1.png" />Documents</label>
+                                    <label htmlFor="windows-documents-input"><img src="icons/documents.png" alt="Documents" />Documents</label>
                                 </li>
                                 <li className="line">
-                                    <label htmlFor="windows-help-input"><img src="https://win98icons.alexmeub.com/icons/png/help_book_cool-2.png" />Help</label>
+                                    <label htmlFor="windows-help-input"><img src="icons/help.png" alt="Help" />Help</label>
                                 </li>
                                 <li>
-                                    <label htmlFor="login-screen-input"><img src="https://win98icons.alexmeub.com/icons/png/key_win-3.png" />Log Off</label>
+                                    <label htmlFor="login-screen-input"><img src="icons/key.png" alt="Log Off" />Log Off</label>
                                 </li>
                                 <li>
-                                    <label htmlFor="shutdown-screen-input"><img src="https://win98icons.alexmeub.com/icons/png/shut_down_cool-4.png" />Shutdown</label>
+                                    <label htmlFor="shutdown-screen-input"><img src="icons/shutdown.png" alt="Shutdown" />Shutdown</label>
                                 </li>
                             </ul>
                         </div>
@@ -142,11 +98,13 @@ const Desktop = ({ display, onSetDisplay }) => {
                         <div className="toolbar-items">
                             {tasks.map(task => (
                                 <Task 
+                                    id={task.id}
                                     key={task.id}
                                     name={task.name}
+                                    active={task.active}
                                     icon={task.icon}
-                                    minimized={task.minimized}
-                                    onClick={() => handleClick(task.id)}
+                                    status={task.status}
+                                    setTasks={setTasks}
                                 />
                             ))}
                         </div>
@@ -154,9 +112,9 @@ const Desktop = ({ display, onSetDisplay }) => {
                     </div>
                 
                     <div className="toolbar-right">
-                        <button className="toolbar-icon"><img src="icons/volume.png" /></button>
-                        <button className="toolbar-icon"><img src="icons/usb.png" /></button>
-                        <button className="toolbar-icon"><img src="icons/net.gif" /></button>
+                        <button className="toolbar-icon"><img src="icons/volume.png" alt="Volume" /></button>
+                        <button className="toolbar-icon"><img src="icons/usb.png" alt="Usb" /></button>
+                        <button className="toolbar-icon"><img src="icons/net.gif" alt="Telnet" /></button>
                         <Clock />
                     </div>
                 </div>

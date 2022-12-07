@@ -326,7 +326,7 @@ $screen-background:#121010;
   .toolbar-start-menu{
     
     .start-button{
-      background: url(https://win98icons.alexmeub.com/icons/png/windows-0.png) no-repeat 2px center / 24px;
+      background: url('/images/icons/windows-logo.png') no-repeat 2px center / 24px;
       padding-left: 28px;
       padding-right: 5px;
       height: 29px;
@@ -370,19 +370,15 @@ $screen-background:#121010;
     margin: 3px 2px;
     
     &.ie{
-      background-image: url(https://win98icons.alexmeub.com/icons/png/msie1-4.png);
+      background-image: url('/images/icons/ie-small.png');
     }
     
     &.outlook{
-      background-image: url(https://win98icons.alexmeub.com/icons/png/outlook_express-0.png);
+      background-image: url('/images/icons/outlook.png');
     }
     
     &.desktop{
-      background-image: url(https://win98icons.alexmeub.com/icons/png/desktop-4.png);
-    }
-    
-    &.channels{
-      background-image: url(https://win98icons.alexmeub.com/icons/png/channels-5.png);
+      background-image: url('/images/icons/desktop.png');
     }
 
   }
@@ -458,8 +454,9 @@ $screen-background:#121010;
   border-left-color: #fff;
   box-shadow: none !important;
   line-height: 22px;
+  display: none;
 
-  &.opened {
+  &.open.active {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAG0lEQVQYV2M8cODAf3t7ewbG/////z948CADAFuqCj64BtLKAAAAAElFTkSuQmCC);
     border-top: 1px solid #000;
     border-left: 1px solid #000;
@@ -467,11 +464,12 @@ $screen-background:#121010;
     border-bottom: 1px solid #fff;
     box-shadow: inset 1px 1px grey;
     box-shadow: -2px -2px #e0dede, -2px 0 #e0dede, 0 -2px #e0dede, -4px -4px white, -4px 0 white, 0 -4px white, 2px 2px #818181, 0 2px #818181, 2px 0 #818181,  2px -2px #e0dede, -2px 2px #818181, -4px 2px white, -4px 4px black, 4px 4px black, 4px 0 black, 0 4px black, 2px -4px white, 4px -4px black;
+    display: block;
     line-height: 25px;
   }
 
-  &.closed {
-    display: none;
+  &.minimized, &.open {
+    display: block;
   }
 
   &:hover {
@@ -480,6 +478,9 @@ $screen-background:#121010;
 
   span {
     margin-right: 8px;
-    img { height: 14px; }
+    img { 
+      height: 14px;
+      margin-top: -3px;
+    }
   }
 }

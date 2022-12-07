@@ -7,7 +7,7 @@ const ContentIcon = (props) => {
     return ( 
         <label className="file">
             <span className="image">
-                <img src={`icons/${icon}.png`} /></span>
+                <img src={`icons/${icon}.png`} alt={name} /></span>
             <span className="text">{name}</span>
         </label>
     );

@@ -1,20 +1,27 @@
-import {useState} from 'react';
-
 import ContentIcon from './ContentIcon';
 
 import './Window.scss';
 
 const Window = (props) => {
 
-    const { title, type, minimized } = props;
+    const { id, title, type, status, active, setTasks } = props;
+
+    const handleStatus = (taskId, status) => {
+        setTasks(state => {
+            const newState = structuredClone(state);
+            const task = newState.find((original) => original.id === taskId);
+            task.status = status;
+            return newState;
+        })
+    };
 
     return ( 
-        <div className={minimized ? 'window minimized' : 'window'}>
+        <div className={active ? 'window ' + status + ' active' : 'window ' + status}>
             <div className="window-toolbar">   
                 <div className="window-title">{title}</div>   
                 <div className="window-buttons">
-                    <div className="window-button window-close"></div>
-                    { type !== 'alert' && <div className="window-button window-minimize"></div> }
+                    <div className="window-button window-close" onClick={() => handleStatus(id, '')}></div>
+                    { type !== 'alert' && <div className="window-button window-minimize" onClick={() => handleStatus(id, 'minimized')}></div> }
                 </div>        
             </div>
             { type !== 'alert' &&
