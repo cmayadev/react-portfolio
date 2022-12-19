@@ -28,7 +28,7 @@ const useTasksStatus =  () => {
             id: 4,
             name: "Recycle Bin",
             icon: "bin-full",
-            status: 'minimized',
+            status: 'open',
             active: false
         },
 

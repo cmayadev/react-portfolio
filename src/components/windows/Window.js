@@ -9,6 +9,12 @@ const Window = (props) => {
     const handleStatus = (taskId, status) => {
         setTasks(state => {
             const newState = structuredClone(state);
+            newState.map(function(task) {
+                if(task.status === 'open' && task.id !== taskId) {
+                    task.active = true;
+                    return;
+                }
+            });
             const task = newState.find((original) => original.id === taskId);
             task.status = status;
             return newState;

@@ -6,7 +6,7 @@ const Task = (props) => {
         setTasks(state => {
             const newState = structuredClone(state);
             newState.map(function(task) {
-                if(task.status === 'open' && task.active === true) {
+                if(task.status === 'open' && task.active === true && task.id !== taskId) {
                     task.status = "minimized";
                     task.active = false;
                 }
@@ -17,7 +17,8 @@ const Task = (props) => {
                     if (task.active === false) {
                         task.status = 'open';
                         task.active = true;
-                    } else {
+                    }
+                    if (task.active === true) {
                         task.status = 'minimized';
                         task.active = false;
                     }
@@ -26,7 +27,8 @@ const Task = (props) => {
                     if (task.active === true) {
                         task.status = 'minimized';
                         task.active = false;
-                    } else {
+                    }
+                    if (task.active === false) {
                         task.status = 'open';
                         task.active = true;
                     }
