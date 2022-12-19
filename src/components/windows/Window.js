@@ -42,9 +42,34 @@ const Window = (props) => {
             }
             <div className="window-wrapper white">
                 
-                <ContentIcon name="Dreamweaver.exe" icon="dreamweaver" />
-                <ContentIcon name="main.old.css" icon="file" />
-                <ContentIcon name="php.ini" icon="ini" />
+                {(() => {
+                    switch (title) {
+                    case 'My Computer':
+                        return <>
+                            <ContentIcon name="3½ Floppy (A:)" icon="floppy" />
+                            <ContentIcon name="WIN98 (C:)" icon="hard_disk" />
+                            <ContentIcon name="MY DATA (D:)" icon="hard_disk" />
+                            <ContentIcon name="(E:)" icon="cd_drive" />
+                        </>
+                    case 'My Documents':
+                        return <>
+                            <ContentIcon name="links.txt" icon="file" />
+                            <ContentIcon name="passwords.txt" icon="file" />
+                            <ContentIcon name="React for Dummies.txt" icon="file" />
+                        </>
+                    case 'won':
+                        return 
+                    case 'Recycle Bin':
+                        return <>
+                            <ContentIcon name="Dreamweaver.exe" icon="dreamweaver" />
+                            <ContentIcon name="main.css" icon="file" />
+                            <ContentIcon name="main.old.css" icon="file" />
+                            <ContentIcon name="php.ini" icon="ini" />
+                        </>
+                    default:
+                        return null
+                    }
+                })()}
 
                 { type === 'alert' &&
                     <>

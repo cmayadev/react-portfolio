@@ -9,6 +9,8 @@ const Task = (props) => {
                 if(task.status === 'open' && task.active === true && task.id !== taskId) {
                     task.status = "minimized";
                     task.active = false;
+                } else {
+                    task.active = true;
                 }
             });
             const task = newState.find((task) => task.id === taskId);

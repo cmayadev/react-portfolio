@@ -44,10 +44,9 @@ const Desktop = ({ display, onSetDisplay }) => {
                 ))}
 
                 <div className="desktop-icons">
-                    <DesktopIcon label="My Computer" icon="my-pc" />
-                    <DesktopIcon label="My Documents" icon="documents" />
-                    <DesktopIcon label="Internet Explorer" icon="ie" />
-                    <DesktopIcon label="Recycle Bin" icon="bin-full" />
+                    {tasks.map(icon => (
+                        <DesktopIcon id={icon.id} label={icon.name} icon={icon.large} setTasks={setTasks} />
+                    ))}
                 </div>
 
                 <div id="toolbar">
