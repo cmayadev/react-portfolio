@@ -405,31 +405,6 @@ $screen-background:#121010;
   }
 }
 
-.desktop-icons{
-  
-  .desktop-icon{
-    display: flex;
-    flex-direction: column;
-    width: 115px;
-    height: 70px;
-    align-items: center;
-    margin: 10px 10px 40px 10px;
-    color: #fff;
-
-    img {
-      height: 48px;
-      width: 48px;
-      margin-bottom: 5px;
-
-      &:hover {
-        cursor: pointer;
-      }
-    
-    }
-    
-  }
-}
-
 .toolbar-items {
   margin: 0 0 0 0.5rem;
   display: flex;
@@ -468,7 +443,7 @@ $screen-background:#121010;
     line-height: 25px;
   }
 
-  &.minimized, &.open {
+  &.minimized, &.open, &.unfocused {
     display: block;
   }
 

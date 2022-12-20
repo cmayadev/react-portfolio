@@ -9,7 +9,8 @@ const useTasksStatus =  () => {
             icon: "my-pc",
             large: "my-pc",
             status: '',
-            active: false
+            active: false,
+            selected: false
         },
         {
             id: 2,
@@ -17,7 +18,8 @@ const useTasksStatus =  () => {
             icon: "documents",
             large: "documents",
             status: '',
-            active: false
+            active: false,
+            selected: false
         },
         {
             id: 3,
@@ -25,15 +27,17 @@ const useTasksStatus =  () => {
             icon: "ie-html",
             large: "ie",
             status: 'open',
-            active: true
+            active: true,
+            selected: false
         },
         {
             id: 4,
             name: "Recycle Bin",
             icon: "bin-full",
             large: "bin-full",
-            status: 'open',
-            active: false
+            status: '',
+            active: false,
+            selected: false
         },
 
 

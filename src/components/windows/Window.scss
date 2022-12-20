@@ -14,12 +14,20 @@
     display: none;
     z-index: 0;
 
-    &.open {
+    &.open,
+    &.unfocused {
         display: block;
     }
 
     &.active {
         z-index: 1;
+    }
+
+    &.unfocused {
+        .window-toolbar {
+            background: linear-gradient(to right, #808080 0%, #B5B5B5 100%);
+            color: #C0C0C0;
+        }
     }
 
     .window-toolbar {
@@ -90,6 +98,7 @@
     }
 
     .window-wrapper {
+        height: 200px;
         padding: 10px;
 
         &.white {

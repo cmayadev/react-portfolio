@@ -1,33 +1,33 @@
-.file-icon {
+.desktop-icon {
+    color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
+    margin: 10px 10px 40px 10px;
     text-align: center;
-    width: 75px;
-    height: 75px;
+    height: 70px;
+    width: 115px;
 
     .icon-wrapper {
-        width: 32px;
-        height: 32px;
+        width: 48px;
+        height: 48px;
         position: relative;
         display: inline-block;
         vertical-align: bottom;
     }
 
     img {
-        height: 32px;
-        width: 32px;
+        height: 48px;
+        width: 48px;
+        margin-bottom: 5px;
+        image-rendering: pixelated;
     }
 
     .title {
-        font-size: 8pt;
-        line-height: 13px;
         margin-top: 5px;
-        padding: 1px;
         position: relative;
         text-align: center;
-        word-break: break-all;
+        width: 100%;
     }
 
     &.selected {
@@ -36,8 +36,6 @@
         }
         .title {
             background: #000080;
-            color: #FFFFFF;
-
             &:after {
                 content: "";
                 position: absolute;
@@ -56,13 +54,12 @@
         position: absolute;
         left: 0;
         top: 0;
-        width: 32px;
-        height: 32px;
+        width: 48px;
+        height: 48px;
         mask-image: var(--icon-image);
-        mask-size: 32px;
         -webkit-mask-image: var(--icon-image);
         background: #000080;
         opacity: 0.5;
     }
-
+    
 }

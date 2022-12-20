@@ -26,6 +26,19 @@ const Desktop = ({ display, onSetDisplay }) => {
         }
     };
 
+    const handleOutside = () => {
+        setTasks(state => {
+            const newState = structuredClone(state);
+            newState.map(function(task) {
+                task.selected = false;
+            });
+            return newState;
+        })
+        if (startMenu !== '') {
+            setStartMenu('');
+        };
+    };
+
     return ( 
         <>
             <div className="windows">
@@ -45,7 +58,7 @@ const Desktop = ({ display, onSetDisplay }) => {
 
                 <div className="desktop-icons">
                     {tasks.map(icon => (
-                        <DesktopIcon id={icon.id} label={icon.name} icon={icon.large} setTasks={setTasks} />
+                        <DesktopIcon id={icon.id} key={icon.id} label={icon.name} icon={icon.large} selected={icon.selected} setTasks={setTasks} onClickOutside={() => { handleOutside() }} />
                     ))}
                 </div>
 
