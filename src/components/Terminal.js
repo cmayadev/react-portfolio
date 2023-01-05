@@ -1,4 +1,6 @@
 import React from 'react';
+import Typewriter from "typewriter-effect";
+
 import './Terminal.css'
 
 const getYear = () => {
@@ -20,7 +22,18 @@ const Terminal = () => {
                         <span>Copyright © {getYear()} Cristian Maya. Programado con ReactJS.</span>
                     </div>
                     <p>Diseño inspirado en Visual Studio Code.</p>
-                    <p>PS C:\react-portfolio></p>
+                    <p>
+                        PS C:\react-portfolio>
+                        <Typewriter
+                            options={{
+                                cursor: '█',
+                                strings: [''],
+                                autoStart: true,
+                                loop: true,
+                            }}
+                        />
+                    </p>
+                    
                 </div>
             </div>
         </section>

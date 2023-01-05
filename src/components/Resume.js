@@ -31,7 +31,7 @@ const Resume = () => {
                     </div>
                     <div className="col-lg-5 col-md-5 mt-4 pt-2 mt-sm-0 pt-sm-0">
                         <div>
-                            <img src="about/portrait.png" alt="Cmaya Portrait" className="img-fluid m-auto position-relative" />
+                            <img src="about/portrait.webp" alt="Cmaya Portrait" className="img-fluid m-auto position-relative" />
                         </div>
                     </div>
                 </div>

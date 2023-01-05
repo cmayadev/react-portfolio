@@ -20,7 +20,7 @@ const About = () => {
                 <div className="row">
                     <div className="col-lg-5">
                         <div className="thumbnail">
-                            <img src="about/cmaya-about.jpg" alt="Cmaya About" />
+                            <img src="about/cmaya-about.webp" alt="Cmaya About" />
                         </div>
                     </div>
                     <div className="col-lg-7">
