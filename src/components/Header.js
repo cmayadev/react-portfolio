@@ -78,7 +78,7 @@ const Header = () => {
                                     offset={-90}
                                     duration={500}
                                     >
-                                        <img width="15px" alt="js-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png" />
+                                        <img width="15px" alt="js-logo" src="tech/javascript.svg" />
                                     Inicio.js
                                 </Link>
                             </li>
@@ -93,7 +93,7 @@ const Header = () => {
                                     offset={-70}
                                     duration={500}
                                     >
-                                        <img width="15px" alt="js-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png" />
+                                        <img width="15px" alt="js-logo" src="tech/javascript.svg" />
                                     Sobre mí.js
                                 </Link>
                             </li>
@@ -108,7 +108,7 @@ const Header = () => {
                                     offset={-70}
                                     duration={500}
                                     >
-                                        <img width="15px" alt="js-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png" />
+                                        <img width="15px" alt="js-logo" src="tech/javascript.svg" />
                                     Conocimientos.js
                                 </Link>
                             </li>
@@ -123,7 +123,7 @@ const Header = () => {
                                     offset={-70}
                                     duration={500}
                                     >
-                                        <img width="15px" alt="js-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png" />
+                                        <img width="15px" alt="js-logo" src="tech/javascript.svg" />
                                     Experiencia.js
                                 </Link>                        
                             </li>
@@ -138,7 +138,7 @@ const Header = () => {
                                     offset={-70}
                                     duration={500}
                                     >
-                                        <img width="15px" alt="js-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png" />
+                                        <img width="15px" alt="js-logo" src="tech/javascript.svg" />
                                     Contacto.js
                                 </Link> 
                             </li>
