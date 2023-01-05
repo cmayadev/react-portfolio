@@ -1,4 +1,9 @@
 import React from 'react';
+
+import Social from './Social';
+
+import rrss from '../api/rrss.json';
+
 import './Contact.css';
 
 const Contact = () => {
@@ -25,26 +30,11 @@ const Contact = () => {
                         </div>
                         <div>
                             <ul>
-                                <li>
-                                    <a href="https://www.linkedin.com/in/cmayadev/" title="LinkedIn" target="_blank" rel="noreferrer">
-                                        <img src="socials/linkedin.svg" alt="LinkedIn" width="30px" height="30px" />
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/nejima/" title="Instagram" target="_blank" rel="noreferrer">
-                                        <img src="socials/instagram.svg" alt="Instagram" width="30px" height="30px" />
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://github.com/cmayadev" title="GitHub" target="_blank" rel="noreferrer">
-                                        <img src="socials/github.svg" alt="GitHub" width="30px" height="30px" />
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://twitter.com/NejimaErland" title="Twitter" target="_blank" rel="noreferrer">
-                                        <img src="socials/twitter.svg" alt="Twitter" width="30px" height="30px" />
-                                    </a>
-                                </li>
+                                { 
+                                    rrss.map((social) =>
+                                        <Social social={social} />
+                                    )
+                                }
                             </ul>
                         </div>
                     </div>

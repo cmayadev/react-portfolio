@@ -1,0 +1,22 @@
+[
+    {
+        "title": "LinkedIn",
+        "slug": "linkedin",
+        "link": "https://www.linkedin.com/in/cmayadev/"
+    },
+    {
+        "title": "Instagram",
+        "slug": "instagram",
+        "link": "https://www.instagram.com/nejima/"
+    },
+    {
+        "title": "GitHub",
+        "slug": "github",
+        "link": "https://github.com/cmayadev"
+    },
+    {
+        "title": "Twitter",
+        "slug": "twitter",
+        "link": "https://twitter.com/NejimaErland"
+    }
+]
