@@ -17,7 +17,7 @@ const Job = (props) => {
                 <p className="job-description">{description}</p>
                 <p className='job-skills'>
                     {
-                        skills && skills.map((skill, i) => <span>{skill}</span>)
+                        skills && skills.map((skill, i) => <span key={skill}>{skill}</span>)
                     }
                 </p>
             </div>

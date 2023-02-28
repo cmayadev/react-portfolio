@@ -18,25 +18,25 @@ const Skills = () => {
                     <div className="group">
                         <h6>Lenguajes</h6>
                         <div className="grid">
-                            { skills.map((skill) => skill.type === "language" ? <Tech skill={skill} /> : '') }
+                            { skills.map((skill) => skill.type === "language" ? <Tech key={skill.title} skill={skill} /> : '') }
                         </div>
                     </div>
                     <div className="group">
                         <h6>Frameworks</h6>
                         <div className="grid">
-                            { skills.map((skill) => skill.type === "framework" ? <Tech skill={skill} /> : '') }
+                            { skills.map((skill) => skill.type === "framework" ? <Tech key={skill.title} skill={skill} /> : '') }
                         </div>
                     </div>      
                     <div className="group">
                         <h6>Bases de Datos</h6>
                         <div className="grid">
-                            { skills.map((skill) => skill.type === "bd" ? <Tech skill={skill} /> : '') }
+                            { skills.map((skill) => skill.type === "bd" ? <Tech key={skill.title} skill={skill} /> : '') }
                         </div>
                     </div> 
                     <div className="group">
                         <h6>Herramientas</h6>
                         <div className="grid">
-                            { skills.map((skill) => skill.type === "tool" ? <Tech skill={skill} /> : '') }
+                            { skills.map((skill) => skill.type === "tool" ? <Tech key={skill.title} skill={skill} /> : '') }
                         </div>
                     </div>
                 </div>

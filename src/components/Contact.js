@@ -32,7 +32,7 @@ const Contact = () => {
                             <ul>
                                 { 
                                     rrss.map((social) =>
-                                        <Social social={social} />
+                                        <Social key={social.title} social={social} />
                                     )
                                 }
                             </ul>

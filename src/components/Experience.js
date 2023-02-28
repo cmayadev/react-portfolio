@@ -18,7 +18,7 @@ const Experience = () => {
                     <div className="timeline">
                         {
                             jobs.map((job) =>
-                                <Job job={job} />
+                                <Job key={job.company} job={job} />
                             )
                         }
                     </div>

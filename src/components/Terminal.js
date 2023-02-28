@@ -18,11 +18,11 @@ const Terminal = () => {
                 </div>
                 <div className="terminal-content">
                     <div>
-                        <span>Cmaya Portfolio</span>
+                        <span>Cmayadev Portfolio</span>
                         <span>Copyright © {getYear()} Cristian Maya. Programado con ReactJS.</span>
                     </div>
                     <p>Diseño inspirado en Visual Studio Code.</p>
-                    <p>
+                    <div>
                         PS C:\react-portfolio>
                         <Typewriter
                             options={{
@@ -32,7 +32,7 @@ const Terminal = () => {
                                 loop: true,
                             }}
                         />
-                    </p>
+                    </div>
                     
                 </div>
             </div>
