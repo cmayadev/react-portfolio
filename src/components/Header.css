@@ -13,6 +13,7 @@
     line-height: 35px;
     text-align: center;
     display: flex;
+    position: relative;
 }
 
 .appTitle {
@@ -23,6 +24,9 @@
 
 .appControls {
     display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .appMinimize,
@@ -205,6 +209,10 @@
     }
 }
 @media (max-width: 991px) {
+
+    .appControls {
+        display: none;
+    }
 
     .navbar {
         padding: 0 15px;

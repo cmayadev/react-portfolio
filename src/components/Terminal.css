@@ -28,7 +28,9 @@
     margin-bottom: 30px;
 }
 
-.terminal-content span, p, div {
+.terminal-content span, 
+.terminal-content p, 
+.terminal-content div {
     display: block;
     color: #E7E7E7;
     font-size: 13px;
@@ -45,6 +47,7 @@
 }
 
 .terminal-content .Typewriter {
+    display: inline;
     margin-left: 5px;
 }
 
