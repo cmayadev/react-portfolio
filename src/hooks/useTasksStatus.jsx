@@ -10,7 +10,8 @@ const useTasksStatus =  () => {
             large: "my-pc",
             status: '',
             active: false,
-            selected: false
+            selected: false,
+            desktop: true
         },
         {
             id: 2,
@@ -19,7 +20,8 @@ const useTasksStatus =  () => {
             large: "documents",
             status: '',
             active: false,
-            selected: false
+            selected: false,
+            desktop: true
         },
         {
             id: 3,
@@ -28,7 +30,8 @@ const useTasksStatus =  () => {
             large: "ie",
             status: 'open',
             active: true,
-            selected: false
+            selected: false,
+            desktop: true
         },
         {
             id: 4,
@@ -37,7 +40,19 @@ const useTasksStatus =  () => {
             large: "bin-full",
             status: '',
             active: false,
-            selected: false
+            selected: false,
+            desktop: true
+        },
+        {
+            id: 5,
+            name: "Windows Update",
+            type: "update",
+            icon: "windows-update",
+            large: "windows-update",
+            status: '',
+            active: false,
+            selected: false,
+            desktop: true
         },
 
 

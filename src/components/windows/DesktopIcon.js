@@ -45,6 +45,7 @@ const DesktopIcon = (props) => {
     };
 
     useEffect(() => {
+        
         const handleClickOutside = (event) => {
             if (ref.current && !ref.current.contains(event.target)) {
                 onClickOutside && onClickOutside();

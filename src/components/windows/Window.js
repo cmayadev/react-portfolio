@@ -50,7 +50,7 @@ const Window = (props) => {
     };
 
     return ( 
-        <Draggable nodeRef={nodeRef} position={position} onStop={(e, data) => setPosition({ x: data.lastX, y: data.lastY })}>
+        <Draggable nodeRef={nodeRef} position={position} onStop={(e, data) => setPosition({ x: data.lastX, y: data.lastY })} onStart={() => handleClick(id)}>
             <div ref={nodeRef} className={active ? 'window ' + status + ' active' : 'window ' + status} onClick={() => handleClick(id)}>
                 <div className="window-toolbar">   
                     <div className="window-title">{title}</div>   
@@ -59,7 +59,7 @@ const Window = (props) => {
                         { type !== 'alert' && <div className="window-button window-minimize" onClick={() => handleStatus(id, 'minimized')}></div> }
                     </div>        
                 </div>
-                { type !== 'alert' &&
+                { !type &&
                     <div className="options line">
                         <div className="item">File</div>
                         <div className="item">Edit</div>
@@ -69,7 +69,7 @@ const Window = (props) => {
                         <div className="item">Help</div>
                     </div>
                 }
-                <div className="window-wrapper white">
+                <div className={`window-wrapper ${type === 'update' ? 'update' : 'white'}`}>
                     
                     {(() => {
                         switch (title) {
@@ -94,6 +94,19 @@ const Window = (props) => {
                                 <ContentIcon name="main.css" icon="file" />
                                 <ContentIcon name="main.old.css" icon="file" />
                                 <ContentIcon name="php.ini" icon="ini" />
+                            </>
+                        case 'Windows Update':
+                            return <>
+                                <div className="update-wrapper">
+                                    <img className="update-img" src="icons/update.gif" alt="Windows Update" />
+                                    <div className="title">Intall progress</div>
+                                    <div id="install-bar">
+                                        
+                                    </div>
+                                    <div className="window-actions">
+                                        <button className="window-action-button">Cancel</button>
+                                    </div>
+                                </div>
                             </>
                         default:
                             return null

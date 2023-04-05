@@ -14,6 +14,18 @@ const Desktop = ({ display, onSetDisplay }) => {
     const [startMenu, setStartMenu] = useState();
     const [tasks, setTasks] = useTasksStatus();
 
+    const handleDesktop = () => {
+        setTasks(state => {
+            const newState = structuredClone(state);
+            newState.map(function(task) {
+                if(task.status === 'open') {
+                    task.status = 'minimized';
+                }
+            });
+            return newState;
+        })
+    };
+
     const handleVisualButton = useCallback(event => {
         onSetDisplay('portfolio')
       }, [onSetDisplay])
@@ -50,6 +62,7 @@ const Desktop = ({ display, onSetDisplay }) => {
                         id={window.id}
                         key={window.id}
                         title={window.name}
+                        type={window.type}
                         status={window.status} 
                         active={window.active}
                         setTasks={setTasks}
@@ -57,9 +70,9 @@ const Desktop = ({ display, onSetDisplay }) => {
                 ))}
 
                 <div className="desktop-icons">
-                    {tasks.map(icon => (
+                    {tasks.map((icon) => icon.desktop === true && 
                         <DesktopIcon id={icon.id} key={icon.id} label={icon.name} icon={icon.large} selected={icon.selected} setTasks={setTasks} onClickOutside={() => { handleOutside() }} />
-                    ))}
+                    )}
                 </div>
 
                 <div id="toolbar">
@@ -101,7 +114,7 @@ const Desktop = ({ display, onSetDisplay }) => {
 
                         <div className="toolbar-separator"></div>
 
-                        <button className="toolbar-icon desktop"></button>
+                        <button className="toolbar-icon desktop" onClick={() => handleDesktop()}></button>
                         <button className="toolbar-icon ie"></button>
                         <button className="toolbar-icon outlook"></button>
 

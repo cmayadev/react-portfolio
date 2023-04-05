@@ -109,12 +109,23 @@
             margin-top: 2px;
         }
 
+        &.gray {
+            background: #c0c0c0;
+            padding: 1rem;
+            box-sizing: border-box;
+            display: flex;
+            margin-top: 2px;    
+        }
+
         .window-content {
             padding: 15px;
             border-top: none;
         }
 
         .window-actions {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
             margin-top: 10px;
             overflow: hidden;
         }
@@ -124,13 +135,34 @@
             border-top-color: #fff;
             border-left-color: #fff;
             background: #c0c0c0;
+            line-height: 24px;
+            height: 27px;
             width: 75px;
             text-align: center;
-            padding: 5px 0;
+
             float: right;
             margin-left: 5px;
+
+            &:active {
+                border-top: 2px solid #000;
+                border-left: 2px solid #000;
+                border-right: 2px solid #efefef;
+                border-bottom: 2px solid #efefef;
+            }
+
         }
 
     }
 
+}
+
+.update-wrapper {
+    .title {
+        font-size: 15px;
+        margin: 1rem 0 0 0;
+    }
+}
+.update-img {
+    height: 65px;
+    width: 20rem;
 }
