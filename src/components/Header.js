@@ -20,7 +20,10 @@ const Header = () => {
 
   useEffect(() => {
     const handleActiveLi = () => {
-      const activeLiElement = document.querySelector(".nav-item:has(.active)");
+      const navItems = document.querySelectorAll(".nav-item");
+      const activeLiElement = Array.from(navItems).find((element) =>
+        element.querySelector(":scope .active")
+      );
       if (activeLiElement) {
         const newActiveLi = activeLiElement.getAttribute("data-name");
         if (newActiveLi !== lastActiveLi) {
