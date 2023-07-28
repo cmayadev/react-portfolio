@@ -1,8 +1,8 @@
 .job-container {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    margin-bottom: 20px;
-    padding-bottom: 8px;
+    margin-bottom: 32px;
+    padding-bottom: 16px;
     border-bottom: 1px solid #545454;
 
     &:last-child {
@@ -16,34 +16,62 @@
 }
 
 .job-title {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     font-size: 24px;
-    font-weight: 600;
-    margin-bottom: -4px;
+    font-weight: 500;
+}
+
+.job-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.job-header img {
+    border-radius: 8px;
+    width: 56px;
+}
+
+.job-body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .job-description {
+    color: #e3e3e3;
     font-size: 14px;
-    margin-bottom: 20px;
 }
 
-.job-company {
-    display: block;
+.job-position {
+    font-weight: 400;
     font-size: 16px;
-    margin-bottom: 12px;
 }
 
 .job-skills {
-    margin-bottom: 16px;
-    span {
-        margin-left: 8px;
-        margin-right: 8px;
-        text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    font-size: 13px;
+    font-weight: 500;
+    gap: 16px;
+    text-transform: uppercase;
 
-        &:first-child {
-            margin-left: 0;
-        }
-    }
+    .js { color: #F59E0B; }
+    .html { color: #E34C26; }
+    .css { color: #3C99DC; }
+    .php { color: #F05340; }
+    .mysql { color: #00758F; }
+    .react { color: #61DBFB; }
+    .vue { color: #41B883; }
+    .elastic { color: #d7689d; }
+    .livewire { color: #FB70A9; }
+    .wp { color: #21759B; }
+    .joomla { color: #F44321; }
+    .java { color: #ed1d25; }
+    .pli { color: #CCD6E0; }
+    .cobol { color: #bcd2e2; }
 }
 
 @media (max-width: 990px) {

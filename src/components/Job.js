@@ -1,28 +1,38 @@
-import React from 'react'
+import React from "react";
 
-import './Job.scss';
+import "./Job.scss";
 
 const Job = (props) => {
+  const { from, to, company, position, description, actually, skills } =
+    props.job;
 
-    const { from, to, company, position, description, actually, skills } = props.job;
-    
-    return ( 
-        <div className="job-container">
-            <div className="job-date">
-                <span>{from} - {actually ? 'Actualmente' : to}</span>
-            </div>
-            <div className="job-body">
-                <span className="job-title">{position}</span>
-                <span className="job-company">{company}</span>
-                <p className="job-description">{description}</p>
-                <p className='job-skills'>
-                    {
-                        skills && skills.map((skill, i) => <span key={skill}>{skill}</span>)
-                    }
-                </p>
-            </div>
+  return (
+    <div className="job-container">
+      <div className="job-date">
+        <span>
+          {from} - {actually ? "Actualmente" : to}
+        </span>
+      </div>
+      <div className="job-body">
+        <div className="job-header">
+          <img src={`logos/${company}.jpg`} alt={company} />
+          <div className="job-title">
+            <div>{company}</div>
+            <span className="job-position">{position}</span>
+          </div>
         </div>
-    );
-}
+        <div className="job-description">{description}</div>
+        <p className="job-skills">
+          {skills &&
+            skills.map((skill, i) => (
+              <span className={skill.abv} key={skill.name}>
+                {skill.name}
+              </span>
+            ))}
+        </p>
+      </div>
+    </div>
+  );
+};
 
 export default Job;

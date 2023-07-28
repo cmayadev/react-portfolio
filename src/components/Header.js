@@ -1,155 +1,150 @@
-import React, { useState, useEffect } from 'react'
-import { Link } from 'react-scroll'
-import Toolbar from './Toolbar'
-import './Header.css'
+import React, { useState, useEffect } from "react";
+import { Link } from "react-scroll";
+import Toolbar from "./Toolbar";
+import "./Header.css";
+import File from "./File";
 
 const Header = () => {
+  const [navbar, setNavbar] = useState(false);
+  const [menu, setMenu] = useState(false);
+  const [activeLi, setActiveLi] = useState("Resume");
+  const [lastActiveLi, setLastActiveLi] = useState("Resume");
 
-    const [navbar, setNavbar] = useState(false);
-    const [menu, setMenu] = useState(false);
-    const [scroll, setScroll] = useState(0);
-
-    const changeBackground = () => {
-        if(window.scrollY >= 40) {
-            setNavbar(true);
-        } else {
-            setNavbar(false);
-        }
+  const changeBackground = () => {
+    if (window.scrollY >= 40) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
     }
+  };
 
-    useEffect(() => {
-
-        let progressBarHandler = () => {
-            
-            const totalScroll = document.documentElement.scrollTop;
-            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scroll = `${totalScroll / windowHeight}`;
-    
-            setScroll(scroll);
+  useEffect(() => {
+    const handleActiveLi = () => {
+      const activeLiElement = document.querySelector(".nav-item:has(.active)");
+      if (activeLiElement) {
+        const newActiveLi = activeLiElement.getAttribute("data-name");
+        if (newActiveLi !== lastActiveLi) {
+          setActiveLi(newActiveLi);
+          setLastActiveLi(newActiveLi);
         }
-    
-        window.addEventListener('scroll', () => {
-            changeBackground();
-            progressBarHandler();
-        });
-    
-        return () => window.removeEventListener("scroll", progressBarHandler);
+      }
+    };
 
-    });
+    const handleScroll = () => {
+      changeBackground();
+      handleActiveLi();
+    };
 
-    return ( 
+    window.addEventListener("scroll", handleScroll);
 
-        <div>
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastActiveLi]);
 
-            <Toolbar />
+  return (
+    <header>
+      <Toolbar />
 
-            <nav className={navbar || menu ? 'navbar navbar-expand-lg fixed-top navbar-custom navbar-light sticky white' : 'navbar navbar-expand-lg fixed-top navbar-custom navbar-light sticky'}>
-    
-                <div id="progressBarContainer">
-                    <div id="progressBar" style={{transform: `scale(${scroll}, 1)`, opacity: `${scroll}`}} />
-                </div>
-    
-                <Link
-                    href="#"
-                    to="resume"
-                    className={`back-top text-replace ${navbar ? '' : 'hidden'}`}
-                    smooth={true}
-                    offset={-70}
-                    duration={500}
-                    >
-                    Top
-                </Link>
-                
-                <div className="container">
-                    <Link className="logo" href="#" to="resume" smooth={true} offset={-70} duration={500}>
-                        <img src="cmayadev.png" alt="cmayadev-logo" />
-                    </Link>
-                    <button onClick={() => setMenu(!menu)} className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded={menu ? 'true' : 'false'} aria-label="Toggle navigation"><span className="icon-bar"></span><span className="icon-bar"></span><span className="icon-bar"></span></button>
-                    <div className={`navbar-collapse offset collapse ${menu ? 'show' : ''}`} id="navbarCollapse">
-                        <ul id="navbar-navlist" className="navbar-nav ml-auto">
-                            <li className="nav-item">
-                                <Link
-                                    href="#resume"
-                                    to="resume"
-                                    activeClass="active"
-                                    className="nav-link"
-                                    spy={true}
-                                    smooth={true}
-                                    offset={-90}
-                                    duration={500}
-                                    >
-                                        <img width="15px" alt="js-logo" src="tech/javascript.svg" />
-                                    Inicio.js
-                                </Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link
-                                    href="#about"
-                                    to="about"
-                                    activeClass="active"
-                                    className="nav-link"
-                                    spy={true}
-                                    smooth={true}
-                                    offset={-70}
-                                    duration={500}
-                                    >
-                                        <img width="15px" alt="js-logo" src="tech/javascript.svg" />
-                                    Sobre mí.js
-                                </Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link
-                                    href="#skills"
-                                    to="skills"
-                                    activeClass="active"
-                                    className="nav-link"
-                                    spy={true}
-                                    smooth={true}
-                                    offset={-70}
-                                    duration={500}
-                                    >
-                                        <img width="15px" alt="js-logo" src="tech/javascript.svg" />
-                                    Conocimientos.js
-                                </Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link
-                                    href="#experience"
-                                    to="experience"
-                                    activeClass="active"
-                                    className="nav-link"
-                                    spy={true}
-                                    smooth={true}
-                                    offset={-70}
-                                    duration={500}
-                                    >
-                                        <img width="15px" alt="js-logo" src="tech/javascript.svg" />
-                                    Experiencia.js
-                                </Link>                        
-                            </li>
-                            <li className="nav-item">
-                                <Link
-                                    href="#contact"
-                                    to="contact"
-                                    activeClass="active"
-                                    className="nav-link"
-                                    spy={true}
-                                    smooth={true}
-                                    offset={-70}
-                                    duration={500}
-                                    >
-                                        <img width="15px" alt="js-logo" src="tech/javascript.svg" />
-                                    Contacto.js
-                                </Link> 
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+      <nav
+        className={
+          navbar || menu
+            ? "navbar navbar-expand-lg fixed-top navbar-custom navbar-light sticky white"
+            : "navbar navbar-expand-lg navbar-custom navbar-light sticky"
+        }
+      >
+        <Link
+          href="#"
+          to="resume"
+          className={`back-top text-replace ${navbar ? "" : "hidden"}`}
+          smooth={true}
+          offset={-70}
+          duration={500}
+        >
+          Top
+        </Link>
 
+        <div className="container">
+          <Link
+            className="logo"
+            href="#"
+            to="resume"
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            <img src="cmayadev.png" alt="cmayadev-logo" />
+          </Link>
+          <button
+            onClick={() => setMenu(!menu)}
+            className="navbar-toggler collapsed"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded={menu ? "true" : "false"}
+            aria-label="Toggle navigation"
+          >
+            <span className="icon-bar"></span>
+            <span className="icon-bar"></span>
+            <span className="icon-bar"></span>
+          </button>
+          <div
+            className={`navbar-collapse offset collapse ${menu ? "show" : ""}`}
+            id="navbarCollapse"
+          >
+            <ul id="navbar-navlist" className="navbar-nav ml-auto">
+              <File
+                props={{
+                  name: "Resume",
+                  to: "resume",
+                  ext: "js",
+                  text: "Inicio",
+                }}
+              />
+              <File
+                props={{
+                  name: "About",
+                  to: "about",
+                  ext: "js",
+                  text: "Sobre mí",
+                }}
+              />
+              <File
+                props={{
+                  name: "Skills",
+                  to: "skills",
+                  ext: "js",
+                  text: "Conocimientos",
+                }}
+              />
+              <File
+                props={{
+                  name: "Experience",
+                  to: "experience",
+                  ext: "js",
+                  text: "Experiencia",
+                }}
+              />
+              <File
+                props={{
+                  name: "Contact",
+                  to: "contact",
+                  ext: "js",
+                  text: "Contacto",
+                }}
+              />
+            </ul>
+          </div>
         </div>
-
-    );
-}
+      </nav>
+      <div className={`breadcrumbs ${navbar ? "fixed-breadcrumb" : ""}`}>
+        <div className="container">
+          src &gt; components &gt;{" "}
+          <img width="15px" alt={`js-logo`} src={`files/js.svg`} /> {activeLi}
+          .js
+        </div>
+      </div>
+    </header>
+  );
+};
 
 export default Header;

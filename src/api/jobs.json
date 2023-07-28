@@ -7,7 +7,26 @@
         "to": "Actualidad",
         "actually": true,
         "skills": [
-            "Laravel", "Javascript", "React", "MySQL", "ElasticSearch"
+            {
+                "name": "Laravel",
+                "abv": "php"
+            },
+            {
+                "name": "Javascript",
+                "abv": "js"
+            },
+            {
+                "name": "React",
+                "abv": "react"
+            },
+            {
+                "name": "MySQL",
+                "abv": "mysql"
+            },
+            {
+                "name": "ElasticSearch",
+                "abv": "elastic"
+            }
         ]
     },
     {
@@ -18,7 +37,22 @@
         "to": "Oct 2021",
         "actually": false,
         "skills": [
-            "Laravel", "Javascript", "MySQL"
+            {
+                "name": "Laravel",
+                "abv": "php"
+            },
+            {
+                "name": "Javascript",
+                "abv": "js"
+            },
+            {
+                "name": "Vue",
+                "abv": "vue"
+            },
+            {
+                "name": "MySQL",
+                "abv": "mysql"
+            }
         ]
     },
     {
@@ -29,7 +63,26 @@
         "to": "Mar 2021",
         "actually": false,
         "skills": [
-            "Laravel", "Javascript", "Livewire", "Vue"
+            {
+                "name": "Laravel",
+                "abv": "php"
+            },
+            {
+                "name": "Javascript",
+                "abv": "js"
+            },
+            {
+                "name": "Vue",
+                "abv": "vue"
+            },
+            {
+                "name": "Livewire",
+                "abv": "livewire"
+            },
+            {
+                "name": "MySQL",
+                "abv": "mysql"
+            }
         ]
     },
     {
@@ -40,7 +93,22 @@
         "to": "Dic 2019",
         "actually": false,
         "skills": [
-            "Symfony", "Javascript", "MySQL", "ElasticSearch"
+            {
+                "name": "Symfony",
+                "abv": "php"
+            },
+            {
+                "name": "Javascript",
+                "abv": "js"
+            },
+            {
+                "name": "MySQL",
+                "abv": "mysql"
+            },
+            {
+                "name": "ElasticSearch",
+                "abv": "elastic"
+            }
         ]
     },
     {
@@ -51,7 +119,18 @@
         "to": "Jul 2017",
         "actually": false,
         "skills": [
-            "PL/I", "Cobol", "Java"
+            {
+                "name": "PL/I",
+                "abv": "pli"
+            },
+            {
+                "name": "Cobol",
+                "abv": "cobol"
+            },
+            {
+                "name": "Java",
+                "abv": "java"
+            }
         ]
     },
     {
@@ -62,7 +141,26 @@
         "to": "Set 2007",
         "actually": false,
         "skills": [
-            "HTML", "CSS", "PHP", "WordPress", "Joomla"
+            {
+                "name": "HTML",
+                "abv": "html"
+            },
+            {
+                "name": "CSS",
+                "abv": "css"
+            },
+            {
+                "name": "PHP",
+                "abv": "php"
+            },
+            {
+                "name": "Joomla",
+                "abv": "joomla"
+            },
+            {
+                "name": "WordPress",
+                "abv": "wp"
+            }
         ]
     }
 ]

@@ -179,7 +179,7 @@ p {
     width: 40px;
     width: var(--cd-back-to-top-size);
     box-shadow: 0 0 10px rgb(0 0 0 / 5%);
-    background: url(./top-arrow.svg), #007acc;
+    background: url(./top-arrow.svg), #2f80ed;
     background-repeat: no-repeat;
     background-position: center;
     z-index: 9;
