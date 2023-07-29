@@ -1,0 +1,6 @@
+@use "../abstracts/sizes" as *;
+
+.navbar {
+  height: $navbar-height;
+  top: 0;
+}

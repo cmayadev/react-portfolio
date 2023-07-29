@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import Toolbar from "./Toolbar";
-import "./Header.css";
+import "./Header.scss";
 import File from "./File";
 
 const Header = () => {
@@ -75,7 +75,12 @@ const Header = () => {
             duration={500}
           >
             <picture>
-              <img src="cmayadev.png" alt="cmayadev-logo" />
+              <img
+                src="cmayadev.png"
+                alt="cmayadev-logo"
+                height="24px"
+                width="104px"
+              />
             </picture>
           </Link>
           <button
@@ -144,7 +149,13 @@ const Header = () => {
       <div className={`breadcrumbs ${navbar ? "fixed-breadcrumb" : ""}`}>
         <div className="container">
           src &gt; components &gt;{" "}
-          <img width="15px" alt={`js-logo`} src={`files/js.svg`} /> {activeLi}
+          <img
+            height="15px"
+            width="15px"
+            alt={`js-logo`}
+            src={`files/js.svg`}
+          />{" "}
+          {activeLi}
           .js
         </div>
       </div>

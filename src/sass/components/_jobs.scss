@@ -1,0 +1,116 @@
+@use "../abstracts/sizes" as *;
+
+.job-container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #545454;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.job-date {
+  color: #e3e3e3;
+  line-height: 36px;
+}
+
+.job-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.job-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  img {
+    border-radius: 8px;
+    width: $company-logo-size;
+  }
+}
+
+.job-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.job-description {
+  color: #e3e3e3;
+  font-size: 14px;
+}
+
+.job-position {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.job-skills {
+  display: flex;
+  flex-direction: row;
+  font-size: 13px;
+  font-weight: 500;
+  gap: 16px;
+  text-transform: uppercase;
+
+  .js {
+    color: #f59e0b;
+  }
+  .html {
+    color: #e34c26;
+  }
+  .css {
+    color: #3c99dc;
+  }
+  .php {
+    color: #f05340;
+  }
+  .mysql {
+    color: #00758f;
+  }
+  .react {
+    color: #61dbfb;
+  }
+  .vue {
+    color: #41b883;
+  }
+  .elastic {
+    color: #d7689d;
+  }
+  .livewire {
+    color: #fb70a9;
+  }
+  .wp {
+    color: #21759b;
+  }
+  .joomla {
+    color: #f44321;
+  }
+  .java {
+    color: #ed1d25;
+  }
+  .pli {
+    color: #ccd6e0;
+  }
+  .cobol {
+    color: #bcd2e2;
+  }
+}
+
+@media (max-width: 990px) {
+  .timeline {
+    margin-left: unset !important;
+    margin-top: 40px;
+  }
+
+  .job-container {
+    grid-template-columns: 1fr;
+  }
+}

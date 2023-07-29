@@ -1,7 +1,7 @@
 const Toolbar = () => {
   return (
     <div className="appName">
-      <img src="logo.png" alt="logo" />
+      <img src="logo.png" alt="dev-logo" height="32px" width="32px" />
       <div className="appTitle">react-porfolio - Maya Studio Code</div>
       <div className="appControls">
         <div className="appMinimize">

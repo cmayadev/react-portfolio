@@ -1,7 +1,5 @@
 import React from "react";
 
-import "./Job.scss";
-
 const Job = (props) => {
   const { from, to, company, position, description, actually, skills } =
     props.job;
@@ -15,7 +13,12 @@ const Job = (props) => {
       </div>
       <div className="job-body">
         <div className="job-header">
-          <img src={`logos/${company.toString().toLowerCase()}.jpg`} alt={company} />
+          <img
+            src={`logos/${company.toString().toLowerCase()}.jpg`}
+            alt={company}
+            height="56px"
+            width="56px"
+          />
           <div className="job-title">
             <div>{company}</div>
             <span className="job-position">{position}</span>

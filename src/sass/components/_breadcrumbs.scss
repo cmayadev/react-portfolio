@@ -1,0 +1,31 @@
+@use "../abstracts/tokens" as *;
+
+.breadcrumbs {
+  background-color: #1e1e1e;
+  color: #a4a4a4;
+  display: flex;
+  font-size: 12px;
+  align-items: center;
+  padding: 4px;
+}
+
+.breadcrumbs img {
+  margin-top: -2px;
+}
+
+.fixed-breadcrumb {
+  position: fixed;
+  top: $breadcrumb-top;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+@media (max-width: 991px) {
+  .breadcrumbs {
+    display: none;
+  }
+}
