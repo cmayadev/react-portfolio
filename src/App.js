@@ -1,5 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+
+import "./fonts/JetBrainsMono-VariableFont_wght.ttf";
+
 import Header from "./components/Header";
 import Resume from "./components/Resume";
 import About from "./components/About";

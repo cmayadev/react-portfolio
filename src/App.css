@@ -1,16 +1,7 @@
-:root {
-  --white: #fff;
-  --primary: #007bff;
-  --primary-800: #0056b3;
-  --cd-back-to-top-size: 52px;
-  --cd-back-to-top-margin: 40px;
-}
-
-@media screen and (max-width: 479px) {
-  :root {
-    --cd-back-to-top-size: 40px;
-    --cd-back-to-top-margin: 20px;
-  }
+@font-face {
+  font-family: "Regular"; /*Can be any text*/
+  src: local("JetBrains Mono Regular"),
+    url("./fonts/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
 }
 
 body {
@@ -152,24 +143,6 @@ p {
   left: 0;
 }
 
-@media (max-width: 767px) {
-  #progressBarContainer {
-    top: 0;
-  }
-}
-
-#progressBar {
-  background: #007acc;
-  transform-origin: top left;
-  transform: scale(0, 0);
-  opacity: 0;
-}
-
-#progressBarContainer,
-#progressBar {
-  height: 5px;
-}
-
 .back-top {
   position: fixed;
   border-radius: 5px;
@@ -205,4 +178,8 @@ p {
   color: transparent;
   text-indent: 100%;
   white-space: nowrap;
+}
+
+.terminal-content {
+  font-family: "JetBrains Mono Regular", "Courier New", monospace;
 }
