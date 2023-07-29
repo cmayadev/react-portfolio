@@ -1,10 +1,6 @@
 import React from "react";
 import "./Footer.css";
 
-const getYear = () => {
-  return new Date().getFullYear();
-};
-
 const Footer = () => {
   return (
     <footer>
@@ -163,7 +159,7 @@ const Footer = () => {
                 <line x1="12" y1="3" x2="12" y2="9" />
                 <line x1="12" y1="15" x2="12" y2="21" />
               </svg>{" "}
-              cmayadev, {getYear()}
+              cmayadev
             </div>
             <div className="exceed">UTF-8</div>
             <div className="exceed">CRLF</div>

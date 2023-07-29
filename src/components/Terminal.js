@@ -1,10 +1,6 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 
-const getYear = () => {
-  return new Date().getFullYear();
-};
-
 const Terminal = () => {
   return (
     <section className="section last">
