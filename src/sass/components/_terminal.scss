@@ -1,0 +1,72 @@
+.terminal-tabs {
+  position: absolute;
+  top: 25px;
+
+  span:hover {
+    color: #c1ccc1;
+  }
+}
+
+.terminal-tabs span {
+  color: #979797;
+  font-size: 12px;
+  margin-right: 30px;
+}
+
+.terminal-tabs span:first-child {
+  color: #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+  padding-bottom: 8px;
+}
+
+.terminal-content {
+  font-family: "JetBrains Mono Regular", "Courier New", monospace;
+  margin-top: -40px;
+}
+
+.terminal-content span,
+.terminal-content p,
+.terminal-content div {
+  color: #c1ccc1;
+  font-size: 13px;
+}
+
+.terminal-content p,
+.terminal-content div {
+  margin-bottom: 16px;
+}
+
+.terminal-cols {
+  display: flex;
+  max-width: 304px;
+  margin-left: 16px;
+
+  &:first-child {
+    margin-bottom: 0 !important;
+  }
+
+  a {
+    color: inherit;
+    cursor: text;
+  }
+
+  div {
+    flex: 1;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .terminal-content {
+    margin-top: 20px;
+  }
+}
+
+.terminal-content .Typewriter {
+  display: inline;
+  margin-left: 5px;
+}
+
+.terminal-content .Typewriter span {
+  display: inline-block;
+}

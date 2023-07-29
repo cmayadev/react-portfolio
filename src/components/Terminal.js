@@ -1,43 +1,57 @@
-import React from 'react';
+import React from "react";
 import Typewriter from "typewriter-effect";
 
-import './Terminal.css'
-
 const getYear = () => {
-    return new Date().getFullYear();
-}
+  return new Date().getFullYear();
+};
 
 const Terminal = () => {
-    return ( 
-        <section className="section last">
-            <div className="container">
-                <div className="terminal-tabs">
-                    <span className="">TERMINAL</span>
-                    <span className="">OUTPUT</span>
-                    <span className="">DEBUG CONSOLE</span>
-                </div>
-                <div className="terminal-content">
-                    <div>
-                        <span>Cmayadev Portfolio</span>
-                        <span>Copyright © {getYear()} Cristian Maya. Programado con ReactJS.</span>
-                    </div>
-                    <p>Diseño inspirado en Visual Studio Code.</p>
-                    <div>
-                        PS C:\react-portfolio>
-                        <Typewriter
-                            options={{
-                                cursor: '█',
-                                strings: [''],
-                                autoStart: true,
-                                loop: true,
-                            }}
-                        />
-                    </div>
-                    
-                </div>
+  return (
+    <section className="section last">
+      <div className="container">
+        <div className="terminal-tabs">
+          <span className="">TERMINAL</span>
+          <span className="">OUTPUT</span>
+          <span className="">DEBUG CONSOLE</span>
+        </div>
+        <div className="terminal-content">
+          <p className="text-status-success">Compiled successfully!</p>
+
+          <p>
+            You can now view <span className="fw-bold">react-portfolio</span> in
+            the browser.
+          </p>
+
+          <div className="terminal-cols">
+            <div>
+              <span className="fw-bold">Local</span>:
             </div>
-        </section>
-    );
-}
+            <div>
+              <a href="/">https://www.cmaya.dev</a>
+            </div>
+          </div>
+
+          <p>
+            Note that this project is build with React. <br /> Design by{" "}
+            <span className="text-status-info">Cristian Maya</span> inspired by{" "}
+            <span className="text-status-info">Visual Studio Code</span>.
+          </p>
+
+          <div>
+            PS C:\react-portfolio>
+            <Typewriter
+              options={{
+                cursor: "█",
+                strings: [""],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default Terminal;

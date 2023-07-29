@@ -1,14 +1,13 @@
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './components/Header';
-import Resume from './components/Resume';
-import About from './components/About';
-import Skills from './components/Skills';
-import Experience from './components/Experience';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import Terminal from './components/Terminal';
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import Header from "./components/Header";
+import Resume from "./components/Resume";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Experience from "./components/Experience";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import Terminal from "./components/Terminal";
 
 function App() {
   return (

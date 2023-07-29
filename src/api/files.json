@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Resume",
+        "to": "resume",
+        "ext": "js",
+        "text": "Inicio"
+    },
+    {
+        "name": "About",
+        "to": "about",
+        "ext": "js",
+        "text": "Sobre mí"
+    },
+    {
+        "name": "Skills",
+        "to": "skills",
+        "ext": "js",
+        "text": "Conocimientos"
+    },
+    {
+        "name": "Experience",
+        "to": "experience",
+        "ext": "js",
+        "text": "Experiencia"
+    },
+    {
+        "name": "Contact",
+        "to": "contact",
+        "ext": "js",
+        "text": "Contacto"
+    }
+]
