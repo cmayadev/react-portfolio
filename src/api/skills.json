@@ -10,6 +10,11 @@
         "type": "language"
     },
     {
+        "title": "SASS",
+        "icon": "tech/sass.png",
+        "type": "language"
+    },
+    {
         "title": "JavaScript",
         "icon": "tech/js.png",
         "type": "language"
@@ -57,11 +62,16 @@
     {
         "title": "ElasticSearch",
         "icon": "tech/elastic.png",
-        "type" : "bd"
+        "type": "bd"
+    },
+    {
+        "title": "MongoDB",
+        "icon": "tech/mongo.png",
+        "type": "bd"
     },
     {
         "title": "MySQL",
         "icon": "tech/mysql.png",
-        "type" : "bd"
+        "type": "bd"
     }
 ]

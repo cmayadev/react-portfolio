@@ -1,47 +1,48 @@
 .resume {
-    background: #1E1E1E;
-    font-weight: 500;
-    line-height: normal;
-    padding: 200px 0;
+  background: #1e1e1e;
+  font-weight: 500;
+  line-height: normal;
+  padding: 200px 0;
 }
 
 .resume h3 {
-    color: #D4D4D4;
+  color: #d4d4d4;
 }
 
 .resume h1 {
-    color: #D4D4D4;
-    font-size: calc(22px + (70 - 22) * ((100vw - 300px) / (1920 - 300)));
-    margin-top: -20px;
-    margin-bottom: 5px;
-    line-height: normal;
+  color: #d4d4d4;
+  font-size: calc(22px + (70 - 22) * ((100vw - 300px) / (1920 - 300)));
+  margin-top: -20px;
+  margin-bottom: 5px;
+  line-height: normal;
 }
 
 .resume a {
-    font-size: calc(13px + (14 - 13) * ((100vw - 300px) / (1920 - 300)));
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    line-height: normal;
+  font-size: calc(13px + (14 - 13) * ((100vw - 300px) / (1920 - 300)));
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .resume .font-large {
-    color: #D4D4D4;
-    font-size: 120%;
+  color: #d4d4d4;
+  font-size: 120%;
 }
 
 .header-sub-text p {
-    font-size: calc(13px + (16 - 13) * ((100vw - 300px) / (1920 - 300)));
-    font-weight: 300;
+  font-size: calc(13px + (16 - 13) * ((100vw - 300px) / (1920 - 300)));
+  font-weight: 300;
 }
 
 .job {
-    color: #D4D4D4;
+  color: #d4d4d4;
+  font-size: 1.25rem;
 }
 
 .header-sub-text {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .Typewriter {
-    display: inline;
+  display: inline;
 }
