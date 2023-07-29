@@ -74,7 +74,9 @@ const Header = () => {
             offset={-70}
             duration={500}
           >
-            <img src="cmayadev.png" alt="cmayadev-logo" />
+            <picture>
+              <img src="cmayadev.png" alt="cmayadev-logo" />
+            </picture>
           </Link>
           <button
             onClick={() => setMenu(!menu)}
