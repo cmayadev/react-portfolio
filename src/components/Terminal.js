@@ -3,7 +3,7 @@ import Typewriter from "typewriter-effect";
 
 const Terminal = () => {
   return (
-    <section className="section last">
+    <section className="section">
       <div className="container">
         <div className="terminal-tabs">
           <span className="">TERMINAL</span>
@@ -34,7 +34,7 @@ const Terminal = () => {
           </p>
 
           <div>
-            PS C:\react-portfolio>
+            PS C:\react-portfolio{`>`}
             <Typewriter
               options={{
                 cursor: "█",

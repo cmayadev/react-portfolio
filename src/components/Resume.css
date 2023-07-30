@@ -1,26 +1,27 @@
 .resume {
   background: #1e1e1e;
+  color: #d4d4d4;
   font-weight: 500;
   line-height: normal;
   padding: 200px 0;
+  font-family: "Poppins", sans-serif;
 }
 
-.resume h3 {
-  color: #d4d4d4;
+.resume-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  gap: 56px;
+}
+
+.greetings {
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .resume h1 {
-  color: #d4d4d4;
   font-size: calc(22px + (70 - 22) * ((100vw - 300px) / (1920 - 300)));
-  margin-top: -20px;
   margin-bottom: 5px;
-  line-height: normal;
-}
-
-.resume a {
-  font-size: calc(13px + (14 - 13) * ((100vw - 300px) / (1920 - 300)));
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
   line-height: normal;
 }
 
@@ -35,7 +36,6 @@
 }
 
 .job {
-  color: #d4d4d4;
   font-size: 1.25rem;
 }
 
@@ -45,4 +45,20 @@
 
 .Typewriter {
   display: inline;
+}
+
+@media (max-width: 768px) {
+  .resume-content {
+    grid-template-columns: 1fr;
+  }
+  .greetings {
+    font-size: 1.25rem;
+  }
+  .resume h1 {
+    font-size: 3rem;
+  }
+  .resume img {
+    margin: 0 auto;
+    width: 75%;
+  }
 }

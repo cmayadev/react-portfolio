@@ -149,6 +149,15 @@
   transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
 }
 
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse {
+    display: -webkit-flex !important;
+    display: flex !important;
+    -webkit-flex-basis: auto;
+    flex-basis: auto;
+  }
+}
+
 .navbar-toggler {
   border: 0;
   padding: 0;
@@ -191,8 +200,8 @@
 }
 
 @media (max-width: 767px) {
-  .navbar .navbar-toggler {
-    height: 70px;
+  .appName {
+    display: none;
   }
 }
 @media (max-width: 991px) {

@@ -1,4 +1,20 @@
 /* Set core body defaults */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
@@ -15,6 +31,11 @@ img,
 picture {
   max-width: 100%;
   display: block;
+}
+
+img,
+svg {
+  vertical-align: middle;
 }
 
 /* Inherit fonts for inputs and buttons */

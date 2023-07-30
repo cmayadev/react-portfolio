@@ -46,22 +46,22 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`navbar navbar-expand-lg navbar-custom navbar-light sticky ${
+        className={`navbar navbar-custom navbar-light sticky ${
           menu || navbar ? "fixed-top white" : ""
         }`}
       >
-        <Link
-          href="#"
-          to="resume"
-          className={`back-top text-replace ${navbar ? "" : "hidden"}`}
-          smooth={true}
-          offset={-70}
-          duration={500}
-        >
-          Top
-        </Link>
+        <div className="navbar-content">
+          <Link
+            href="#"
+            to="resume"
+            className={`back-top text-replace ${navbar ? "" : "hidden"}`}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            Top
+          </Link>
 
-        <div className="container">
           <Link
             className="logo"
             href="#"

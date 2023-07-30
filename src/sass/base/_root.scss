@@ -6,17 +6,27 @@
   --primary-800: #0056b3;
   --cd-back-to-top-size: 52px;
   --cd-back-to-top-margin: 40px;
+  --cd-back-to-top-bottom: 48px;
   --section-spacing: 3.5rem;
   @each $color, $shade in $colors {
     @each $prop, $value in $shade {
       --clr-#{$color}-#{$prop}: #{$value};
     }
   }
+
+  @media (min-width: $mobile-size) {
+    --container-width: #{$mobile-size};
+  }
+
+  @media (min-width: $desktop-size) {
+    --container-width: #{$desktop-size};
+  }
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 767px) {
   :root {
     --cd-back-to-top-size: 40px;
-    --cd-back-to-top-margin: 20px;
+    --cd-back-to-top-margin: 24px;
+    --cd-back-to-top-bottom: 16px;
   }
 }
