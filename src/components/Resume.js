@@ -32,8 +32,8 @@ const Resume = () => {
               <img
                 src="about/portrait.webp"
                 alt="Cmaya Portrait"
-                height="auto"
-                width="auto"
+                height="100%"
+                width="100%"
               />
             </picture>
           </div>

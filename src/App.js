@@ -1,7 +1,3 @@
-import "./App.css";
-
-import "./fonts/JetBrainsMono-VariableFont_wght.ttf";
-
 import Header from "./components/Header";
 import Resume from "./components/Resume";
 import About from "./components/About";
@@ -10,6 +6,8 @@ import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Terminal from "./components/Terminal";
+
+import "./App.css";
 
 function App() {
   return (
