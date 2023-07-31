@@ -1,0 +1,37 @@
+.business-card {
+  background-color: #fff;
+  background-position-y: -18px;
+  background-position-x: -8px;
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  color: #000;
+  text-align: center;
+  padding: 16px 16px 8px 16px;
+  min-width: 320px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+.business-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-name {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: -10px;
+}
+
+.contact-nickname {
+  font-size: 0.9rem;
+  font-style: italic;
+  font-weight: 400;
+  margin-top: -8px;
+  margin-bottom: 16px;
+}

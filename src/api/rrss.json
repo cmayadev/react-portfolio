@@ -1,8 +1,9 @@
 [
     {
-        "title": "LinkedIn",
-        "slug": "linkedin",
-        "link": "https://www.linkedin.com/in/cmayadev/"
+        "title": "Twitter",
+        "slug": "twitter",
+        "link": "https://twitter.com/NejimaErland",
+        "color": "#1DA1F2"
     },
     {
         "title": "Instagram",
@@ -10,13 +11,23 @@
         "link": "https://www.instagram.com/nejima/"
     },
     {
+        "title": "LinkedIn",
+        "slug": "linkedin",
+        "link": "https://www.linkedin.com/in/cmayadev/"
+    },
+    {
         "title": "GitHub",
         "slug": "github",
         "link": "https://github.com/cmayadev"
     },
     {
-        "title": "Twitter",
-        "slug": "twitter",
-        "link": "https://twitter.com/NejimaErland"
+        "title": "Spotify",
+        "slug": "spotify",
+        "link": "https://open.spotify.com/user/nejima"
+    },
+    {
+        "title": "Steam",
+        "slug": "steam",
+        "link": "https://steamcommunity.com/id/nejima"
     }
 ]
