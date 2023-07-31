@@ -57,7 +57,8 @@
   flex-direction: row;
   font-size: 13px;
   font-weight: 500;
-  gap: 16px;
+  grid-column-gap: 16px;
+  flex-wrap: wrap;
   text-transform: uppercase;
 
   .js {
