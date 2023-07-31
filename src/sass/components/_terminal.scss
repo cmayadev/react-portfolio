@@ -24,6 +24,13 @@
   margin-top: -40px;
 }
 
+.terminal-group {
+  display: flex;
+    flex: 1;
+    margin-bottom: 0;
+    justify-content: space-between;
+}
+
 .terminal-content span,
 .terminal-content p,
 .terminal-content div {
@@ -31,8 +38,7 @@
   font-size: 13px;
 }
 
-.terminal-content p,
-.terminal-content div {
+.terminal-content p {
   margin-bottom: 16px;
 }
 
@@ -40,6 +46,8 @@
   display: flex;
   max-width: 304px;
   margin-left: 16px;
+  flex-direction: column;
+  margin-bottom: 21px;
 
   &:first-child {
     margin-bottom: 0 !important;
@@ -48,12 +56,11 @@
   a {
     color: inherit;
     cursor: text;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
-  div {
-    flex: 1;
-    margin-bottom: 0;
-  }
 }
 
 @media (max-width: 767px) {

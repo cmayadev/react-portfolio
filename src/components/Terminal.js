@@ -19,11 +19,21 @@ const Terminal = () => {
           </p>
 
           <div className="terminal-cols">
-            <div>
-              <span className="fw-bold">Local</span>:
+            <div className="terminal-group">
+              <div>
+                <span className="fw-bold">Local</span>:
+              </div>
+              <div>
+                <a href="/">https://www.cmaya.dev</a>
+              </div>
             </div>
-            <div>
-              <a href="/">https://www.cmaya.dev</a>
+            <div className="terminal-group">
+              <div>
+                <span className="fw-bold">On Your Network:</span>
+              </div>
+              <div>
+                <a href="/">http://localhost:3000</a>
+              </div>
             </div>
           </div>
 
