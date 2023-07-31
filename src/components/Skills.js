@@ -1,5 +1,4 @@
 import React from "react";
-import "./Skills.css";
 import Tech from "./Tech.js";
 
 import skills from "../api/skills.json";

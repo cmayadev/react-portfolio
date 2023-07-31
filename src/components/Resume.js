@@ -1,6 +1,5 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
-import "./Resume.css";
 
 const Resume = () => {
   return (
