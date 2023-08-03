@@ -44,7 +44,8 @@ const Terminal = () => {
           </p>
 
           <div>
-            PS C:\react-portfolio{`>`}
+            PS <span className="path">C:\var\www\react-portfolio</span>
+            {`>`}
             <Typewriter
               options={{
                 cursor: "█",

@@ -7,7 +7,6 @@ const Resume = () => {
       <div className="container">
         <div className="resume-content">
           <div className="">
-            <p className="greetings">Hello world, soy</p>
             <h1>Cristian Maya</h1>
             <div className="header-sub-text job">
               Desarrollador

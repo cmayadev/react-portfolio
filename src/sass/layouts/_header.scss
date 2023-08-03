@@ -1,5 +1,5 @@
 .appName {
-  background-color: #3c3c3c;
+  background-color: #323233;
   color: #cccccc;
   font-size: 11px;
   height: 35px;
@@ -22,9 +22,6 @@
 
 .appControls {
   display: flex;
-  position: absolute;
-  top: 0;
-  right: 0;
 }
 
 .appMinimize,
@@ -35,7 +32,7 @@
   align-items: center;
   justify-content: center;
   padding: 0px 15px;
-  background-color: #3c3c3c;
+  background-color: #323233;
   color: #898989;
   font-size: 18px;
   height: 35px;
@@ -48,7 +45,7 @@
 
 .appMinimize:hover,
 .appMaximize:hover {
-  background-color: #4c4c4c;
+  background-color: #4d4d4e;
 }
 
 .appClose:hover {
@@ -73,12 +70,12 @@
 
 .logo,
 .logo img {
-  width: 105px;
+  width: 104px;
   transition: transform ease 0.3s;
 }
 
 .logo:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .toolbar .nav-link {
@@ -107,7 +104,22 @@
 
 .navbar .navbar-nav .nav-item a {
   color: #969696;
-  padding: 10px 25px 10px 10px;
+  padding: 10px 32px 10px 10px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translate(0, -50%);
+    width: 14px; /* Ajusta el tamaño del SVG */
+    height: 14px; /* Ajusta el tamaño del SVG */
+    background-image: url("../../close.svg");
+    background-size: cover;
+    color: #969596;
+    opacity: 0;
+  }
 }
 
 .navbar .navbar-nav .nav-item a.active {
@@ -116,7 +128,10 @@
 }
 
 .navbar .navbar-nav .nav-item:hover {
-  background-color: #1e1e1e;
+  background-color: #323233;
+  ::after {
+    opacity: 1;
+  }
 }
 
 .navbar .navbar-nav .nav-item:hover a {
@@ -199,12 +214,10 @@
   position: relative;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .appName {
     display: none;
   }
-}
-@media (max-width: 991px) {
   .appControls {
     display: none;
   }
@@ -226,5 +239,12 @@
   .navbar .navbar-nav .nav-item .nav-link:before,
   .navbar-toggler span {
     background: #444;
+  }
+}
+
+@media (max-width: 1140px) {
+  .navbar .navbar-nav .nav-item a {
+    font-size: 12px;
+    padding: 10px 10px 10px 10px;
   }
 }
