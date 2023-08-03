@@ -2,7 +2,7 @@ const Toolbar = () => {
   return (
     <div className="appName">
       <div className="app-options">
-        <img src="logo.png" alt="dev-logo" height="32px" width="32px" />
+        <img src="logo.png" alt="dev-logo" height="26px" width="26px" />
         <ul>
           <li>File</li>
           <li>Edit</li>
