@@ -45,8 +45,7 @@ const Terminal = () => {
 
           <div>
             PS <span className="path">C:\var\www\react-portfolio</span>
-            {`>`}
-            <TypeWriter />
+            {`>`} <TypeWriter />
           </div>
         </div>
       </div>

@@ -1,160 +1,167 @@
-$ease-out-quint:cubic-bezier(0.230, 1.000, 0.320, 1.000);
-$ease-in-quint:cubic-bezier(0.755, 0.050, 0.855, 0.060);
-$screen-background:#121010;
+$ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+$ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+$screen-background: #121010;
 
-[type="checkbox"], [type="radio"] {
+[type="checkbox"],
+[type="radio"] {
   display: none;
 }
 
-@keyframes flicker{
-  $steps:20;
-  @for $i from 0 through $steps{
-    #{percentage($i*(1/$steps))}{
-      opacity:random();
+@keyframes flicker {
+  $steps: 20;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      opacity: random();
     }
   }
 }
-.windows{
+.windows {
   background-color: teal;
   background-size: cover;
-  height:100vh;
-  position:relative;
-  overflow:hidden;
-  border:2px solid #666;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #666;
 
   // flicker
-  &::after{
-    content:" ";
-    display:block;
-    position:absolute;
-    top:0;
-    left:0;
-    bottom:0;
-    right:0;
-    background:transparentize($screen-background,0.9);
-    opacity:0;
-    z-index:2;
-    pointer-events:none;
+  &::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: transparentize($screen-background, 0.9);
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
   }
   // scanlines
-  &::before{
-    content:" ";
-    display:block;
-    position:absolute;
-    top:0;
-    left:0;
-    bottom:0;
-    right:0;
-    background:linear-gradient(transparentize($screen-background,1) 50%, transparentize(darken($screen-background,10),0.75) 50%), linear-gradient(90deg,transparentize(#ff0000,0.94),transparentize(#00ff00,0.98),transparentize(#0000ff,0.94));
-    z-index:2;
-    background-size:100% 2px, 3px 100%;
-    pointer-events:none;
+  &::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(
+        transparentize($screen-background, 1) 50%,
+        transparentize(darken($screen-background, 10), 0.75) 50%
+      ),
+      linear-gradient(
+        90deg,
+        transparentize(#ff0000, 0.94),
+        transparentize(#00ff00, 0.98),
+        transparentize(#0000ff, 0.94)
+      );
+    z-index: 2;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
   }
 }
-#switch:checked~.desktop::after{
-  animation:flicker 0.15s infinite;
+#switch:checked ~ .desktop::after {
+  animation: flicker 0.15s infinite;
 }
 
+@keyframes turn-on {
+  0% {
+    transform: scale(1, 0.8) translate3d(0, 0, 0);
+    -webkit-filter: brightness(30);
+    filter: brightness(30);
+    opacity: 1;
+  }
+  3.5% {
+    transform: scale(1, 0.8) translate3d(0, 100%, 0);
+  }
 
-@keyframes turn-on{
-  0%{
-    transform:scale(1,0.8) translate3d(0,0,0);
-    -webkit-filter:brightness(30);
-    filter:brightness(30);
-    opacity:1;
+  3.6% {
+    transform: scale(1, 0.8) translate3d(0, -100%, 0);
+    opacity: 1;
   }
-  3.5%{
-    transform:scale(1,0.8) translate3d(0,100%,0);
+
+  9% {
+    transform: scale(1.3, 0.6) translate3d(0, 100%, 0);
+    -webkit-filter: brightness(30);
+    filter: brightness(30);
+    opacity: 0;
   }
-  
-  3.6%{
-    transform:scale(1,0.8) translate3d(0,-100%,0);
-    opacity:1;
-  } 
-  
-  9%{
-    transform:scale(1.3,0.6) translate3d(0,100%,0);
-    -webkit-filter:brightness(30);
-    filter:brightness(30);
-    opacity:0;
+
+  11% {
+    transform: scale(1, 1) translate3d(0, 0, 0);
+    -webkit-filter: contrast(0) brightness(0);
+    filter: contrast(0) brightness(0);
+    opacity: 0;
   }
-  
-  
-  
-  11%{
-    transform:scale(1,1) translate3d(0,0,0);
-    -webkit-filter:contrast(0) brightness(0) ;
-    filter:contrast(0) brightness(0);
-    opacity:0;
-  }
-  
-  100%{
-    transform:scale(1,1) translate3d(0,0,0);
-    -webkit-filter:contrast(1) brightness(1.2) saturate(1.3);
-    filter:contrast(1) brightness(1.2) saturate(1.3);
-    opacity:1;
+
+  100% {
+    transform: scale(1, 1) translate3d(0, 0, 0);
+    -webkit-filter: contrast(1) brightness(1.2) saturate(1.3);
+    filter: contrast(1) brightness(1.2) saturate(1.3);
+    opacity: 1;
   }
 }
-@keyframes turn-off{
-  0%{
-    transform:scale(1,1.3) translate3d(0,0,0);
-    -webkit-filter:brightness(1);
-    filter:brightness(1);
-    opacity:1;
+@keyframes turn-off {
+  0% {
+    transform: scale(1, 1.3) translate3d(0, 0, 0);
+    -webkit-filter: brightness(1);
+    filter: brightness(1);
+    opacity: 1;
   }
-  60%{
-    transform:scale(1.3,0.001) translate3d(0,0,0);
-    -webkit-filter:brightness(10);
-    filter:brightness(10);
+  60% {
+    transform: scale(1.3, 0.001) translate3d(0, 0, 0);
+    -webkit-filter: brightness(10);
+    filter: brightness(10);
   }
-  100%{
-    animation-timing-function:$ease-in-quint;
-    transform:scale(0.000,0.0001) translate3d(0,0,0);
-    -webkit-filter:brightness(50);
-    filter:brightness(50);
+  100% {
+    animation-timing-function: $ease-in-quint;
+    transform: scale(0, 0.0001) translate3d(0, 0, 0);
+    -webkit-filter: brightness(50);
+    filter: brightness(50);
   }
 }
-.screen{
-  width:100%;
-  height:100%;
-  border:none;
+.screen {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
-#switch~.windows>.screen{
+#switch ~ .windows > .screen {
   animation: turn-off 0.55s $ease-out-quint;
-  animation-fill-mode:forwards;
+  animation-fill-mode: forwards;
 }
-#switch:checked~.windows>.screen{
+#switch:checked ~ .windows > .screen {
   animation: turn-on 4s linear;
-  animation-fill-mode:forwards;
+  animation-fill-mode: forwards;
 }
 
-@keyframes overlay-anim{
-  0%{
-    visibility:hidden;
+@keyframes overlay-anim {
+  0% {
+    visibility: hidden;
   }
-  20%{
-    visibility:hidden;
+  20% {
+    visibility: hidden;
   }
-  21%{
-    visibility:visible;
+  21% {
+    visibility: visible;
   }
-  100%{
-    visibility:hidden;
+  100% {
+    visibility: hidden;
   }
 }
-.overlay{
-  color:#00FF00;
-  position:absolute;
-  top:20px;
-  left:20px;
-  font-size:60px;
+.overlay {
+  color: #00ff00;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 60px;
   z-index: 2;
-  visibility:hidden;
-  pointer-events:none;
+  visibility: hidden;
+  pointer-events: none;
 }
-.windows .overlay{
-  animation:overlay-anim 5s linear;
-  animation-fill-mode:forwards;
+.windows .overlay {
+  animation: overlay-anim 5s linear;
+  animation-fill-mode: forwards;
 }
 
 #start-menu {
@@ -191,7 +198,7 @@ $screen-background:#121010;
 #start-menu > ul > li label:before {
   width: 10px;
   background: black;
-  content: '';
+  content: "";
   height: 1px;
   position: absolute;
   bottom: 20px;
@@ -200,7 +207,6 @@ $screen-background:#121010;
 #start-menu > ul > li label:first-of-type:before {
   width: 14px;
 }
-
 
 #start-menu > ul > li label:hover:before {
   background: white;
@@ -221,8 +227,12 @@ $screen-background:#121010;
   color: white;
   box-shadow: -8px 0 #0c1b98, 8px 0 #0c1b98;
 }
-.inverse-windows-box-shadow, .minesweeper .content > label:active {
-  box-shadow: -2px -2px #818181, -2px 0 #818181, 0 -2px #818181, -4px -4px black, -4px 0 black, 0 -4px black, 2px 2px #e0dede, 0 2px #e0dede, 2px 0 #e0dede,  2px -2px #818181, -2px 2px #e0dede, -4px 2px black, -4px 4px white, 4px 4px white, 4px 0 white, 0 4px white, 2px -4px black, 4px -4px white;
+.inverse-windows-box-shadow,
+.minesweeper .content > label:active {
+  box-shadow: -2px -2px #818181, -2px 0 #818181, 0 -2px #818181, -4px -4px black,
+    -4px 0 black, 0 -4px black, 2px 2px #e0dede, 0 2px #e0dede, 2px 0 #e0dede,
+    2px -2px #818181, -2px 2px #e0dede, -4px 2px black, -4px 4px white,
+    4px 4px white, 4px 0 white, 0 4px white, 2px -4px black, 4px -4px white;
 }
 
 #windows-start-menu-blue {
@@ -248,7 +258,7 @@ $screen-background:#121010;
 .programs {
   position: relative;
 }
-#toolbar .programs > ul { 
+#toolbar .programs > ul {
   display: none;
   position: absolute;
   top: 4rem;
@@ -264,7 +274,7 @@ $screen-background:#121010;
 }
 
 .programs label:after {
-  content: '';
+  content: "";
   border-width: 5px;
   border-style: solid;
   border-color: transparent transparent transparent black;
@@ -279,7 +289,7 @@ $screen-background:#121010;
 .programs {
   position: relative;
 }
-#toolbar .programs > ul { 
+#toolbar .programs > ul {
   display: none;
   position: absolute;
   top: 4rem;
@@ -306,14 +316,14 @@ $screen-background:#121010;
   padding: 0.5rem;
   width: 14rem;
 }
-#toolbar .programs:hover > ul { 
+#toolbar .programs:hover > ul {
   display: block;
 }
 #start-menu .programs ul li label:hover {
-  box-shadow: none;   
+  box-shadow: none;
 }
 
-#toolbar{
+#toolbar {
   background: #c0c0c0;
   height: 35px;
   width: 100%;
@@ -322,11 +332,13 @@ $screen-background:#121010;
   left: 0;
   border-top: 2px solid #fff;
   display: flex;
-  
-  .toolbar-start-menu{
-    
-    .start-button{
-      background: url('/images/icons/windows-logo.png') no-repeat 2px center / 24px;
+
+  .toolbar-start-menu {
+    display: flex;
+
+    .start-button {
+      background: url("/images/icons/windows-logo.png") no-repeat 2px center /
+        24px;
       padding-left: 28px;
       padding-right: 5px;
       height: 29px;
@@ -336,14 +348,14 @@ $screen-background:#121010;
       border-top-color: #fff;
       border-left-color: #fff;
       line-height: 25px;
-      
-      &:hover{
+
+      &:hover {
         background-color: darken(#c0c0c0, 10%);
       }
     }
   }
-  
-  .toolbar-separator{
+
+  .toolbar-separator {
     width: 2px;
     height: 26px;
     margin-top: 3px;
@@ -355,35 +367,34 @@ $screen-background:#121010;
       margin-left: 4px;
     }
   }
-  
-  .toolbar-left{
+
+  .toolbar-left {
     display: flex;
     padding: 0 5px;
   }
-  
-  .toolbar-icon{
+
+  .toolbar-icon {
     background: no-repeat center / auto 20px;
     width: 25px;
     height: 25px;
     border: none;
     margin-top: 3px;
     margin: 3px 2px;
-    
-    &.ie{
-      background-image: url('/images/icons/ie-small.png');
-    }
-    
-    &.outlook{
-      background-image: url('/images/icons/outlook.png');
-    }
-    
-    &.desktop{
-      background-image: url('/images/icons/desktop.png');
+
+    &.ie {
+      background-image: url("/images/icons/ie-small.png");
     }
 
+    &.outlook {
+      background-image: url("/images/icons/outlook.png");
+    }
+
+    &.desktop {
+      background-image: url("/images/icons/desktop.png");
+    }
   }
-  
-  .toolbar-right{
+
+  .toolbar-right {
     margin: 2px 3px;
     height: 29px;
     border: 2px solid #7c7c7c;
@@ -392,13 +403,14 @@ $screen-background:#121010;
     display: flex;
     align-items: center;
     margin-left: auto;
+    padding: 0 4px;
 
-    .toolbar-icon{
+    .toolbar-icon {
       background-size: 16px;
       margin-right: -5px;
     }
-    
-    .time{
+
+    .time {
       margin-top: 2px;
       padding: 4px 10px;
     }
@@ -422,7 +434,6 @@ $screen-background:#121010;
   color: #000;
   min-width: 150px;
   padding: 0 10px 0 6px;
-  margin-top: 7px;
   margin-right: 4px;
   border: 2px solid #7c7c7c;
   border-top-color: #fff;
@@ -430,6 +441,8 @@ $screen-background:#121010;
   box-shadow: none !important;
   line-height: 22px;
   display: none;
+  flex-direction: row;
+  align-items: center;
 
   &.open.active {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAG0lEQVQYV2M8cODAf3t7ewbG/////z948CADAFuqCj64BtLKAAAAAElFTkSuQmCC);
@@ -438,24 +451,32 @@ $screen-background:#121010;
     border-right: 1px solid #fff;
     border-bottom: 1px solid #fff;
     box-shadow: inset 1px 1px grey;
-    box-shadow: -2px -2px #e0dede, -2px 0 #e0dede, 0 -2px #e0dede, -4px -4px white, -4px 0 white, 0 -4px white, 2px 2px #818181, 0 2px #818181, 2px 0 #818181,  2px -2px #e0dede, -2px 2px #818181, -4px 2px white, -4px 4px black, 4px 4px black, 4px 0 black, 0 4px black, 2px -4px white, 4px -4px black;
-    display: block;
-    line-height: 25px;
+    box-shadow: -2px -2px #e0dede, -2px 0 #e0dede, 0 -2px #e0dede,
+      -4px -4px white, -4px 0 white, 0 -4px white, 2px 2px #818181,
+      0 2px #818181, 2px 0 #818181, 2px -2px #e0dede, -2px 2px #818181,
+      -4px 2px white, -4px 4px black, 4px 4px black, 4px 0 black, 0 4px black,
+      2px -4px white, 4px -4px black;
+    display: flex;
   }
 
-  &.minimized, &.open, &.unfocused {
-    display: block;
+  &.minimized,
+  &.open,
+  &.unfocused {
+    display: flex;
   }
 
   &:hover {
     background-color: #a7a7a7;
   }
 
+  span:not(:first-child) {
+    margin-top: 2px;
+  }
+
   span {
     margin-right: 8px;
-    img { 
+    img {
       height: 14px;
-      margin-top: -3px;
     }
   }
 }

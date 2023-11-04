@@ -1,12 +1,7 @@
-import { useCallback } from "react";
+import { useDisplay } from "../contexts/DisplayContext";
 
-const Toolbar = ({ display, onSetDisplay }) => {
-  const handleCloseButton = useCallback(
-    (event) => {
-      onSetDisplay("desktop");
-    },
-    [onSetDisplay]
-  );
+const Toolbar = () => {
+  const { setDisplay } = useDisplay();
 
   return (
     <div className="appName">
@@ -37,7 +32,12 @@ const Toolbar = ({ display, onSetDisplay }) => {
         <div className="appMaximize">
           <img src="icons/maximize.png" alt="maximize" />
         </div>
-        <div className="appClose" onClick={handleCloseButton}>
+        <div
+          className="appClose"
+          onClick={() => {
+            setDisplay("desktop");
+          }}
+        >
           <img src="icons/close.svg" alt="close" />
         </div>
       </div>
