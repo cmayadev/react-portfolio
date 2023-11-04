@@ -1,5 +1,4 @@
-import React from "react";
-import Typewriter from "typewriter-effect";
+import TypeWriter from "./TypeWriter";
 
 const Resume = () => {
   return (
@@ -9,14 +8,7 @@ const Resume = () => {
           <div className="">
             <h1>Cristian Maya</h1>
             <div className="header-sub-text job">
-              Desarrollador
-              <Typewriter
-                options={{
-                  strings: [" Frontend", " Backend"],
-                  autoStart: true,
-                  loop: true,
-                }}
-              />
+              Desarrollador <TypeWriter />
             </div>
             <div className="header-sub-text">
               <p className="font-large">

@@ -39,3 +39,25 @@ p {
 .mx-auto {
   margin-left: auto !important;
 }
+
+#cursor {
+  background: #d4d4d4;
+  display: inline-block;
+  line-height: 17px;
+  margin-left: 3px;
+  animation: blink 1s infinite;
+  width: 4px;
+  height: 15px;
+}
+
+@keyframes blink {
+  0% {
+    background: #222;
+  }
+  50% {
+    background: #d4d4d4;
+  }
+  100% {
+    background: #222;
+  }
+}
