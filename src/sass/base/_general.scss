@@ -40,6 +40,13 @@ p {
   margin-left: auto !important;
 }
 
+.unselectable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 #cursor {
   background: #d4d4d4;
   display: inline-block;

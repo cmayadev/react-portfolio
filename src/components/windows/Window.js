@@ -14,11 +14,10 @@ const Window = (props) => {
   const handleClick = (taskId) => {
     setTasks((state) => {
       const newState = structuredClone(state);
-      newState.map(function (task) {
+      newState.forEach(function (task) {
         if (task.status === "open" && task.id !== taskId) {
           task.status = "unfocused";
           task.active = false;
-          return;
         }
       });
       const task = newState.find((original) => original.id === taskId);
@@ -31,10 +30,9 @@ const Window = (props) => {
   const handleStatus = (taskId, status) => {
     setTasks((state) => {
       const newState = structuredClone(state);
-      newState.map(function (task) {
+      newState.forEach(function (task) {
         if (task.status === "open" && task.id !== taskId) {
           task.active = true;
-          return;
         }
       });
       const task = newState.find((original) => original.id === taskId);
@@ -45,6 +43,14 @@ const Window = (props) => {
     if (status === "") {
       setPosition({ x: 0, y: 0 });
     }
+  };
+
+  const renderDivs = () => {
+    const result = [];
+    for (let i = 0; i < 26; i++) {
+      result.push(<div key={i}></div>);
+    }
+    return result;
   };
 
   return (
@@ -95,8 +101,9 @@ const Window = (props) => {
             <div>Address</div>
             <input
               type="text"
-              class="inverse-windows-box-shadow"
+              className="inverse-windows-box-shadow"
               value="https://cmaya.dev/"
+              disabled
             ></input>
           </div>
         )}
@@ -169,9 +176,17 @@ const Window = (props) => {
                         alt="Windows Update"
                       />
                       <div className="title">Install progress</div>
-                      <div id="install-bar"></div>
+                      <div id="install-bar">{renderDivs()}</div>
                       <div className="window-actions">
-                        <button className="window-action-button">Cancel</button>
+                        <button
+                          className="window-action-button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleStatus(id, "");
+                          }}
+                        >
+                          Cancel
+                        </button>
                       </div>
                     </div>
                   </>

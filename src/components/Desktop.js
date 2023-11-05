@@ -19,7 +19,7 @@ const Desktop = () => {
   const handleDesktop = () => {
     setTasks((state) => {
       const newState = structuredClone(state);
-      newState.map(function (task) {
+      newState.forEach(function (task) {
         if (task.status === "open") {
           task.status = "minimized";
         }
@@ -45,7 +45,7 @@ const Desktop = () => {
     (event) => {
       setTasks((state) => {
         const newState = structuredClone(state);
-        newState.map(function (task) {
+        newState.forEach(function (task) {
           task.selected = false;
         });
         return newState;
@@ -62,7 +62,7 @@ const Desktop = () => {
           setStartMenu("closed");
         }}
       >
-        <div className="overlay">AV-1</div>
+        <div className="overlay">VGA</div>
 
         {tasks.map((window) => (
           <Window
@@ -85,6 +85,7 @@ const Desktop = () => {
                   key={icon.id}
                   label={icon.name}
                   icon={icon.large}
+                  handleVisualButton={handleVisualButton}
                   selected={icon.selected}
                   setTasks={setTasks}
                   onClickOutside={() => {
@@ -105,7 +106,10 @@ const Desktop = () => {
             }}
           />
 
-          <div id="start-menu" className={`windows-box-shadow ${startMenu}`}>
+          <div
+            id="start-menu"
+            className={`windows-box-shadow ${startMenu} unselectable`}
+          >
             <div id="windows-start-menu-blue">
               Windows<span>98</span>
             </div>

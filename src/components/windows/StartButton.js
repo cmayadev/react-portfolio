@@ -1,7 +1,4 @@
-import { useEffect, useRef } from "react";
-
 const StartButton = (props) => {
-  const ref = useRef(null);
   const { onClick } = props;
 
   const handleClick = (event) => {
@@ -10,9 +7,8 @@ const StartButton = (props) => {
   };
 
   return (
-    <div className="toolbar-start-menu">
+    <div className="toolbar-start-menu unselectable">
       <label
-        ref={ref}
         htmlFor="start-button-input"
         className="start-button"
         onClick={handleClick}

@@ -152,8 +152,8 @@ $screen-background: #121010;
 .overlay {
   color: #00ff00;
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 8px;
+  right: 32px;
   font-size: 60px;
   z-index: 2;
   visibility: hidden;
@@ -380,6 +380,7 @@ $screen-background: #121010;
     border: none;
     margin-top: 3px;
     margin: 3px 2px;
+    cursor: pointer;
 
     &.ie {
       background-image: url("/images/icons/ie-small.png");
