@@ -1,7 +1,24 @@
 [
     {
-        "Name": "Cocoon",
-        "Date Completed": "October 29, 2023",
+        "name": "Jusant",
+        "image": "https://www.notion.so/image/https%3A%2F%2Fmedia.rawg.io%2Fmedia%2Fresize%2F1280%2F-%2Fgames%2F6fc%2F6fcd3a3192df9abeb281f6e936fc1b80.jpg?table=block&id=fec03cc8-e1f9-4931-ac98-aa9e0fd9de00&spaceId=d396ac1f-a29c-45a2-b967-50e8b940109b&width=560&userId=a558198b-0cf9-4476-8ff6-6a3e0bcb5e3a&cache=v2",
+        "date_completed": "November 5, 2023",
+        "Date Started": "November 4, 2023",
+        "Developer": "DONTNOD Entertainment",
+        "Duration": 3,
+        "Game Info-link": "",
+        "Game time": "2h 20m",
+        "Genres": "Adventure, Indie, Puzzle",
+        "Notes": "",
+        "platform": "Xbox Gamepass",
+        "status": "Completed",
+        "Release Year": 2023,
+        "Score": ""
+    },
+    {
+        "name": "Cocoon",
+        "image": "https://www.notion.so/image/https%3A%2F%2Fmedia.rawg.io%2Fmedia%2Fresize%2F1280%2F-%2Fgames%2F153%2F153e8d78ac19e959214dadefb8c27310.jpg?id=587d4ff2-1bc9-492d-abe6-e418e266c8de&table=block&spaceId=d396ac1f-a29c-45a2-b967-50e8b940109b&width=560&userId=a558198b-0cf9-4476-8ff6-6a3e0bcb5e3a&cache=v2",
+        "date_completed": "October 29, 2023",
         "Date Started": "October 28, 2023",
         "Developer": "Geometric Interactive",
         "Duration": 5,
@@ -15,8 +32,9 @@
         "Score": ""
     },
     {
-        "Name": "Assassin's Creed Mirage",
-        "Date Completed": "October 24, 2023",
+        "name": "Assassin's Creed Mirage",
+        "image": "https://www.notion.so/image/https%3A%2F%2Fmedia.rawg.io%2Fmedia%2Fresize%2F1280%2F-%2Fgames%2Ffbd%2Ffbd0128013b7965904be571e75fb30c0.jpg?id=75d8b7ae-ae69-4975-951a-2a16ef4012b2&table=block&spaceId=d396ac1f-a29c-45a2-b967-50e8b940109b&width=560&userId=a558198b-0cf9-4476-8ff6-6a3e0bcb5e3a&cache=v2",
+        "date_completed": "October 24, 2023",
         "Date Started": "October 12, 2023",
         "Developer": "Ubisoft Bordeaux",
         "Duration": 22,
@@ -30,8 +48,9 @@
         "Score": ""
     },
     {
-        "Name": "Yakuza 3 Remastered",
-        "Date Completed": "October 8, 2023",
+        "name": "Yakuza 3 Remastered",
+        "image": "https://www.notion.so/image/https%3A%2F%2Fmedia.rawg.io%2Fmedia%2Fresize%2F1280%2F-%2Fgames%2F372%2F372ad5555afd1c58e39914600a412b84.jpg?id=b10509a3-1ea0-42da-9bb3-1374f2f8d0e7&table=block&spaceId=d396ac1f-a29c-45a2-b967-50e8b940109b&width=560&userId=a558198b-0cf9-4476-8ff6-6a3e0bcb5e3a&cache=v2",
+        "date_completed": "October 8, 2023",
         "Date Started": "October 1, 2023",
         "Developer": "Ryu ga Gotoku Studio",
         "Duration": 26,
@@ -45,8 +64,9 @@
         "Score": ""
     },
     {
-        "Name": "Lies of P",
-        "Date Completed": "September 30, 2023",
+        "name": "Lies of P",
+        "image": "https://www.notion.so/image/https%3A%2F%2Fmedia.rawg.io%2Fmedia%2Fresize%2F1280%2F-%2Fgames%2Fcc3%2Fcc3231b0e4ef970590eeb2ce23f60ca0.jpg?id=ae7fc22f-3aaf-413e-a1a7-48aa04e0601c&table=block&spaceId=d396ac1f-a29c-45a2-b967-50e8b940109b&width=560&userId=a558198b-0cf9-4476-8ff6-6a3e0bcb5e3a&cache=v2",
+        "date_completed": "September 30, 2023",
         "Date Started": "September 18, 2023",
         "Developer": "NEOWIZ",
         "Duration": 33,
@@ -60,8 +80,9 @@
         "Score": ""
     },
     {
-        "Name": "Sea of Stars",
-        "Date Completed": "September 16, 2023",
+        "name": "Sea of Stars",
+        "image": "https://www.notion.so/image/https%3A%2F%2Fcdn.hobbyconsolas.com%2Fsites%2Fnavi.axelspringer.es%2Fpublic%2Fmedia%2Fimage%2F2023%2F08%2Fsea-stars-3104876.jpg%3Ftf%3D3840x?id=737689df-6d36-4745-bdb3-a80b807b1114&table=block&spaceId=d396ac1f-a29c-45a2-b967-50e8b940109b&width=560&userId=a558198b-0cf9-4476-8ff6-6a3e0bcb5e3a&cache=v2",
+        "date_completed": "September 16, 2023",
         "Date Started": "August 31, 2023",
         "Developer": "Sabotage Studio",
         "Duration": 28,
@@ -75,8 +96,9 @@
         "Score": ""
     },
     {
-        "Name": "Blasphemous II",
-        "Date Completed": "August 30, 2023",
+        "name": "Blasphemous II",
+        "image": "https://www.notion.so/image/https%3A%2F%2Ffs-prod-cdn.nintendo-europe.com%2Fmedia%2Fimages%2F10_share_images%2Fgames_15%2Fnintendo_switch_4%2F2x1_NSwitch_Blasphemous2_image1600w.jpg?id=c31035c5-9ecf-47cc-8787-2d66e6fc1d6d&table=block&spaceId=d396ac1f-a29c-45a2-b967-50e8b940109b&width=560&userId=a558198b-0cf9-4476-8ff6-6a3e0bcb5e3a&cache=v2",
+        "date_completed": "August 30, 2023",
         "Date Started": "August 26, 2023",
         "Developer": "The Game Kitchen",
         "Duration": 17,
@@ -90,8 +112,9 @@
         "Score": ""
     },
     {
-        "Name": "Katana ZERO",
-        "Date Completed": "August 23, 2023",
+        "name": "Katana ZERO",
+        "image": "https://www.notion.so/image/https%3A%2F%2Fmedia.rawg.io%2Fmedia%2Fresize%2F1280%2F-%2Fgames%2Fd37%2Fd37e110ddcc0bd52d99f0f647b737a0a.jpg?id=76ebd6f7-6936-4fe8-83de-0ed2582292d5&table=block&spaceId=d396ac1f-a29c-45a2-b967-50e8b940109b&width=560&userId=a558198b-0cf9-4476-8ff6-6a3e0bcb5e3a&cache=v2",
+        "date_completed": "August 23, 2023",
         "Date Started": "August 21, 2023",
         "Developer": "Askiisoft",
         "Duration": 6,
@@ -105,8 +128,9 @@
         "Score": ""
     },
     {
-        "Name": "High on Life",
-        "Date Completed": "August 21, 2023",
+        "name": "High on Life",
+        "image": "https://www.notion.so/image/https%3A%2F%2Fmedia.rawg.io%2Fmedia%2Fresize%2F1280%2F-%2Fgames%2F2e7%2F2e732a02c29c84ca177855848932a5aa.jpg?id=fe48da75-93a9-4738-83bc-7df65f6d3c5b&table=block&spaceId=d396ac1f-a29c-45a2-b967-50e8b940109b&width=560&userId=a558198b-0cf9-4476-8ff6-6a3e0bcb5e3a&cache=v2",
+        "date_completed": "August 21, 2023",
         "Date Started": "August 14, 2023",
         "Developer": "Squanch Games",
         "Duration": 11,
@@ -120,8 +144,9 @@
         "Score": ""
     },
     {
-        "Name": "Blasphemous",
-        "Date Completed": "August 20, 2023",
+        "name": "Blasphemous",
+        "image": "https://cdn1.epicgames.com/offer/eddb735dde6b47cda8193f2643cff886/EGS_Blasphemous_TheGameKitchen_S3_2560x1440-f1a83630b91b3f128e8f9dd58f3f8eed",
+        "date_completed": "August 20, 2023",
         "Date Started": "",
         "Developer": "The Game Kitchen",
         "Duration": 16,
@@ -135,8 +160,9 @@
         "Score": ""
     },
     {
-        "Name": "Death Stranding",
-        "Date Completed": "August 12, 2023",
+        "name": "Death Stranding",
+        "image": "https://www.notion.so/image/https%3A%2F%2Fmedia.rawg.io%2Fmedia%2Fresize%2F1280%2F-%2Fgames%2F2ad%2F2ad87a4a69b1104f02435c14c5196095.jpg?id=92627ae8-65e8-402c-a916-285f4e63ccaa&table=block&spaceId=d396ac1f-a29c-45a2-b967-50e8b940109b&width=560&userId=a558198b-0cf9-4476-8ff6-6a3e0bcb5e3a&cache=v2",
+        "date_completed": "August 12, 2023",
         "Date Started": "July 27, 2023",
         "Developer": "Kojima Productions",
         "Duration": "",
@@ -150,8 +176,9 @@
         "Score": ""
     },
     {
-        "Name": "Trials of Mana (2020)",
-        "Date Completed": "July 25, 2023",
+        "name": "Trials of Mana (2020)",
+        "image": "https://www.notion.so/image/https%3A%2F%2Fimg.opencritic.com%2Fgame%2F9264%2F0M9I3eop.jpg?id=36452cf2-9047-40e0-a29e-39c78339f47a&table=block&spaceId=d396ac1f-a29c-45a2-b967-50e8b940109b&width=560&userId=a558198b-0cf9-4476-8ff6-6a3e0bcb5e3a&cache=v2",
+        "date_completed": "July 25, 2023",
         "Date Started": "July 13, 2023",
         "Developer": "Square Enix",
         "Duration": "",
@@ -165,8 +192,9 @@
         "Score": 76
     },
     {
-        "Name": "Coffee Talk",
-        "Date Completed": "July 17, 2023",
+        "name": "Coffee Talk",
+        "image": "https://www.notion.so/image/https%3A%2F%2Fimg.opencritic.com%2Fgame%2F8901%2FskspWKgV.jpg?id=0d4a8627-6935-4f55-8a43-75841ea4087c&table=block&spaceId=d396ac1f-a29c-45a2-b967-50e8b940109b&width=560&userId=a558198b-0cf9-4476-8ff6-6a3e0bcb5e3a&cache=v2",
+        "date_completed": "July 17, 2023",
         "Date Started": "July 11, 2023",
         "Developer": "Toge Productions",
         "Duration": "",
@@ -180,8 +208,9 @@
         "Score": 75
     },
     {
-        "Name": "Final Fantasy XVI",
-        "Date Completed": "July 3, 2023",
+        "name": "Final Fantasy XVI",
+        "image": "https://www.notion.so/image/https%3A%2F%2Ffyre.cdn.sewest.net%2Fff-xvi%2F63613f54b609f28540733c42%2Fsocial_share-GK0OFw6bj.jpg?id=efa4cabd-80e9-4b6a-bc36-d82e7593dc17&table=block&spaceId=d396ac1f-a29c-45a2-b967-50e8b940109b&width=560&userId=a558198b-0cf9-4476-8ff6-6a3e0bcb5e3a&cache=v2",
+        "date_completed": "July 3, 2023",
         "Date Started": "June 22, 2023",
         "Developer": "Square Enix",
         "Duration": "",
@@ -195,8 +224,9 @@
         "Score": 89
     },
     {
-        "Name": "Persona 3 Portable",
-        "Date Completed": "June 12, 2023",
+        "name": "Persona 3 Portable",
+        "image": "https://www.notion.so/image/https%3A%2F%2Fmedia.rawg.io%2Fmedia%2Fresize%2F1280%2F-%2Fgames%2F68a%2F68a5aaddf51fa089fe1d2fcc9aa1b62b.jpg?id=450cbaf3-07ed-4ad4-9721-66769a4a21ca&table=block&spaceId=d396ac1f-a29c-45a2-b967-50e8b940109b&width=560&userId=a558198b-0cf9-4476-8ff6-6a3e0bcb5e3a&cache=v2",
+        "date_completed": "June 12, 2023",
         "Date Started": "May 26, 2023",
         "Developer": "Atlus",
         "Duration": "",
@@ -210,8 +240,9 @@
         "Score": ""
     },
     {
-        "Name": "The Gardens Between",
-        "Date Completed": "May 29, 2023",
+        "name": "The Gardens Between",
+        "image": "https://www.notion.so/image/https%3A%2F%2Fmedia.rawg.io%2Fmedia%2Fresize%2F1280%2F-%2Fgames%2Faf8%2Faf81c1cc5aad59f0ce1b3b7cee207220.jpg?id=25fd2d92-e39e-4902-9ef7-bad0c97c2f83&table=block&spaceId=d396ac1f-a29c-45a2-b967-50e8b940109b&width=560&userId=a558198b-0cf9-4476-8ff6-6a3e0bcb5e3a&cache=v2",
+        "date_completed": "May 29, 2023",
         "Date Started": "May 29, 2023",
         "Developer": "The Voxel Agents",
         "Duration": "",
@@ -225,8 +256,9 @@
         "Score": ""
     },
     {
-        "Name": "Persona 4 Golden",
-        "Date Completed": "May 2, 2023",
+        "name": "Persona 4 Golden",
+        "image": "https://www.notion.so/image/https%3A%2F%2Fmedia.rawg.io%2Fmedia%2Fresize%2F1280%2F-%2Fgames%2Fb2c%2Fb2c9c6115114c8f7d461b5430e8a7d4a.jpg?id=f6855cae-842f-48d0-8870-0fa54c5ed63f&table=block&spaceId=d396ac1f-a29c-45a2-b967-50e8b940109b&width=560&userId=a558198b-0cf9-4476-8ff6-6a3e0bcb5e3a&cache=v2",
+        "date_completed": "May 2, 2023",
         "Date Started": "April 19, 2023",
         "Developer": "Atlus",
         "Duration": "",
@@ -240,8 +272,9 @@
         "Score": ""
     },
     {
-        "Name": "Neon White",
-        "Date Completed": "April 15, 2023",
+        "name": "Neon White",
+        "image": "https://www.notion.so/image/https%3A%2F%2Fmedia.rawg.io%2Fmedia%2Fresize%2F1280%2F-%2Fgames%2Fa12%2Fa120fc7faed7666f8c320a755137e316.jpg?id=ce488fcf-6562-48a9-9f8b-428be7de5fb2&table=block&spaceId=d396ac1f-a29c-45a2-b967-50e8b940109b&width=560&userId=a558198b-0cf9-4476-8ff6-6a3e0bcb5e3a&cache=v2",
+        "date_completed": "April 15, 2023",
         "Date Started": "March 4, 2023",
         "Developer": "Angel Matrix, Ben Esposito",
         "Duration": "",
@@ -255,8 +288,9 @@
         "Score": ""
     },
     {
-        "Name": "The Pedestrian",
-        "Date Completed": "April 8, 2023",
+        "name": "The Pedestrian",
+        "image": "https://www.notion.so/image/https%3A%2F%2Fmedia.rawg.io%2Fmedia%2Fresize%2F1280%2F-%2Fscreenshots%2F789%2F789144172022eb539a9fe76e5ca61527.jpg?id=c0bd3286-9c2f-4c5a-94b5-31c775e4e2d9&table=block&spaceId=d396ac1f-a29c-45a2-b967-50e8b940109b&width=560&userId=a558198b-0cf9-4476-8ff6-6a3e0bcb5e3a&cache=v2",
+        "date_completed": "April 8, 2023",
         "Date Started": "April 2, 2023",
         "Developer": "Skookum Arts",
         "Duration": "",
@@ -270,8 +304,9 @@
         "Score": ""
     },
     {
-        "Name": "Resident Evil 4",
-        "Date Completed": "April 7, 2023",
+        "name": "Resident Evil 4",
+        "image": "https://www.notion.so/image/https%3A%2F%2Fmedia.rawg.io%2Fmedia%2Fresize%2F1280%2F-%2Fgames%2F51a%2F51a404b9918a0b19fc704a3ca248c69f.jpg?id=1df5b0f5-d23f-4513-816d-5148a2c6c2c9&table=block&spaceId=d396ac1f-a29c-45a2-b967-50e8b940109b&width=560&userId=a558198b-0cf9-4476-8ff6-6a3e0bcb5e3a&cache=v2",
+        "date_completed": "April 7, 2023",
         "Date Started": "March 25, 2023",
         "Developer": "Capcom",
         "Duration": "",
@@ -285,8 +320,9 @@
         "Score": ""
     },
     {
-        "Name": "Wo Long: Fallen Dinasty",
-        "Date Completed": "March 18, 2023",
+        "name": "Wo Long: Fallen Dinasty",
+        "image": "https://www.notion.so/image/https%3A%2F%2Fmedia.rawg.io%2Fmedia%2Fresize%2F1280%2F-%2Fgames%2F1e1%2F1e1b965459d5cf69cf51e5d6fe7da959.jpg?id=52eb28df-c38d-4ca8-9e96-25e2ff9350c1&table=block&spaceId=d396ac1f-a29c-45a2-b967-50e8b940109b&width=560&userId=a558198b-0cf9-4476-8ff6-6a3e0bcb5e3a&cache=v2",
+        "date_completed": "March 18, 2023",
         "Date Started": "March 4, 2023",
         "Developer": "KOEI TECMO GAMES CO, Team NINJA",
         "Duration": "",
@@ -300,8 +336,9 @@
         "Score": ""
     },
     {
-        "Name": "Hogwarts Legacy",
-        "Date Completed": "March 4, 2023",
+        "name": "Hogwarts Legacy",
+        "image": "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F63df594b-5f35-48e8-8cda-b655055ef0b5%2FHogwarts_Legacy_(%25D0%25BE%25D0%25B1%25D0%25BA%25D0%25BB%25D0%25B0%25D0%25B4%25D0%25B8%25D0%25BD%25D0%25BA%25D0%25B0).jpeg?id=af3daab2-8caf-47e2-a61e-374760de57b9&table=block&spaceId=d396ac1f-a29c-45a2-b967-50e8b940109b&width=560&userId=a558198b-0cf9-4476-8ff6-6a3e0bcb5e3a&cache=v2",
+        "date_completed": "March 4, 2023",
         "Date Started": "February 10, 2023",
         "Developer": "Avalanche Software, Portkey Games",
         "Duration": "",
@@ -315,8 +352,9 @@
         "Score": 84
     },
     {
-        "Name": "Hades",
-        "Date Completed": "February 7, 2023",
+        "name": "Hades",
+        "image": "https://www.notion.so/image/https%3A%2F%2Fmedia.rawg.io%2Fmedia%2Fresize%2F1280%2F-%2Fgames%2F1f4%2F1f47a270b8f241e4676b14d39ec620f7.jpg?id=0b971f11-0a5b-4723-b7ca-ceeced4516d4&table=block&spaceId=d396ac1f-a29c-45a2-b967-50e8b940109b&width=560&userId=a558198b-0cf9-4476-8ff6-6a3e0bcb5e3a&cache=v2",
+        "date_completed": "February 7, 2023",
         "Date Started": "February 5, 2023",
         "Developer": "Supergiant Games",
         "Duration": "",
@@ -330,8 +368,9 @@
         "Score": ""
     },
     {
-        "Name": "Hi-Fi RUSH",
-        "Date Completed": "February 4, 2023",
+        "name": "Hi-Fi RUSH",
+        "image": "https://www.notion.so/image/https%3A%2F%2Fmedia.rawg.io%2Fmedia%2Fresize%2F1280%2F-%2Fgames%2F62f%2F62f71917e64e913f2a893e7373319c60.jpg?id=960d0edb-2677-4562-85d4-758c92df2ea1&table=block&spaceId=d396ac1f-a29c-45a2-b967-50e8b940109b&width=560&userId=a558198b-0cf9-4476-8ff6-6a3e0bcb5e3a&cache=v2",
+        "date_completed": "February 4, 2023",
         "Date Started": "January 27, 2023",
         "Developer": "Tango Gameworks",
         "Duration": "",
@@ -345,8 +384,9 @@
         "Score": ""
     },
     {
-        "Name": "Immortals: Fenyx Rising",
-        "Date Completed": "January 7, 2023",
+        "name": "Immortals: Fenyx Rising",
+        "image": "https://www.notion.so/image/https%3A%2F%2Fmedia.rawg.io%2Fmedia%2Fresize%2F1280%2F-%2Fgames%2Fd51%2Fd51ada3b94bfd617bf91d4344ab81ce9.jpg?id=f1126264-8f01-4bf3-bd7d-4d2aa2c3a002&table=block&spaceId=d396ac1f-a29c-45a2-b967-50e8b940109b&width=560&userId=a558198b-0cf9-4476-8ff6-6a3e0bcb5e3a&cache=v2",
+        "date_completed": "January 7, 2023",
         "Date Started": "December 28, 2022",
         "Developer": "Ubisoft, Ubisoft Quevec",
         "Duration": "",
@@ -360,8 +400,8 @@
         "Score": ""
     },
     {
-        "Name": "UnMetal",
-        "Date Completed": "December 26, 2022",
+        "name": "UnMetal",
+        "date_completed": "December 26, 2022",
         "Date Started": "December 23, 2022",
         "Developer": "unepic_fran",
         "Duration": "",
@@ -375,8 +415,8 @@
         "Score": ""
     },
     {
-        "Name": "Crisis Core: Final Fantasy VII Reunion",
-        "Date Completed": "December 21, 2022",
+        "name": "Crisis Core: Final Fantasy VII Reunion",
+        "date_completed": "December 21, 2022",
         "Date Started": "December 13, 2022",
         "Developer": "Square Enix, Tose Co",
         "Duration": "",
@@ -390,8 +430,8 @@
         "Score": ""
     },
     {
-        "Name": "Cyberpunk 2077",
-        "Date Completed": "December 10, 2022",
+        "name": "Cyberpunk 2077",
+        "date_completed": "December 10, 2022",
         "Date Started": "January 28, 2023",
         "Developer": "CD Projekt Red",
         "Duration": "",
@@ -405,8 +445,8 @@
         "Score": ""
     },
     {
-        "Name": "A Plague Tale: Requiem",
-        "Date Completed": "November 1, 2022",
+        "name": "A Plague Tale: Requiem",
+        "date_completed": "November 1, 2022",
         "Date Started": "October 24, 2022",
         "Developer": "Asobo Studio",
         "Duration": 19,
@@ -420,8 +460,8 @@
         "Score": ""
     },
     {
-        "Name": "Eiyuden Chronicle: Rising",
-        "Date Completed": "October 16, 2022",
+        "name": "Eiyuden Chronicle: Rising",
+        "date_completed": "October 16, 2022",
         "Date Started": "June 30, 2022",
         "Developer": "NATSUME ATARI, Rabbit & Bear Studios",
         "Duration": "",
@@ -435,8 +475,8 @@
         "Score": ""
     },
     {
-        "Name": "Last Stop",
-        "Date Completed": "June 30, 2022",
+        "name": "Last Stop",
+        "date_completed": "June 30, 2022",
         "Date Started": "June 29, 2022",
         "Developer": "Tainted Games, Variable State",
         "Duration": "",
@@ -450,8 +490,8 @@
         "Score": ""
     },
     {
-        "Name": "A Plague Tale: Innocence",
-        "Date Completed": "June 25, 2022",
+        "name": "A Plague Tale: Innocence",
+        "date_completed": "June 25, 2022",
         "Date Started": "June 19, 2022",
         "Developer": "Asobo Studio, Focus Home Interactive",
         "Duration": 12,
@@ -465,8 +505,8 @@
         "Score": ""
     },
     {
-        "Name": "Tunic",
-        "Date Completed": "March 22, 2022",
+        "name": "Tunic",
+        "date_completed": "March 22, 2022",
         "Date Started": "",
         "Developer": "Andrew Shouldice, ISOMETRICORP Games",
         "Duration": 16,
@@ -480,8 +520,8 @@
         "Score": ""
     },
     {
-        "Name": "Asura’s Wrath",
-        "Date Completed": "February 8, 2022",
+        "name": "Asura’s Wrath",
+        "date_completed": "February 8, 2022",
         "Date Started": "February 6, 2022",
         "Developer": "CyberConnect2 Co.",
         "Duration": "",
@@ -495,8 +535,8 @@
         "Score": ""
     },
     {
-        "Name": "Tales of Berseria",
-        "Date Completed": "September 21, 2021",
+        "name": "Tales of Berseria",
+        "date_completed": "September 21, 2021",
         "Date Started": "August 11, 2021",
         "Developer": "Bandai Namco Entertainment",
         "Duration": "",
@@ -510,8 +550,8 @@
         "Score": ""
     },
     {
-        "Name": "Tales of Zestiria",
-        "Date Completed": "May 31, 2021",
+        "name": "Tales of Zestiria",
+        "date_completed": "May 31, 2021",
         "Date Started": "January 7, 2021",
         "Developer": "Bandai Namco Entertainment",
         "Duration": "",
@@ -525,8 +565,8 @@
         "Score": ""
     },
     {
-        "Name": "Little Nightmares",
-        "Date Completed": "",
+        "name": "Little Nightmares",
+        "date_completed": "",
         "Date Started": "",
         "Developer": "Bandai Namco Entertainment, Tarsier Studios",
         "Duration": 4,
@@ -540,8 +580,8 @@
         "Score": ""
     },
     {
-        "Name": "Bramble: The Mountain",
-        "Date Completed": "",
+        "name": "Bramble: The Mountain",
+        "date_completed": "",
         "Date Started": "",
         "Developer": "Dimfrost",
         "Duration": 5,
@@ -555,8 +595,8 @@
         "Score": ""
     },
     {
-        "Name": "Little Nightmares II",
-        "Date Completed": "",
+        "name": "Little Nightmares II",
+        "date_completed": "",
         "Date Started": "",
         "Developer": "Tarsier Studios",
         "Duration": 6,
@@ -570,8 +610,8 @@
         "Score": ""
     },
     {
-        "Name": "Terra Nil",
-        "Date Completed": "",
+        "name": "Terra Nil",
+        "date_completed": "",
         "Date Started": "",
         "Developer": "Free Lives",
         "Duration": 7,
@@ -585,8 +625,8 @@
         "Score": ""
     },
     {
-        "Name": "Ghostrunner",
-        "Date Completed": "",
+        "name": "Ghostrunner",
+        "date_completed": "",
         "Date Started": "August 15, 2023",
         "Developer": "3D Realms, One More Level, Slipgate Ironworks™",
         "Duration": 8,
@@ -600,8 +640,8 @@
         "Score": ""
     },
     {
-        "Name": "Coffee Talk Episode 2: Hibiscus & Butterfly",
-        "Date Completed": "",
+        "name": "Coffee Talk Episode 2: Hibiscus & Butterfly",
+        "date_completed": "",
         "Date Started": "",
         "Developer": "Toge Productions",
         "Duration": 9,
@@ -615,8 +655,8 @@
         "Score": ""
     },
     {
-        "Name": "Celeste",
-        "Date Completed": "",
+        "name": "Celeste",
+        "date_completed": "",
         "Date Started": "",
         "Developer": "Matt Makes Games",
         "Duration": 11,
@@ -630,8 +670,8 @@
         "Score": ""
     },
     {
-        "Name": "Resident Evil 7",
-        "Date Completed": "",
+        "name": "Resident Evil 7",
+        "date_completed": "",
         "Date Started": "",
         "Developer": "Capcom",
         "Duration": 11,
@@ -645,8 +685,8 @@
         "Score": ""
     },
     {
-        "Name": "Ghost Trick : Detective Phantom (remastered)",
-        "Date Completed": "",
+        "name": "Ghost Trick : Detective Phantom (remastered)",
+        "date_completed": "",
         "Date Started": "",
         "Developer": "",
         "Duration": 12,
@@ -660,8 +700,8 @@
         "Score": ""
     },
     {
-        "Name": "Resident Evil 8",
-        "Date Completed": "",
+        "name": "Resident Evil 8",
+        "date_completed": "",
         "Date Started": "",
         "Developer": "Capcom",
         "Duration": 12,
@@ -675,8 +715,8 @@
         "Score": ""
     },
     {
-        "Name": "Punch Club",
-        "Date Completed": "",
+        "name": "Punch Club",
+        "date_completed": "",
         "Date Started": "",
         "Developer": "Lazy Bear Games, tinyBuild",
         "Duration": 13,
@@ -690,8 +730,8 @@
         "Score": ""
     },
     {
-        "Name": "Inscryption",
-        "Date Completed": "",
+        "name": "Inscryption",
+        "date_completed": "",
         "Date Started": "",
         "Developer": "Daniel Mullins Games",
         "Duration": 15,
@@ -705,8 +745,8 @@
         "Score": ""
     },
     {
-        "Name": "Bayonetta 3",
-        "Date Completed": "",
+        "name": "Bayonetta 3",
+        "date_completed": "",
         "Date Started": "",
         "Developer": "Platinum Games",
         "Duration": 16,
@@ -720,8 +760,8 @@
         "Score": ""
     },
     {
-        "Name": "Bayonetta Origins",
-        "Date Completed": "",
+        "name": "Bayonetta Origins",
+        "date_completed": "",
         "Date Started": "",
         "Developer": "Platinum Games",
         "Duration": 17,
@@ -735,8 +775,8 @@
         "Score": ""
     },
     {
-        "Name": "Marvel's Guardians of the Galaxy",
-        "Date Completed": "",
+        "name": "Marvel's Guardians of the Galaxy",
+        "date_completed": "",
         "Date Started": "",
         "Developer": "Eidos Montreal",
         "Duration": 20,
@@ -750,8 +790,8 @@
         "Score": ""
     },
     {
-        "Name": "Ghostwire Tokyo",
-        "Date Completed": "",
+        "name": "Ghostwire Tokyo",
+        "date_completed": "",
         "Date Started": "",
         "Developer": "Tango Gameworks",
         "Duration": 21,
@@ -765,8 +805,8 @@
         "Score": ""
     },
     {
-        "Name": "Xenoblade Chronicles 2: Torna ~ The Golden Country",
-        "Date Completed": "",
+        "name": "Xenoblade Chronicles 2: Torna ~ The Golden Country",
+        "date_completed": "",
         "Date Started": "",
         "Developer": "Monolith Soft",
         "Duration": 24,
@@ -780,8 +820,8 @@
         "Score": ""
     },
     {
-        "Name": "Yakuza 6: The Song of Life",
-        "Date Completed": "",
+        "name": "Yakuza 6: The Song of Life",
+        "date_completed": "",
         "Date Started": "",
         "Developer": "Ryu ga Gotoku Studio",
         "Duration": 28,
@@ -795,8 +835,8 @@
         "Score": ""
     },
     {
-        "Name": "Far Cry 5",
-        "Date Completed": "",
+        "name": "Far Cry 5",
+        "date_completed": "",
         "Date Started": "",
         "Developer": "Ubisoft",
         "Duration": 29,
@@ -810,8 +850,8 @@
         "Score": ""
     },
     {
-        "Name": "Yakuza 4 Remastered",
-        "Date Completed": "",
+        "name": "Yakuza 4 Remastered",
+        "date_completed": "",
         "Date Started": "",
         "Developer": "Ryu ga Gotoku Studio",
         "Duration": 31,
@@ -825,8 +865,8 @@
         "Score": ""
     },
     {
-        "Name": "Far Cry 6",
-        "Date Completed": "",
+        "name": "Far Cry 6",
+        "date_completed": "",
         "Date Started": "",
         "Developer": "Ubisoft",
         "Duration": 37,
@@ -840,8 +880,8 @@
         "Score": ""
     },
     {
-        "Name": "Diablo IV",
-        "Date Completed": "",
+        "name": "Diablo IV",
+        "date_completed": "",
         "Date Started": "",
         "Developer": "Activision Blizzard",
         "Duration": 38,
@@ -855,8 +895,8 @@
         "Score": ""
     },
     {
-        "Name": "NieR Replicant v1.22474487139...",
-        "Date Completed": "",
+        "name": "NieR Replicant v1.22474487139...",
+        "date_completed": "",
         "Date Started": "",
         "Developer": "Toylogic",
         "Duration": 40,
@@ -870,8 +910,8 @@
         "Score": ""
     },
     {
-        "Name": "Like a Dragon: Ishin!",
-        "Date Completed": "",
+        "name": "Like a Dragon: Ishin!",
+        "date_completed": "",
         "Date Started": "",
         "Developer": "Ryu ga Gotoku Studio",
         "Duration": 43,
@@ -885,8 +925,8 @@
         "Score": ""
     },
     {
-        "Name": "God of War: Ragnarök",
-        "Date Completed": "",
+        "name": "God of War: Ragnarök",
+        "date_completed": "",
         "Date Started": "",
         "Developer": "SCE Santa Monica Studio",
         "Duration": 43,
@@ -900,8 +940,8 @@
         "Score": ""
     },
     {
-        "Name": "Days Gone",
-        "Date Completed": "",
+        "name": "Days Gone",
+        "date_completed": "",
         "Date Started": "",
         "Developer": "Bend Studio",
         "Duration": 51,
@@ -915,8 +955,8 @@
         "Score": ""
     },
     {
-        "Name": "Yakuza 5 Remastered",
-        "Date Completed": "",
+        "name": "Yakuza 5 Remastered",
+        "date_completed": "",
         "Date Started": "",
         "Developer": "Ryu ga Gotoku Studio",
         "Duration": 59,
@@ -930,8 +970,8 @@
         "Score": ""
     },
     {
-        "Name": "Red Dead Redemption 2",
-        "Date Completed": "",
+        "name": "Red Dead Redemption 2",
+        "date_completed": "",
         "Date Started": "",
         "Developer": "Rockstar Studios",
         "Duration": 66,
@@ -945,8 +985,8 @@
         "Score": ""
     },
     {
-        "Name": "Yakuza: Like a Dragon",
-        "Date Completed": "",
+        "name": "Yakuza: Like a Dragon",
+        "date_completed": "",
         "Date Started": "",
         "Developer": "Ryu ga Gotoku Studio",
         "Duration": 67,
@@ -960,8 +1000,8 @@
         "Score": ""
     },
     {
-        "Name": "Octopath Traveller II",
-        "Date Completed": "",
+        "name": "Octopath Traveller II",
+        "date_completed": "",
         "Date Started": "September 17, 2023",
         "Developer": "Square Enix",
         "Duration": 72,
@@ -975,8 +1015,8 @@
         "Score": ""
     },
     {
-        "Name": "The Legend of Heroes: Trails of Cold Steel",
-        "Date Completed": "",
+        "name": "The Legend of Heroes: Trails of Cold Steel",
+        "date_completed": "",
         "Date Started": "",
         "Developer": "Nihon Falcom, XSEED Games",
         "Duration": 78,
@@ -990,8 +1030,8 @@
         "Score": ""
     },
     {
-        "Name": "Xenoblade Chronicles 3",
-        "Date Completed": "",
+        "name": "Xenoblade Chronicles 3",
+        "date_completed": "",
         "Date Started": "",
         "Developer": "Monolith Soft",
         "Duration": 100,

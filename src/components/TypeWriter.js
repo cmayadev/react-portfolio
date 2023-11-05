@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const TypeWriter = () => {
+const TypeWriter = ({ withText = false }) => {
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
@@ -29,7 +29,7 @@ const TypeWriter = () => {
       }
 
       if (!isDeleting && newText === fullTxt) {
-        newDelta = 2000; // Adjust this value as needed
+        newDelta = 2000;
         setIsDeleting(true);
       } else if (isDeleting && newText === "") {
         setIsDeleting(false);
@@ -46,11 +46,11 @@ const TypeWriter = () => {
     return () => {
       clearTimeout(timer);
     };
-  }, [text, isDeleting, loopNum, delta]);
+  }, [text, isDeleting, loopNum, delta]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <span className="typewriter">
-      {text}
+      {withText && text}
       <div id="cursor"></div>
     </span>
   );

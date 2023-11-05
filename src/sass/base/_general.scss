@@ -43,11 +43,11 @@ p {
 #cursor {
   background: #d4d4d4;
   display: inline-block;
-  line-height: 17px;
   margin-left: 3px;
+  margin-bottom: -1px;
   animation: blink 1s infinite;
-  width: 4px;
-  height: 15px;
+  width: 5px;
+  height: 16px;
 }
 
 @keyframes blink {

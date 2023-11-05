@@ -8,7 +8,7 @@ const Resume = () => {
           <div className="">
             <h1>Cristian Maya</h1>
             <div className="header-sub-text job">
-              Desarrollador <TypeWriter />
+              Desarrollador <TypeWriter withText />
             </div>
             <div className="header-sub-text">
               <p className="font-large">

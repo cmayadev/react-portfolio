@@ -1,5 +1,5 @@
 import React from "react";
-import Typewriter from "typewriter-effect";
+import TypeWriter from "./TypeWriter";
 
 const Terminal = () => {
   return (
@@ -46,14 +46,7 @@ const Terminal = () => {
           <div>
             PS <span className="path">C:\var\www\react-portfolio</span>
             {`>`}
-            <Typewriter
-              options={{
-                cursor: "█",
-                strings: [""],
-                autoStart: true,
-                loop: true,
-              }}
-            />
+            <TypeWriter />
           </div>
         </div>
       </div>

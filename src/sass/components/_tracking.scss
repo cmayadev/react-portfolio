@@ -1,0 +1,120 @@
+#tracking {
+  margin-top: 3rem;
+
+  .container {
+    margin: 0 auto;
+    min-width: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+  }
+  @media (min-width: 1540px) {
+    .container {
+      max-width: 1520px;
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+  }
+  .tracking-title {
+    font-size: 2.8rem;
+    color: #fff;
+    font-weight: 800;
+    margin-bottom: -45px;
+    margin-top: 35px;
+    padding-bottom: 30px;
+    text-transform: capitalize;
+  }
+  .filters {
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto -webkit-min-content;
+    grid-template-columns: auto min-content;
+    margin-bottom: 30px;
+    min-height: 23px;
+    position: relative;
+  }
+  .results {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+    margin-bottom: 50px;
+    padding-top: 1px;
+    padding-bottom: 4px;
+  }
+  .game-card {
+    display: flex;
+    color: inherit;
+    text-decoration: none;
+    user-select: none;
+    transition: background 100ms ease-out 0s;
+    cursor: pointer;
+    box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px,
+      rgba(15, 15, 15, 0.1) 0px 2px 4px;
+    border-radius: 3px;
+    background: white;
+    overflow: hidden;
+    position: static;
+    height: 100%;
+    flex-direction: column;
+  }
+  .game-title {
+    width: 100%;
+    display: flex;
+    padding: 8px 10px 6px;
+    position: relative;
+  }
+  .game-name {
+    max-width: 100%;
+    width: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+    caret-color: rgb(55, 53, 47);
+    font-size: 14px;
+    line-height: 1.5;
+    min-height: 21px;
+    font-weight: 500;
+    pointer-events: none;
+  }
+  .game-date {
+    user-select: none;
+    transition: background 20ms ease-in 0s;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    border-radius: 5px;
+    margin: 0px 6px 2px;
+    padding: 0px 5px;
+    font-size: 12px;
+    min-height: 24px;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  .grid-title {
+    align-items: flex-end;
+    display: flex;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .counter {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-left: auto;
+    text-transform: none;
+    transition: color 0.2s ease;
+  }
+  .game-img {
+    display: block;
+    object-fit: cover;
+    border-radius: 1px 1px 0px 0px;
+    width: 100%;
+    height: 158.625px;
+    object-position: center 50%;
+  }
+}
