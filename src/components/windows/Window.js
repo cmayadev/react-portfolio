@@ -17,7 +17,7 @@ const Window = (props) => {
     if (id === 3 && status === "open") {
       setQuote(randomPhrase());
     }
-  }, [status]);
+  }, [id, status]);
 
   const handleClick = (taskId) => {
     setTasks((state) => {
