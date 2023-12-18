@@ -69,7 +69,7 @@ const Desktop = () => {
         return newState;
       });
     },
-    [startMenu]
+    [setTasks]
   );
 
   return (
