@@ -7,7 +7,11 @@ function App() {
   const { display } = useDisplay();
   return (
     <div className="App">
-      {display === "portfolio" ? <Portfolio /> : <Desktop />}
+      {display.mode === "portfolio" ? (
+        <Portfolio />
+      ) : (
+        <Desktop status={display.status} />
+      )}
     </div>
   );
 }

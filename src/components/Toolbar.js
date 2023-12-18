@@ -19,7 +19,12 @@ const Toolbar = () => {
       </div>
       <div className="appTitle">react-porfolio - Maya Studio Code</div>
       <div className="appControls">
-        <div className="appMinimize">
+        <div
+          className="appMinimize"
+          onClick={() => {
+            setDisplay({ mode: "desktop", status: "minimized" });
+          }}
+        >
           <svg
             width="18"
             height="18"
@@ -35,7 +40,7 @@ const Toolbar = () => {
         <div
           className="appClose"
           onClick={() => {
-            setDisplay("desktop");
+            setDisplay({ mode: "desktop", status: "closed" });
           }}
         >
           <img src="icons/close.svg" alt="close" />

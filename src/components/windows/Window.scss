@@ -190,7 +190,7 @@
 
 @for $i from 1 through 26 {
   #install-bar > div:nth-of-type(#{$i}) {
-    animation: show 1s forwards 1 ($i * 1s);
+    animation: show .3s forwards 1 ($i * 2.4s);
   }
 }
 

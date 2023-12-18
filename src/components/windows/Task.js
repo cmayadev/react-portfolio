@@ -1,7 +1,13 @@
+import { useDisplay } from "../../contexts/DisplayContext";
+
 const Task = (props) => {
   const { id, name, icon, status, active, setTasks } = props;
+  const { setDisplay } = useDisplay();
 
   const handleClick = (taskId) => {
+    if (taskId === 6) {
+      setDisplay({ mode: "portfolio" });
+    }
     setTasks((state) => {
       const newState = structuredClone(state);
       newState.forEach(function (task) {

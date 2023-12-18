@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 
 import Clock from "./windows/Clock";
 import Task from "./windows/Task";
@@ -14,7 +14,21 @@ import StartButton from "./windows/StartButton";
 const Desktop = () => {
   const [startMenu, setStartMenu] = useState("closed");
   const [tasks, setTasks] = useTasksStatus();
-  const { setDisplay } = useDisplay();
+  const { display, setDisplay } = useDisplay();
+
+  useEffect(() => {
+    if (display.status === "closed") {
+      setTasks((state) => {
+        const newState = structuredClone(state);
+        newState.forEach(function (task) {
+          if (task.id === 6) {
+            task.status = "closed";
+          }
+        });
+        return newState;
+      });
+    }
+  }, [display]);
 
   const handleClick = (taskId) => {
     setTasks((state) => {
@@ -48,7 +62,7 @@ const Desktop = () => {
 
   const handleVisualButton = useCallback(
     (event) => {
-      setDisplay("portfolio");
+      setDisplay({ mode: "portfolio" });
     },
     [setDisplay]
   );
