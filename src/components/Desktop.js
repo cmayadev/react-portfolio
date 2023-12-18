@@ -28,7 +28,7 @@ const Desktop = () => {
         return newState;
       });
     }
-  }, [display]);
+  }, [display, setTasks]);
 
   const handleClick = (taskId) => {
     setTasks((state) => {
