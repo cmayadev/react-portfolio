@@ -10,7 +10,6 @@ import "./Desktop.scss";
 import useTasksStatus from "../hooks/useTasksStatus";
 import { useDisplay } from "../contexts/DisplayContext";
 import StartButton from "./windows/StartButton";
-import { randomPhrase } from "../utils";
 
 const Desktop = () => {
   const [startMenu, setStartMenu] = useState("closed");
