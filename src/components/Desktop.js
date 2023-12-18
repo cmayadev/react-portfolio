@@ -10,11 +10,30 @@ import "./Desktop.scss";
 import useTasksStatus from "../hooks/useTasksStatus";
 import { useDisplay } from "../contexts/DisplayContext";
 import StartButton from "./windows/StartButton";
+import { randomPhrase } from "../utils";
 
 const Desktop = () => {
   const [startMenu, setStartMenu] = useState("closed");
   const [tasks, setTasks] = useTasksStatus();
   const { setDisplay } = useDisplay();
+
+  const handleClick = (taskId) => {
+    setTasks((state) => {
+      const newState = structuredClone(state);
+      newState.forEach(function (task) {
+        if (task.status === "open" && task.id !== taskId) {
+          task.status = "unfocused";
+          task.active = false;
+        }
+      });
+
+      const task = newState.find((original) => original.id === taskId);
+      task.status = "open";
+      task.active = true;
+      task.selected = false;
+      return newState;
+    });
+  };
 
   const handleDesktop = () => {
     setTasks((state) => {
@@ -114,7 +133,7 @@ const Desktop = () => {
               Windows<span>98</span>
             </div>
             <ul>
-              <li className="line update">
+              <li className="line update" onClick={() => handleClick(4)}>
                 <label htmlFor="windows-update-input">
                   <img src="icons/windows-update.png" alt="Windows Update" />
                   Windows Update
@@ -126,7 +145,7 @@ const Desktop = () => {
                   Progams
                 </label>
                 <ul className="windows-box-shadow">
-                  <li>
+                  <li onClick={() => handleClick(3)}>
                     <label>
                       <img src="icons/ie-small.png" alt="Internet Explorer" />
                       Internet Explorer
@@ -149,7 +168,7 @@ const Desktop = () => {
                   </li>
                 </ul>
               </li>
-              <li>
+              <li onClick={() => handleClick(2)}>
                 <label htmlFor="windows-documents-input">
                   <img src="icons/documents.png" alt="Documents" />
                   Documents
@@ -183,7 +202,10 @@ const Desktop = () => {
               className="toolbar-icon desktop"
               onClick={() => handleDesktop()}
             ></button>
-            <button className="toolbar-icon ie"></button>
+            <button
+              className="toolbar-icon ie"
+              onClick={() => handleClick(3)}
+            ></button>
             <button className="toolbar-icon outlook"></button>
 
             <div className="toolbar-separator"></div>

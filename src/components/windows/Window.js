@@ -1,15 +1,23 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Draggable from "react-draggable";
 
 import ContentIcon from "./ContentIcon";
 
 import "./Window.scss";
+import { randomPhrase } from "../../utils";
 
 const Window = (props) => {
   const { id, title, type, status, active, setTasks } = props;
+  const [quote, setQuote] = useState(randomPhrase());
 
   const nodeRef = useRef(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    if (id === 3 && status === "open") {
+      setQuote(randomPhrase());
+    }
+  }, [status]);
 
   const handleClick = (taskId) => {
     setTasks((state) => {
@@ -126,11 +134,7 @@ const Window = (props) => {
                   <>
                     <ContentIcon name="links.txt" icon="file" />
                     <ContentIcon name="passwords.txt" icon="file" />
-                    <ContentIcon
-                      name="React for Dummies.txt"
-                      icon="file"
-                      selected={true}
-                    />
+                    <ContentIcon name="React for Dummies.txt" icon="file" />
                   </>
                 );
               case "won":
@@ -151,9 +155,7 @@ const Window = (props) => {
                     >
                       400 Bad Request
                     </p>
-                    <p style={{ marginBottom: "8px" }}>
-                      Your request is in another castle.
-                    </p>
+                    <p style={{ marginBottom: "8px" }}>{quote}</p>
                     <hr />
                   </div>
                 );
