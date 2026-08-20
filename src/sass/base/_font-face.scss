@@ -1,14 +1,14 @@
 @font-face {
   font-family: "JetBrains Mono Regular"; /*Can be any text*/
   src: local("JetBrains Mono Regular"),
-    url("../../fonts/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
+    url("../../fonts/JetBrainsMono-VariableFont_wght.woff2") format("woff2");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Open Sans"; /*Can be any text*/
   src: local("Open Sans"),
-    url("../../fonts/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
+    url("../../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -16,7 +16,7 @@
   font-family: "Poppins"; /*Can be any text*/
   font-weight: 400;
   src: local("Poppins"),
-    url("../../fonts/Poppins-Regular.ttf") format("truetype");
+    url("../../fonts/Poppins-Regular.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -24,7 +24,7 @@
   font-family: "Poppins"; /*Can be any text*/
   font-weight: 500;
   src: local("Poppins"),
-    url("../../fonts/Poppins-Medium.ttf") format("truetype");
+    url("../../fonts/Poppins-Medium.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -32,7 +32,7 @@
   font-family: "Poppins"; /*Can be any text*/
   font-weight: 600;
   src: local("Poppins"),
-    url("../../fonts/Poppins-SemiBold.ttf") format("truetype");
+    url("../../fonts/Poppins-SemiBold.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -40,6 +40,6 @@
   font-family: "Source Sans Pro"; /*Can be any text*/
   font-weight: 400;
   src: local("Source Sans Pro"),
-    url("../../fonts/SourceSans3-VariableFont_wght.ttf") format("truetype");
+    url("../../fonts/SourceSans3-VariableFont_wght.woff2") format("woff2");
   font-display: swap;
 }

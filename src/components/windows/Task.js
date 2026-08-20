@@ -1,4 +1,5 @@
 import { useDisplay } from "../../contexts/DisplayContext";
+import { updateTasks } from "../../utils";
 
 const Task = (props) => {
   const { id, name, icon, status, active, setTasks } = props;
@@ -8,9 +9,8 @@ const Task = (props) => {
     if (taskId === 6) {
       setDisplay({ mode: "portfolio" });
     }
-    setTasks((state) => {
-      const newState = structuredClone(state);
-      newState.forEach(function (task) {
+    updateTasks(setTasks, (tasks) => {
+      tasks.forEach((task) => {
         if (
           task.status === "open" &&
           task.active === true &&
@@ -21,7 +21,7 @@ const Task = (props) => {
         }
       });
 
-      const task = newState.find((task) => task.id === taskId);
+      const task = tasks.find((task) => task.id === taskId);
       switch (task.status) {
         case "open":
           if (task.active === false) {
@@ -52,7 +52,6 @@ const Task = (props) => {
         default:
           break;
       }
-      return newState;
     });
   };
 

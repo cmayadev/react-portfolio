@@ -10,6 +10,7 @@ import "./Desktop.scss";
 import useTasksStatus from "../hooks/useTasksStatus";
 import { useDisplay } from "../contexts/DisplayContext";
 import StartButton from "./windows/StartButton";
+import { updateTasks } from "../utils";
 
 const Desktop = () => {
   const [startMenu, setStartMenu] = useState("closed");
@@ -18,45 +19,39 @@ const Desktop = () => {
 
   useEffect(() => {
     if (display.status === "closed") {
-      setTasks((state) => {
-        const newState = structuredClone(state);
-        newState.forEach(function (task) {
+      updateTasks(setTasks, (tasks) => {
+        tasks.forEach((task) => {
           if (task.id === 6) {
             task.status = "closed";
           }
         });
-        return newState;
       });
     }
   }, [display, setTasks]);
 
   const handleClick = (taskId) => {
-    setTasks((state) => {
-      const newState = structuredClone(state);
-      newState.forEach(function (task) {
+    updateTasks(setTasks, (tasks) => {
+      tasks.forEach((task) => {
         if (task.status === "open" && task.id !== taskId) {
           task.status = "unfocused";
           task.active = false;
         }
       });
 
-      const task = newState.find((original) => original.id === taskId);
+      const task = tasks.find((original) => original.id === taskId);
       task.status = "open";
       task.active = true;
       task.selected = false;
-      return newState;
     });
   };
 
   const handleDesktop = () => {
-    setTasks((state) => {
-      const newState = structuredClone(state);
-      newState.forEach(function (task) {
+    updateTasks(setTasks, (tasks) => {
+      tasks.forEach((task) => {
         if (task.status === "open") {
           task.status = "minimized";
         }
       });
-      return newState;
     });
   };
 
@@ -73,18 +68,18 @@ const Desktop = () => {
     );
   }, []);
 
-  const handleOutside = useCallback(
-    (event) => {
-      setTasks((state) => {
-        const newState = structuredClone(state);
-        newState.forEach(function (task) {
-          task.selected = false;
-        });
-        return newState;
+  const handleOutside = useCallback(() => {
+    updateTasks(setTasks, (tasks) => {
+      tasks.forEach((task) => {
+        task.selected = false;
       });
-    },
-    [setTasks]
-  );
+    });
+  }, [setTasks]);
+
+  useEffect(() => {
+    document.addEventListener("click", handleOutside, true);
+    return () => document.removeEventListener("click", handleOutside, true);
+  }, [handleOutside]);
 
   return (
     <>
@@ -120,9 +115,6 @@ const Desktop = () => {
                   handleVisualButton={handleVisualButton}
                   selected={icon.selected}
                   setTasks={setTasks}
-                  onClickOutside={() => {
-                    handleOutside();
-                  }}
                 />
               )
           )}
@@ -132,9 +124,6 @@ const Desktop = () => {
           <StartButton
             onClick={(event) => {
               handleStartMenu(event);
-            }}
-            onClickOutside={() => {
-              handleOutside();
             }}
           />
 

@@ -3,6 +3,13 @@ import Tech from "./Tech.js";
 
 import skills from "../api/skills.json";
 
+const SKILL_GROUPS = [
+  { title: "Lenguajes", type: "language" },
+  { title: "Frameworks", type: "framework" },
+  { title: "Bases de Datos", type: "bd" },
+  { title: "Herramientas", type: "tool" },
+];
+
 const Skills = () => {
   return (
     <section className="section alt" id="skills">
@@ -13,54 +20,18 @@ const Skills = () => {
         </div>
 
         <div className="techs">
-          <div className="group">
-            <h3>Lenguajes</h3>
-            <div className="grid">
-              {skills.map((skill) =>
-                skill.type === "language" ? (
-                  <Tech key={skill.title} skill={skill} />
-                ) : (
-                  ""
-                )
-              )}
+          {SKILL_GROUPS.map(({ title, type }) => (
+            <div className="group" key={type}>
+              <h3>{title}</h3>
+              <div className="grid">
+                {skills
+                  .filter((skill) => skill.type === type)
+                  .map((skill) => (
+                    <Tech key={skill.title} skill={skill} />
+                  ))}
+              </div>
             </div>
-          </div>
-          <div className="group">
-            <h3>Frameworks</h3>
-            <div className="grid">
-              {skills.map((skill) =>
-                skill.type === "framework" ? (
-                  <Tech key={skill.title} skill={skill} />
-                ) : (
-                  ""
-                )
-              )}
-            </div>
-          </div>
-          <div className="group">
-            <h3>Bases de Datos</h3>
-            <div className="grid">
-              {skills.map((skill) =>
-                skill.type === "bd" ? (
-                  <Tech key={skill.title} skill={skill} />
-                ) : (
-                  ""
-                )
-              )}
-            </div>
-          </div>
-          <div className="group">
-            <h3>Herramientas</h3>
-            <div className="grid">
-              {skills.map((skill) =>
-                skill.type === "tool" ? (
-                  <Tech key={skill.title} skill={skill} />
-                ) : (
-                  ""
-                )
-              )}
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

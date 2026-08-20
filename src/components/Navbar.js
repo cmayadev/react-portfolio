@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-scroll";
+import React, { useEffect, useState } from "react";
 import File from "./File";
 
 import files from "../api/files.json";
@@ -7,41 +6,38 @@ import files from "../api/files.json";
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   const [menu, setMenu] = useState(false);
-  const [activeLi, setActiveLi] = useState("Resume");
-  const [lastActiveLi, setLastActiveLi] = useState("Resume");
+  const [activeSection, setActiveSection] = useState(files[0].to);
 
   useEffect(() => {
-    const handleActiveLi = () => {
-      const navItems = document.querySelectorAll(".nav-item");
-      const activeLiElement = Array.from(navItems).find((element) =>
-        element.querySelector(":scope .active")
-      );
-      if (activeLiElement) {
-        const newActiveLi = activeLiElement.getAttribute("data-name");
-        if (newActiveLi !== lastActiveLi) {
-          setActiveLi(newActiveLi);
-          setLastActiveLi(newActiveLi);
-        }
-      }
-    };
-
     const handleScroll = () => {
-      changeBackground();
-      handleActiveLi();
+      setNavbar(window.scrollY >= 40);
     };
-
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastActiveLi]);
+  }, []);
 
-  const changeBackground = () => {
-    if (window.scrollY >= 40) {
-      setNavbar(true);
-    } else {
-      setNavbar(false);
-    }
-  };
+  useEffect(() => {
+    const sections = files
+      .map((file) => document.getElementById(file.to))
+      .filter(Boolean);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible) {
+          setActiveSection(visible.target.id);
+        }
+      },
+      { rootMargin: "-40% 0px -40% 0px" }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
+
+  const activeFile = files.find((file) => file.to === activeSection) || files[0];
 
   return (
     <>
@@ -51,25 +47,14 @@ const Navbar = () => {
         }`}
       >
         <div className="navbar-content">
-          <Link
-            href="#"
-            to="resume"
+          <a
+            href="#resume"
             className={`back-top text-replace ${navbar ? "" : "hidden"}`}
-            smooth={true}
-            offset={-70}
-            duration={500}
           >
             Top
-          </Link>
+          </a>
 
-          <Link
-            className="logo"
-            href="#"
-            to="resume"
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
+          <a className="logo" href="#resume">
             <picture>
               <img
                 src="cmayadev.png"
@@ -78,7 +63,7 @@ const Navbar = () => {
                 width="104px"
               />
             </picture>
-          </Link>
+          </a>
           <button
             onClick={() => setMenu(!menu)}
             className="navbar-toggler collapsed"
@@ -98,9 +83,10 @@ const Navbar = () => {
             id="navbarCollapse"
           >
             <ul id="navbar-navlist" className="navbar-nav ml-auto">
-              {files.map((file, index) => (
+              {files.map((file) => (
                 <File
-                  key={index}
+                  key={file.to}
+                  active={file.to === activeSection}
                   props={{
                     name: file.name,
                     to: file.to,
@@ -123,7 +109,7 @@ const Navbar = () => {
             alt={`js-logo`}
             src={`files/js.svg`}
           />{" "}
-          {activeLi}
+          {activeFile.name}
           .js
         </div>
       </div>
