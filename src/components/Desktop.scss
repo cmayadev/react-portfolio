@@ -337,7 +337,7 @@ $screen-background: #121010;
     display: flex;
 
     .start-button {
-      background: url("/images/icons/windows-logo.png") no-repeat 2px center /
+      background: url("../images/icons/windows-logo.png") no-repeat 2px center /
         24px;
       padding-left: 28px;
       padding-right: 5px;
@@ -383,15 +383,15 @@ $screen-background: #121010;
     cursor: pointer;
 
     &.ie {
-      background-image: url("/images/icons/ie-small.png");
+      background-image: url("../images/icons/ie-small.png");
     }
 
     &.outlook {
-      background-image: url("/images/icons/outlook.png");
+      background-image: url("../images/icons/outlook.png");
     }
 
     &.desktop {
-      background-image: url("/images/icons/desktop.png");
+      background-image: url("../images/icons/desktop.png");
     }
   }
 
